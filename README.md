@@ -41,7 +41,7 @@ Base de datos.
 - [ ] La información se guardará en firebase.
 
 Calidad
-- [ ] Tuilizar u estilo de código estandarizado (revisado por Eslint)
+- [ ] Utilizar u estilo de código estandarizado (revisado por Eslint)
 - [ ] Incluir pruebas unitarias.
 - [ ] Puntuación A Obtenidas en CodeClimate.
 
