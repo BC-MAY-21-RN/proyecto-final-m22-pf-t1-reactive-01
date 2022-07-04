@@ -1,12 +1,10 @@
 ![BrightCoders Logo](img/logo-bc.png)
 
-# Nombre del proyecto
-
-> Instrucciones: *remplazar el título con el nombre del proyecto*
+# My Pet
 
 ## Descripción
 
-> Instrucciones: *escribir la descripción general del proyecto*
+> Dogs are man's best friends, that is why this application gives a little of the love that they give us.
 
 ## Requerimientos funcionales
 
