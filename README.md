@@ -10,7 +10,7 @@
 
 > Instrucciones: *listar los requerimientos que se consideran para el MVP. Respetar el formato de listado indicado*
 
-- User 
+- Usuario
   - [ ] El usuario podrá registrarse utilizando nombre, correo y clave ó una cuenta de Google
   - [ ] Los datos de registro deben guardarse en firebase
   - [ ] El formulario de registro debe contar con validaciones
