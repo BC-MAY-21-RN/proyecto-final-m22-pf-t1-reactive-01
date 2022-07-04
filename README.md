@@ -15,19 +15,18 @@
   - [ ] Los datos de registro deben guardarse en firebase
   - [ ] El formulario de registro debe contar con validaciones
  
- 
-*Permitir a los usuarios registrados iniciar sesión:
+ *Permitir a los usuarios registrados iniciar sesión:
  
   - [ ] El usuario podrá iniciar sesión utilizando correo y clave o su cuenta de Google, dependiendo de la forma en la que realizó su registro.
   - [ ] El inicio de sesión debe realizarse accediendo o verificando los datos almacenados en firebase.
 
 *Permitir a los usuarios ver las reservaciones de paseo:
 
- - [ ]El usuario podrá ver un listado con la información de sus reservaciones
- - [ ]La información debe recuperarse desde firebase
+ - [ ] El usuario podrá ver un listado con la información de sus reservaciones
+ - [ ] La información debe recuperarse desde firebase
  
 * Permitir agregar nuevas reservaciones de paseo.
-  - [ ]El usuario deberá indicia dia, fecha y horario de paseo de mascota.
+  - [ ] El usuario deberá indicia dia, fecha y horario de paseo de mascota.
   - [ ] La información debe guardarse en firebase
 
 - Admin
@@ -38,11 +37,24 @@
 
 ## Requerimientos no funcionales
 
-> Instrucciones: *listar los requerimientos que se consideran para el MVP. Respetar el formato de listado indicado*
+Base de datos.
+- [ ] La información se guardará en firebase.
 
-- [ ] Requerimiento 1
-- [ ] Requerimiento 2
-- [ ] ...
+Calidad
+- [ ] Tuilizar u estilo de código estandarizado (revisado por Eslint)
+- [ ] Incluir pruebas unitarias.
+- [ ] Puntuación A Obtenidas en CodeClimate.
+
+Ejecución
+- [ ] Puede ejecutarse en Android o iOs
+
+Codigo fuente
+- [ ] Orietado a objetos
+- [ ] Metodos pequeños.
+- [ ] Aplicar los principios SOLID.
+
+Manejo del estado.
+- [ ] Redux para el manejor del estado de la App.
 
 ## Plan de ejecución
 
