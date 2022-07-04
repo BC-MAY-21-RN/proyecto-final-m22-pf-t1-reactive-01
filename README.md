@@ -10,11 +10,6 @@
 
 > Instrucciones: *listar los requerimientos que se consideran para el MVP. Respetar el formato de listado indicado*
 
-- Admin
-  - [ ] Requerimiento 1
-  - [ ] Requerimiento 2
-  - [ ] ...
-
 - User 
   - [ ] El usuario podrá registrarse utilizando nombre, correo y clave ó una cuenta de Google
   - [ ] Los datos de registro deben guardarse en firebase
@@ -27,14 +22,18 @@
   - [ ] El inicio de sesión debe realizarse accediendo o verificando los datos almacenados en firebase.
 
 *Permitir a los usuarios ver las reservaciones de paseo:
-
-  - [ ]El usuario podrá ver un listado con la información de sus reservaciones
-  - [ ]La información debe recuperarse desde firebase
+- [ ]El usuario podrá ver un listado con la información de sus reservaciones
+- [ ]La información debe recuperarse desde firebase
  
 * Permitir agregar nuevas reservaciones de paseo.
   - [ ]El usuario deberá indicia dia, fecha y horario de paseo de mascota.
   - [ ] La información debe guardarse en firebase
-  - [ ] 
+
+- Admin
+  - [ ] Requerimiento 1
+  - [ ] Requerimiento 2
+  - [ ] ...
+
 
 ## Requerimientos no funcionales
 
