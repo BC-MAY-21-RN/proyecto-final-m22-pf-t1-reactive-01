@@ -12,39 +12,28 @@
 
 -  Rol de Usuario
   - [ ] El usuario podrá registrarse llenando el formulario con los datos que el mismo le solicite.
-  - [ ] Los datos de registro deben guardarse en firebase.
-  - [ ] El formulario de registro debe contar con las validaciones correspondientes en cada campo.
+  - [ ] El usuario puede editar su Perfil dentro de la App.
   - [ ] El usuario puede reestablecer la contraseña en caso de haberla olvidado.
+  - [ ] El usuario podrá ver un listado con la información de sus reservaciones/contrataciones.
   
 - Usuario (Dueño de mascota)
   - [ ] El usuario podra registrar su o sus mascota para paseo 
   - [ ] El usuario podrá ver el listado de los paseadores de mascotas disponibles en la aplicación.
   - [ ] El usuario podrá visualizar los reviews de los demas paseadores.
   - [ ] El usuario podrá contactar por la aplicación con el paseador.
+  - [ ] El usuario deberá indicar dia, fecha y horario de paseo de mascota.
   - [ ] El usuario podrá reportar al paseador de mascotas.
   
 - Usuario (Paseador de Mascota)
   - [ ] El usuario deberá registrar sus datos personales.(Lugar de residencia, edad, horario que esta disponible, Identificación oficial y telefono)
   - [ ] El usuario podrá aceptar o rechazar las ofertas de trabajo.
-  - [ ] El usuario podrá visualizar sus paseos a realiza
+  - [ ] El usuario podrá visualizar sus paseos a realizar
 
  
- 
- 
-
-
-*Permitir a los usuarios ver las reservaciones de paseo:
-
- - [ ] El usuario podrá ver un listado con la información de sus reservaciones
- - [ ] La información debe recuperarse desde firebase
-  - [ ] El usuario deberá indicia dia, fecha y horario de paseo de mascota.
+ - Sistema:
   - [ ] La información debe guardarse en firebase
- - [ ] El usuario podrá iniciar sesión utilizando correo y contraseña o su cuenta de Google, dependiendo de la forma en la que realizó su registro.
-    *Permitir a los usuarios registrados iniciar sesión:
   - [ ] El usuario podrá iniciar sesión utilizando correo y contraseña o su cuenta de Google, dependiendo de la forma en la que realizó su registro.
   - [ ] El inicio de sesión debe realizarse accediendo o verificando los datos almacenados en firebase.
-  - [ ] El usuario puede editar su Perfil dentro de la App.
-  - [ ] El usuario puede agregar mascotas y sus datos (de la mascota).
 
 
 
