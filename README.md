@@ -60,12 +60,12 @@ Manejo del estado.
 
 > Instrucciones:*considerando que el tiempo que tienen para desarrollar el proyecto es relativamente corto, es importante elaborar una planeación que permita dimensionar el máximo avance posible. Se trata solamente de un plan que pudiera ir cambiando, pero servirá como referencia. Haz una copia de [este template en Google Sheets](https://docs.google.com/spreadsheets/d/1e3kxrdzytEhMlVp1hoItIa-eFhUjE4oFR_iy4MoDiAU/edit?usp=sharing) y actualiza los requerimientos y tiempos para este proyecto. Una vez terminado inserta el enlace al documento y asegúrate de dar acceso a todos quienes tengan este enlace.
 
-- [Ver el plan de ejecución](inserta aquí el enlace a tu documento)
+- [Ver el plan de ejecución](https://docs.google.com/spreadsheets/d/1ceqWA-WOCADq4wZLj2rjjHXOGfhj_JWxZJ85ucT4n6M/edit?usp=sharing)
 
 ## Diseño de UI
 > Instrucciones: *inserta el enlace a el diseño de UI de tu proyecto. Asegúrate de que todos tengan permisos para el acceso.*
 
-- [Ver diseño de UI]
+- [https://app.uizard.io/prototypes/RKLJeqlX9KfRe6Re6JM3]
 
 ## Recursos
 
