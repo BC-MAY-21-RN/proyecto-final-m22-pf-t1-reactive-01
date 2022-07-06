@@ -2,9 +2,15 @@
 
 # My Pet
 
+## Sprint Leader
+
+| Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Sprint 5 | Sprint 6 | Sprint 7 | Sprint 8 |
+|---|---|---|---|---|---|---|---|
+| Ayeza |
+
 ## Descripción
 
-> Dogs are man's best friends, that is why this application gives a little of the love that they give us.
+Dogs are man's best friends, that is why this application gives a little of the love that they give us.
 
 ## Requerimientos funcionales
 
