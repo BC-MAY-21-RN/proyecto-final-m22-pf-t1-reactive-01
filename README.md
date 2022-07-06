@@ -2,30 +2,35 @@
 
 # My Pet
 
+## Sprint Leader
+## Sprint Leader
+
+| Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Sprint 5 | Sprint 6 | Sprint 7 | Sprint 8 |
+|---|---|---|---|---|---|---|---|
+| Ayeza |
+
 ## Descripción
 
-> Dogs are man's best friends, that is why this application gives a little of the love that they give us.
+Dogs are man's best friends, that is why this application gives a little of the love that they give us.
 
 ## Requerimientos funcionales
-
-> Instrucciones: *listar los requerimientos que se consideran para el MVP. Respetar el formato de listado indicado*
 
 - Usuario
   - [ ] El usuario podrá registrarse utilizando nombre, correo y clave ó una cuenta de Google
   - [ ] Los datos de registro deben guardarse en firebase
   - [ ] El formulario de registro debe contar con validaciones
  
- *Permitir a los usuarios registrados iniciar sesión:
+ - Permitir a los usuarios registrados iniciar sesión:
  
   - [ ] El usuario podrá iniciar sesión utilizando correo y clave o su cuenta de Google, dependiendo de la forma en la que realizó su registro.
   - [ ] El inicio de sesión debe realizarse accediendo o verificando los datos almacenados en firebase.
 
-*Permitir a los usuarios ver las reservaciones de paseo:
+ - Permitir a los usuarios ver las reservaciones de paseo:
 
  - [ ] El usuario podrá ver un listado con la información de sus reservaciones
  - [ ] La información debe recuperarse desde firebase
  
-* Permitir agregar nuevas reservaciones de paseo.
+ - Permitir agregar nuevas reservaciones de paseo.
   - [ ] El usuario deberá indicia dia, fecha y horario de paseo de mascota.
   - [ ] La información debe guardarse en firebase
 
