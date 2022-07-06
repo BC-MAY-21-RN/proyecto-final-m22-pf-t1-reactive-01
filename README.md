@@ -14,29 +14,33 @@ Dogs are man's best friends, that is why this application gives a little of the 
 
 ## Requerimientos funcionales
 
-- Usuario
-  - [ ] El usuario podrá registrarse utilizando nombre, correo y clave ó una cuenta de Google
-  - [ ] Los datos de registro deben guardarse en firebase
-  - [ ] El formulario de registro debe contar con validaciones
+ El sistema contara con dos tipos de Usuarios (Dueños y Paseadores)
+
+-  Rol de Usuario
+  - [ ] El usuario podrá registrarse llenando el formulario con los datos que el mismo le solicite.
+  - [ ] El usuario puede editar su Perfil dentro de la App.
+  - [ ] El usuario puede reestablecer la contraseña en caso de haberla olvidado.
+  - [ ] El usuario podrá ver un listado con la información de sus reservaciones/contrataciones.
+  
+- Usuario (Dueño de mascota)
+  - [ ] El usuario podra registrar su o sus mascota para paseo 
+  - [ ] El usuario podrá ver el listado de los paseadores de mascotas disponibles en la aplicación.
+  - [ ] El usuario podrá visualizar los reviews de los demas paseadores.
+  - [ ] El usuario podrá contactar por la aplicación con el paseador.
+  - [ ] El usuario deberá indicar dia, fecha y horario de paseo de mascota.
+  - [ ] El usuario podrá reportar al paseador de mascotas.
+  
+- Usuario (Paseador de Mascota)
+  - [ ] El usuario deberá registrar sus datos personales.(Lugar de residencia, edad, horario que esta disponible, Identificación oficial y telefono)
+  - [ ] El usuario podrá aceptar o rechazar las ofertas de trabajo.
+  - [ ] El usuario podrá visualizar sus paseos a realizar
+
  
- - Permitir a los usuarios registrados iniciar sesión:
- 
-  - [ ] El usuario podrá iniciar sesión utilizando correo y clave o su cuenta de Google, dependiendo de la forma en la que realizó su registro.
+ - Sistema:
+  - [ ] La información debe guardarse en firebase
+  - [ ] El usuario podrá iniciar sesión utilizando correo y contraseña o su cuenta de Google, dependiendo de la forma en la que realizó su registro.
   - [ ] El inicio de sesión debe realizarse accediendo o verificando los datos almacenados en firebase.
 
- - Permitir a los usuarios ver las reservaciones de paseo:
-
- - [ ] El usuario podrá ver un listado con la información de sus reservaciones
- - [ ] La información debe recuperarse desde firebase
- 
- - Permitir agregar nuevas reservaciones de paseo.
-  - [ ] El usuario deberá indicia dia, fecha y horario de paseo de mascota.
-  - [ ] La información debe guardarse en firebase
-
-- Admin
-  - [ ] Requerimiento 1
-  - [ ] Requerimiento 2
-  - [ ] ...
 
 
 ## Requerimientos no funcionales
@@ -79,3 +83,4 @@ Manejo del estado.
 - [El proceso de pensamiento de diseño](https://www.youtube.com/watch?v=_r0VX-aU_T8)
 - [Metodología Design Thinking. Ejemplos](https://www.youtube.com/watch?v=_ul3wfKss58)
 - [Design Thinking ejemplo sencillo](https://www.youtube.com/watch?v=_H33tA2-j0s)
+
