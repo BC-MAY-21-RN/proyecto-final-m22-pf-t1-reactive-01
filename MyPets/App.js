@@ -1,20 +1,12 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
-import React, {useEffect} from 'react';
+import React from 'react';
+import Routers from './src/router/Routers';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>App Text</Text>
-    </View>
+    <>
+      <Routers />
+    </>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
