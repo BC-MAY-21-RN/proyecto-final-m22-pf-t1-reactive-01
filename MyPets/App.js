@@ -4,7 +4,7 @@ import React, {useEffect} from 'react';
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>App</Text>
+      <Text>App Text</Text>
     </View>
   );
 };
