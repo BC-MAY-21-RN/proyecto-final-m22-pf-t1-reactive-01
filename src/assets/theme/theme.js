@@ -1,0 +1,21 @@
+import {Dimensions} from 'react-native';
+export default {
+  BACKGROUND_COLOR: '#f5f5f5',
+  PRIMARY_COLOR: '#6B96DC',
+  SECONDARY_COLOR: '#0C54BC',
+  TERTIARY_COLOR: '#ff4b50ff',
+  FONT_COLOR: '#000',
+  FONT_SIZE: 16,
+  FONT_SIZE_SMALL: 14,
+  FONT_SIZE_LARGE: 18,
+  FONT_SIZE_XLARGE: 20,
+  FONT_SIZE_HIGHER: 28,
+  FONT_FAMILY: 'OpenSans-Regular',
+  FONT_FAMILY_BOLD: 'OpenSans-Bold',
+  FONT_FAMILY_LOGO: 'Waffle Story',
+  FONT_WEIGHT_NORMAL: 'normal',
+  FONT_WEIGHT_BOLD: 'bold',
+  FONT_WEIGHT_LIGHT: 'light',
+  WIDTH_SCREEN: Dimensions.get('screen').width,
+  HEIGHT_SCREEN: Dimensions.get('screen').height,
+};
