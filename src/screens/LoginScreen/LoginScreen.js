@@ -25,6 +25,7 @@ const LoginScreen = ({navigation}) => {
         </View>
         <View style={styles.buttonContainer}>
           <Button title={'Login'} />
+          <Text style={styles.signup}>Sign Up with email</Text>
         </View>
       </View>
     </Layout>

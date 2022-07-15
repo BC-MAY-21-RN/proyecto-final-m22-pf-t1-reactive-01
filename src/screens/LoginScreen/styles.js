@@ -25,4 +25,10 @@ export const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: theme.HEIGHT_SCREEN / 33,
   },
+  signup: {
+    textAlign: 'center',
+    fontSize: 18,
+    textDecorationLine: 'underline ',
+    color: theme.PRIMARY_COLOR,
+  },
 });
