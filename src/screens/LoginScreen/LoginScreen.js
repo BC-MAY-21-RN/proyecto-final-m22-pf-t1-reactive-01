@@ -10,22 +10,22 @@ import Logo from '../../assets/svg/logo.svg';
 const LoginScreen = ({navigation}) => {
   return (
     <Layout>
-      <View style={styles.header}>
-        <Logo width={150} height={150} />
-      </View>
-      <View style={styles.body}>
-        <Input type="email" />
-        <Input type="password" state={true} />
-        <Text onPress={() => navigation.navigate('Home')}>
-          Frogot your password??
-        </Text>
-      </View>
-      <View style={styles.socialContainer}>
-        <SocialButton type="google" size={50} />
-        <SocialButton type="facebook" size={50} />
-      </View>
-      <View style={styles.buttonContainer}>
-        <Button title={'Login'} />
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Logo width={150} height={150} />
+        </View>
+        <View style={styles.body}>
+          <Input type="email" title="Email" />
+          <Input type="password" title="Password" state={true} />
+          <Text style={styles.forPass}>Frogot your password??</Text>
+        </View>
+        <View style={styles.socialContainer}>
+          <SocialButton type="facebook" size={62} />
+          <SocialButton type="google" size={60} />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button title={'Login'} />
+        </View>
       </View>
     </Layout>
   );

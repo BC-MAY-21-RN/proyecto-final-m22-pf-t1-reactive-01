@@ -6,9 +6,9 @@ import theme from '../../assets/theme/theme';
 
 const SocialButton = ({type, size}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={(styles.container, {width: size, height: size})}>
       {type === 'facebook' ? (
-        <FacebookIcon />
+        <FacebookIcon widht={size} height={size} />
       ) : type === 'google' ? (
         <GoogleIcon widht={size} height={size} />
       ) : null}
@@ -20,11 +20,6 @@ export default SocialButton;
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: 'grey',
-    borderWidth: 1,
-    width: 50,
-    height: 52,
-    borderRadius: 25,
     margin: 5,
   },
 });

@@ -1,12 +1,14 @@
-import {StyleSheet, TextInput, View, Pressable} from 'react-native';
+import {StyleSheet, Text, TextInput, View, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import EmailIcon from '../../assets/svg/email.svg';
 import PasswordIcon from '../../assets/svg/lock.svg';
 import ShowPasswordIcon from '../../assets/svg/unlock.svg';
 
-const Input = ({type, onChangeText, placeholder, state}) => {
+const Input = ({title, type, onChangeText, placeholder, state}) => {
   return (
     <View>
+      <Text>{title}</Text>
+
       {type === 'email' ? (
         <>
           <EmailIcon widht={25} height={20} style={styles.icon} />
@@ -20,9 +22,13 @@ const Input = ({type, onChangeText, placeholder, state}) => {
       ) : type === 'password' ? (
         <>
           {state ? (
-            <PasswordIcon widht={25} height={25} style={styles.icon} />
+            <PasswordIcon widht={25} height={25} style={styles.iconPassword} />
           ) : (
-            <ShowPasswordIcon widht={25} height={25} style={styles.icon} />
+            <ShowPasswordIcon
+              widht={25}
+              height={25}
+              style={styles.iconPassword}
+            />
           )}
           <TextInput
             onChangeText={onChangeText}
@@ -49,7 +55,13 @@ export default Input;
 const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
-    marginTop: 25,
+    marginTop: 43,
+    marginLeft: 7,
+    zIndex: 1,
+  },
+  iconPassword: {
+    position: 'absolute',
+    marginTop: 40,
     zIndex: 1,
   },
   text: {
