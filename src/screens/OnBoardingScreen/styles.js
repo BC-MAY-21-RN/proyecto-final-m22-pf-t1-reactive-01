@@ -8,7 +8,6 @@ export const styles = StyleSheet.create({
     alignContent: 'center',
   },
   buttonContainer: {
-    
-    marginTop: theme.WIDTH_SCREEN /3,
+    marginTop: theme.HEIGHT_SCREEN / 6.5,
   },
 });

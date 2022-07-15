@@ -26,13 +26,5 @@ const styles = StyleSheet.create({
     height: 52,
     borderRadius: 25,
     margin: 5,
-    shadowColor: 'grey',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 1,
-    shadowRadius: 1,
-    elevation: 8,
   },
 });
