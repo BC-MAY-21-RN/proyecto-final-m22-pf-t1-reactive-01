@@ -5,10 +5,14 @@ import Layout from '../../layout/Layout';
 import {styles} from './styles';
 import SocialButton from '../../components/Button/SocialButton';
 import Input from '../../components/Inputs/Input';
+import Logo from '../../assets/svg/logo.svg';
 
 const LoginScreen = ({navigation}) => {
   return (
     <Layout>
+      <View style={styles.header}>
+        <Logo width={150} height={150} />
+      </View>
       <View style={styles.body}>
         <Input type="email" />
         <Input type="password" state={true} />

@@ -1,7 +1,7 @@
 import {View, Text, StatusBar} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
-import Logo from '../../assets/svg/logo.svg';
+import Logo from '../../assets/svg/logo2.svg';
 
 const SplashScreen = ({navigation}) => {
   setTimeout(() => {
@@ -11,7 +11,6 @@ const SplashScreen = ({navigation}) => {
     <View style={styles.container}>
       <StatusBar style={styles.containerStatusBar} />
       <Logo width={180} height={180} />
-      <Text style={styles.logo}>MY PETS</Text>
     </View>
   );
 };
