@@ -17,7 +17,11 @@ const LoginScreen = ({navigation}) => {
         <View style={styles.body}>
           <Input type="email" title="Email" />
           <Input type="password" title="Password" state={true} />
-          <Text style={styles.forPass}>Frogot your password??</Text>
+          <Text
+            style={styles.forPass}
+            onPress={() => navigation.navigate('ResetPassword')}>
+            Frogot your password??
+          </Text>
         </View>
         <View style={styles.socialContainer}>
           <SocialButton type="facebook" size={62} />
