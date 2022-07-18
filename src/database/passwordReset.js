@@ -6,14 +6,18 @@ GoogleSignin.configure({
   webClientId: API_URL,
 });
 export const resetPassword = async (navigation, email) => {
-  alert('Sending password reset');
-  try {
-    await auth()
-      .sendPasswordResetEmail(email)
-      .then(() => {
-        navigation.navigate('Login');
-      });
-  } catch (error) {
-    alert(error.toString());
+  if (email === null && undefined) {
+    alert('Field is empy ');
+  } else {
+    alert('Sending password reset');
+    try {
+      await auth()
+        .sendPasswordResetEmail(email)
+        .then(() => {
+          navigation.navigate('Login');
+        });
+    } catch (error) {
+      alert(error.toString());
+    }
   }
 };
