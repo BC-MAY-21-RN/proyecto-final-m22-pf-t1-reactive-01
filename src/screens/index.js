@@ -3,4 +3,4 @@ export {default as Login} from './LoginScreen/LoginScreen';
 export {default as Onboarding} from './OnBoardingScreen/OnBoardingScreen';
 export {default as Home} from './Home/HomeScreen';
 export {default as ResetPassword} from './ResetPasswordScreen/ResetPasswordScreen'
-//export {default as Profile} from './Profile/ProfileScreen';
+
