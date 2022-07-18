@@ -20,7 +20,7 @@ const LoginScreen = ({navigation}) => {
           <Text
             style={styles.forPass}
             onPress={() => navigation.navigate('ResetPassword')}>
-            Frogot your password??
+            Frogot your password?
           </Text>
         </View>
         <View style={styles.socialContainer}>
