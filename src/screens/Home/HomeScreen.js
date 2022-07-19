@@ -6,13 +6,6 @@ const HomeScreen = ({navigator}) => {
   return (
     <Layout>
       <Text>HomeScreen</Text>
-      <Text>HomeScreen</Text>
-
-      <Text>HomeScreen</Text>
-
-      <Text>HomeScreen</Text>
-
-      <Text>HomeScreen</Text>
     </Layout>
   );
 };
