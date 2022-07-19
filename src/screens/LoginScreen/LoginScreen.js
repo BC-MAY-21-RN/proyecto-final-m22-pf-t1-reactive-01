@@ -3,22 +3,25 @@ import {Text, View, StatusBar, Image, TextInput} from 'react-native';
 import Button from '../../components/Button/CustomButton';
 import Layout from '../../layout/Layout';
 import {styles} from './styles';
-import {useFormik} from 'formik';
+import Formik from 'formik';
 import * as Yup from 'yup';
 import SocialButton from '../../components/Button/SocialButton';
 import Input from '../../components/Inputs/Input';
 import Logo from '../../assets/svg/logo.svg';
-
 const LoginScreen = ({navigation}) => {
-  const formik = useFormik({
+  const [status, setStatus] = useState(true);
+
+  const formik = Formik.useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: false,
-    onSubmit: formValue => {
+    onsubmit: formValue => {
+      setStatus(true);
       console.log('formulario enviado...');
       console.log(formValue);
     },
   });
+
   return (
     <Layout>
       <View style={styles.container}>
