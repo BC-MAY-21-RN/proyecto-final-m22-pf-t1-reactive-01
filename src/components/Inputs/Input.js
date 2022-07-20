@@ -1,27 +1,29 @@
-import {StyleSheet, Text, TextInput, View, Pressable} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
+import React from 'react';
 import EmailIcon from '../../assets/svg/email.svg';
 import PasswordIcon from '../../assets/svg/lock.svg';
-import ShowPasswordIcon from '../../assets/svg/unlock.svg';
-import UserIcon from '../../assets/svg/user.svg'
+import UserIcon from '../../assets/svg/user.svg';
 
-
-const Input = ({title, type, onChangeText, placeholder, state}) => {
+const Input = ({title, type, onChangeText, placeholder, error, value}) => {
   return (
     <View>
-      <Text>{title}</Text>
+      <View style={styles.header}>
+        <Text>{title}</Text>
+        <Text style={styles.error}>{error}</Text>
+      </View>
 
-      {type === 'name' ?(
+      {type === 'name' ? (
         <>
-        <UserIcon  widht={25} height={20} style={styles.icon}/>
-        <TextInput
-        onChangeText={onChangeText}
-        placeholder="Enter your full Name"
-        placeholderTextColor="#818181"  
-        style={styles.text}   
-        />
+          <UserIcon widht={25} height={20} style={styles.icon} />
+          <TextInput
+            onChangeText={onChangeText}
+            placeholder="Enter your full Name"
+            placeholderTextColor="#818181"
+            style={styles.text}
+            value={value}
+          />
         </>
-      ): type === 'email' ? (
+      ) : type === 'email' ? (
         <>
           <EmailIcon widht={25} height={20} style={styles.icon} />
           <TextInput
@@ -29,25 +31,20 @@ const Input = ({title, type, onChangeText, placeholder, state}) => {
             placeholder="Enter your email"
             placeholderTextColor="#818181"
             style={styles.text}
+            value={value}
+            keyboardType="email-address"
           />
         </>
       ) : type === 'password' ? (
         <>
-          {state ? (
-            <PasswordIcon widht={25} height={25} style={styles.iconPassword} />
-          ) : (
-            <ShowPasswordIcon
-              widht={25}
-              height={25}
-              style={styles.iconPassword}
-            />
-          )}
+          <PasswordIcon widht={25} height={25} style={styles.iconPassword} />
           <TextInput
             onChangeText={onChangeText}
             placeholder="Enter your password.. "
             placeholderTextColor="#818181"
             style={styles.text}
-            secureTextEntry={state}
+            secureTextEntry={true}
+            value={value}
           />
         </>
       ) : (
@@ -65,6 +62,14 @@ const Input = ({title, type, onChangeText, placeholder, state}) => {
 export default Input;
 
 const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  error: {
+    color: 'red',
+    textAlign: 'right',
+  },
   icon: {
     position: 'absolute',
     marginTop: 43,
