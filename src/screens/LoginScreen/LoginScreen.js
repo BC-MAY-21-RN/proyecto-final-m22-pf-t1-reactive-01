@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View, StatusBar, Image, TextInput} from 'react-native';
+import {Text, View, StatusBar, Image, TextInput,TouchableOpacity} from 'react-native';
 import Button from '../../components/Button/CustomButton';
 import Layout from '../../layout/Layout';
 import {styles} from './styles';
@@ -8,6 +8,8 @@ import * as Yup from 'yup';
 import SocialButton from '../../components/Button/SocialButton';
 import Input from '../../components/Inputs/Input';
 import Logo from '../../assets/svg/logo.svg';
+import SignInScreen from '../SingInScreen/SignInScreen';
+
 const LoginScreen = ({navigation}) => {
   const [status, setStatus] = useState(true);
 
@@ -28,7 +30,9 @@ const LoginScreen = ({navigation}) => {
         <View style={styles.header}>
           <Logo width={150} height={150} />
         </View>
+
         <View style={styles.body}>
+<<<<<<< HEAD
           <Input
             title="Email*"
             err={formik.errors.email}
@@ -46,14 +50,27 @@ const LoginScreen = ({navigation}) => {
             onChangeText={text => formik.setFieldValue('password', text)}
           />
           <Text style={styles.forPass}>Forgot your password??</Text>
+=======
+          <Input type="email" title="Email" />
+          <Input type="password" title="Password" state={true} />
+          <Text style={styles.forPass}>Frogot your password??</Text>
+>>>>>>> master
         </View>
+
         <View style={styles.socialContainer}>
           <SocialButton type="facebook" size={62} />
           <SocialButton type="google" size={60} />
         </View>
+
         <View style={styles.buttonContainer}>
+<<<<<<< HEAD
           <Button title={'Login'} onPress={formik.handleSubmit} />
+=======
+          <Button title={'Login'} />
+          <TouchableOpacity onPress={() => navigation.navigate('SignInScreen')}>
+>>>>>>> master
           <Text style={styles.signup}>Sign Up with email</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </Layout>
