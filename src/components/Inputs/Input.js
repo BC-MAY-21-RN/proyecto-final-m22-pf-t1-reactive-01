@@ -32,6 +32,7 @@ const Input = ({title, type, onChangeText, placeholder, error, value}) => {
             placeholderTextColor="#818181"
             style={styles.text}
             value={value}
+            keyboardType="email-address"
           />
         </>
       ) : type === 'password' ? (
@@ -63,7 +64,7 @@ export default Input;
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   error: {
     color: 'red',
