@@ -15,8 +15,8 @@ const Routers = () => {
         <Stack.Screen name="SplashScreen" component={Splash} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="SignInScreen" component={SignInScreen}/>
-        <Stack.Screen name= "ResetPassword" component={ResetPassword}/>
+        <Stack.Screen name="SignInScreen" component={SignInScreen} />
+        <Stack.Screen name="ResetPassword" component={ResetPassword} />
       </Stack.Navigator>
     </NavigationContainer>
   );
