@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {Text, View, StatusBar, Image, TextInput,TouchableOpacity} from 'react-native';
+import {
+  Text,
+  View,
+  StatusBar,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import Button from '../../components/Button/CustomButton';
 import Layout from '../../layout/Layout';
 import {styles} from './styles';
@@ -32,7 +39,6 @@ const LoginScreen = ({navigation}) => {
         </View>
 
         <View style={styles.body}>
-<<<<<<< HEAD
           <Input
             title="Email*"
             err={formik.errors.email}
@@ -50,11 +56,6 @@ const LoginScreen = ({navigation}) => {
             onChangeText={text => formik.setFieldValue('password', text)}
           />
           <Text style={styles.forPass}>Forgot your password??</Text>
-=======
-          <Input type="email" title="Email" />
-          <Input type="password" title="Password" state={true} />
-          <Text style={styles.forPass}>Frogot your password??</Text>
->>>>>>> master
         </View>
 
         <View style={styles.socialContainer}>
@@ -63,14 +64,8 @@ const LoginScreen = ({navigation}) => {
         </View>
 
         <View style={styles.buttonContainer}>
-<<<<<<< HEAD
           <Button title={'Login'} onPress={formik.handleSubmit} />
-=======
-          <Button title={'Login'} />
-          <TouchableOpacity onPress={() => navigation.navigate('SignInScreen')}>
->>>>>>> master
           <Text style={styles.signup}>Sign Up with email</Text>
-          </TouchableOpacity>
         </View>
       </View>
     </Layout>
