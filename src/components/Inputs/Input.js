@@ -1,11 +1,10 @@
-import {StyleSheet, Text, TextInput, View, Pressable} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
+import React from 'react';
 import EmailIcon from '../../assets/svg/email.svg';
 import PasswordIcon from '../../assets/svg/lock.svg';
-import ShowPasswordIcon from '../../assets/svg/unlock.svg';
 import UserIcon from '../../assets/svg/user.svg';
 
-const Input = ({title, type, onChangeText, placeholder, state, error}) => {
+const Input = ({title, type, onChangeText, placeholder, error, value}) => {
   return (
     <View>
       <View style={styles.header}>
@@ -21,6 +20,7 @@ const Input = ({title, type, onChangeText, placeholder, state, error}) => {
             placeholder="Enter your full Name"
             placeholderTextColor="#818181"
             style={styles.text}
+            value={value}
           />
         </>
       ) : type === 'email' ? (
@@ -31,25 +31,19 @@ const Input = ({title, type, onChangeText, placeholder, state, error}) => {
             placeholder="Enter your email"
             placeholderTextColor="#818181"
             style={styles.text}
+            value={value}
           />
         </>
       ) : type === 'password' ? (
         <>
-          {state ? (
-            <PasswordIcon widht={25} height={25} style={styles.iconPassword} />
-          ) : (
-            <ShowPasswordIcon
-              widht={25}
-              height={25}
-              style={styles.iconPassword}
-            />
-          )}
+          <PasswordIcon widht={25} height={25} style={styles.iconPassword} />
           <TextInput
             onChangeText={onChangeText}
             placeholder="Enter your password.. "
             placeholderTextColor="#818181"
             style={styles.text}
-            secureTextEntry={state}
+            secureTextEntry={true}
+            value={value}
           />
         </>
       ) : (
@@ -69,6 +63,7 @@ export default Input;
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   error: {
     color: 'red',
