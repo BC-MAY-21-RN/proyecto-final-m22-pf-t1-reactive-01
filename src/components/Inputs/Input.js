@@ -5,10 +5,13 @@ import PasswordIcon from '../../assets/svg/lock.svg';
 import ShowPasswordIcon from '../../assets/svg/unlock.svg';
 import UserIcon from '../../assets/svg/user.svg';
 
-const Input = ({title, type, onChangeText, placeholder, state}) => {
+const Input = ({title, type, onChangeText, placeholder, state, error}) => {
   return (
     <View>
-      <Text>{title}</Text>
+      <View style={styles.header}>
+        <Text>{title}</Text>
+        <Text style={styles.error}>{error}</Text>
+      </View>
 
       {type === 'name' ? (
         <>
@@ -64,6 +67,13 @@ const Input = ({title, type, onChangeText, placeholder, state}) => {
 export default Input;
 
 const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+  },
+  error: {
+    color: 'red',
+    textAlign: 'right',
+  },
   icon: {
     position: 'absolute',
     marginTop: 43,

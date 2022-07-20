@@ -18,21 +18,6 @@ import * as Yup from 'yup';
 import {useFormik} from 'formik';
 
 const LoginScreen = ({navigation}) => {
-  const [status, setStatus] = useState(true);
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    validationSchema: {
-      email: Yup.string().email().required('Email error'),
-      password: Yup.string().required('Incorrect password'),
-    },
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-
   return (
     <Layout>
       <View style={styles.container}>
