@@ -10,26 +10,26 @@ import {
 import Button from '../../components/Button/CustomButton';
 import Layout from '../../layout/Layout';
 import {styles} from './styles';
-import Formik from 'formik';
-import * as Yup from 'yup';
 import SocialButton from '../../components/Button/SocialButton';
 import Input from '../../components/Inputs/Input';
 import Logo from '../../assets/svg/logo.svg';
 import SignInScreen from '../SingInScreen/SignInScreen';
+import * as Yup from 'yup';
+import {useFormik} from 'formik';
 
 const LoginScreen = ({navigation}) => {
   const [status, setStatus] = useState(true);
-
-  const formik = Formik.useFormik({
-    initialValues: initialValues(),
-    validationSchema: Yup.object(validationSchema()),
-    validateOnChange: false,
-    onsubmit: formValue => {
-      setStatus(true);
-      console.log('formulario enviado...');
-      console.log(formValue);
+  const formik = useFormik({
+    initialValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+    },
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
     },
   });
+
 
   return (
     <Layout>
@@ -39,22 +39,6 @@ const LoginScreen = ({navigation}) => {
         </View>
 
         <View style={styles.body}>
-          <Input
-            title="Email*"
-            err={formik.errors.email}
-            textContentType="emailAddress"
-            keyboardType="email-address"
-            value={formik.values.email}
-            onChangeText={text => formik.setFieldValue('email', text)}
-          />
-          <Input
-            title="Password*"
-            err={formik.errors.password}
-            textContentType="password"
-            secureTextEntry={true}
-            value={formik.values.password}
-            onChangeText={text => formik.setFieldValue('password', text)}
-          />
           <Text style={styles.forPass}>Forgot your password??</Text>
         </View>
 
@@ -64,7 +48,7 @@ const LoginScreen = ({navigation}) => {
         </View>
 
         <View style={styles.buttonContainer}>
-          <Button title={'Login'} onPress={formik.handleSubmit} />
+          <Button title={'Login'} />
           <Text style={styles.signup}>Sign Up with email</Text>
         </View>
       </View>

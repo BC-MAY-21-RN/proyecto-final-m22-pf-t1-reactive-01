@@ -3,25 +3,24 @@ import React, {useState} from 'react';
 import EmailIcon from '../../assets/svg/email.svg';
 import PasswordIcon from '../../assets/svg/lock.svg';
 import ShowPasswordIcon from '../../assets/svg/unlock.svg';
-import UserIcon from '../../assets/svg/user.svg'
-
+import UserIcon from '../../assets/svg/user.svg';
 
 const Input = ({title, type, onChangeText, placeholder, state}) => {
   return (
     <View>
       <Text>{title}</Text>
 
-      {type === 'name' ?(
+      {type === 'name' ? (
         <>
-        <UserIcon  widht={25} height={20} style={styles.icon}/>
-        <TextInput
-        onChangeText={onChangeText}
-        placeholder="Enter your full Name"
-        placeholderTextColor="#818181"  
-        style={styles.text}   
-        />
+          <UserIcon widht={25} height={20} style={styles.icon} />
+          <TextInput
+            onChangeText={onChangeText}
+            placeholder="Enter your full Name"
+            placeholderTextColor="#818181"
+            style={styles.text}
+          />
         </>
-      ): type === 'email' ? (
+      ) : type === 'email' ? (
         <>
           <EmailIcon widht={25} height={20} style={styles.icon} />
           <TextInput
