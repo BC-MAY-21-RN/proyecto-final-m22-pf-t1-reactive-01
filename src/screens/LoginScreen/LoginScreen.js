@@ -21,15 +21,17 @@ const LoginScreen = ({navigation}) => {
   const [status, setStatus] = useState(true);
   const formik = useFormik({
     initialValues: {
-      firstName: '',
-      lastName: '',
       email: '',
+      password: '',
+    },
+    validationSchema: {
+      email: Yup.string().email().required('Email error'),
+      password: Yup.string().required('Incorrect password'),
     },
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
     },
   });
-
 
   return (
     <Layout>
@@ -39,7 +41,11 @@ const LoginScreen = ({navigation}) => {
         </View>
 
         <View style={styles.body}>
-          <Text style={styles.forPass}>Forgot your password??</Text>
+          <Text
+            style={styles.forPass}
+            onPress={() => navigation.navigate('ResetPassword')}>
+            Forgot your password??
+          </Text>
         </View>
 
         <View style={styles.socialContainer}>
@@ -56,17 +62,4 @@ const LoginScreen = ({navigation}) => {
   );
 };
 
-function initialValues() {
-  return {
-    email: '',
-    password: '',
-  };
-}
-
-function validationSchema() {
-  return {
-    email: Yup.string().email().required('Email error'),
-    password: Yup.string().required('Incorrect password'),
-  };
-}
 export default LoginScreen;
