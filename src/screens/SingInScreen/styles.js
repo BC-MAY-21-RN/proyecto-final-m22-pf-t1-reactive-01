@@ -7,28 +7,16 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   header: {
-    height: theme.HEIGHT_SCREEN / 5,
+    height: theme.HEIGHT_SCREEN / 6,
     alignItems: 'center',
   },
   body: {
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     flexDirection: 'column',
-    height: 300,
-  },
-  forPass: {
-    textAlign: 'right',
-  },
-  socialContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    height: 400,
+    marginBottom: theme.HEIGHT_SCREEN / 7,
   },
   buttonContainer: {
     marginTop: theme.HEIGHT_SCREEN / 33,
-  },
-  signup: {
-    textAlign: 'center',
-    fontSize: 18,
-    textDecorationLine: 'underline ',
-    color: theme.PRIMARY_COLOR,
   },
 });

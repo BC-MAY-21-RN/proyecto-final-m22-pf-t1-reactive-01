@@ -4,7 +4,7 @@ import Button from '../../components/Button/CustomButton';
 import Layout from '../../layout/Layout';
 import Input from '../../components/Inputs/Input';
 import Header from '../../components/Header/Header';
-import {styles} from '../LoginScreen/styles';
+import {styles} from './styles';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import {useState} from 'react';
@@ -40,22 +40,22 @@ const SignInScreen = ({navigation}) => {
             type="email"
             title="Email"
             error={formik.errors.email}
-            value={formik.errors.email}
+            value={formik.values.email}
             onChangeText={text => formik.setFieldValue('email', text)}
           />
           <Input
             type="password"
             title="Password"
             error={formik.errors.password}
-            value={formik.errors.password}
+            value={formik.values.password}
             onChangeText={text => formik.setFieldValue('password', text)}
           />
 
           <Input
             type="password"
-            title="Password"
+            title="Confirm Paassword"
             error={formik.errors.confirmPassword}
-            values={formik.errors.confirmPassword}
+            values={formik.values.confirmPassword}
             onChangeText={text => formik.setFieldValue('confirmPassword', text)}
           />
         </View>
@@ -68,9 +68,10 @@ const SignInScreen = ({navigation}) => {
 };
 function initialValues() {
   return {
-    fullname: ' ',
-    email: ' ',
-    password: ' ',
+    fullname: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
   };
 }
 
