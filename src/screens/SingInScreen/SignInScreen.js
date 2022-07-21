@@ -8,6 +8,7 @@ import {styles} from './styles';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import {useState} from 'react';
+import { signup } from '../../methods/SignUp';
 
 const SignInScreen = ({navigation}) => {
   const [status, setStatus] = useState(false);
@@ -17,7 +18,14 @@ const SignInScreen = ({navigation}) => {
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: true,
     onSubmit: formValue => {
-      alert('work');
+      alert('save data'); 
+      signup( 
+      formValue.fullname,
+      formValue.email,
+      formValue.confirmPassword,
+      navigation,
+      )
+      
     },
   });
 
