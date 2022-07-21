@@ -9,7 +9,7 @@ import *as Yup from 'yup';
 import { useFormik } from "formik";
 
 const SignInScreen =({navigation}) =>{
-
+    const [status, setStatus] = useState(false);
 
     const formik= useFormik({
         initialValues:initialValues(),
