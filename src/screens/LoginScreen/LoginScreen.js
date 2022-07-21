@@ -8,6 +8,7 @@ import Input from '../../components/Inputs/Input';
 import Logo from '../../assets/svg/logo.svg';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
+import SignInScreen from '../SingInScreen/SignInScreen';
 
 const LoginScreen = ({navigation}) => {
   const formik = useFormik({
@@ -53,7 +54,7 @@ const LoginScreen = ({navigation}) => {
 
         <View style={styles.buttonContainer}>
           <Button title={'Login'} onPress={formik.handleSubmit} />
-          <Text style={styles.signup}>Sign Up with email</Text>
+          <Text style={styles.signup} onPress ={()=>navigation.navigate("SignInScreen")}   >Sign Up with email</Text>
         </View>
       </View>
     </Layout>
