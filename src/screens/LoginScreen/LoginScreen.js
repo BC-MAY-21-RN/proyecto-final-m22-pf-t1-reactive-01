@@ -1,20 +1,13 @@
 import React, {useState} from 'react';
-<<<<<<< HEAD
 import {Text, View} from 'react-native';
-=======
-import {Text, View, TouchableOpacity} from 'react-native';
->>>>>>> 19dbe9ca1790a621a88db23df9da5c3bd084d7a1
 import Button from '../../components/Button/CustomButton';
 import Layout from '../../layout/Layout';
 import {styles} from './styles';
 import SocialButton from '../../components/Button/SocialButton';
 import Input from '../../components/Inputs/Input';
 import Logo from '../../assets/svg/logo.svg';
-<<<<<<< HEAD
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
-=======
->>>>>>> 19dbe9ca1790a621a88db23df9da5c3bd084d7a1
 
 const LoginScreen = ({navigation}) => {
   const formik = useFormik({
@@ -50,7 +43,7 @@ const LoginScreen = ({navigation}) => {
             style={styles.forPass}
             onPress={() => navigation.navigate('ResetPassword')}>
             Forgot your password??
-<          </Text>
+          </Text>
         </View>
 
         <View style={styles.socialContainer}>
