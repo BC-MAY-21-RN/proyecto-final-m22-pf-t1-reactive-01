@@ -6,7 +6,7 @@ GoogleSignin.configure({
   webClientId: API_URL,
 });
 export const resetPassword = async (navigation, email) => {
-  if (email === null && undefined) {
+  if (email === null) {
     alert('Field is empy ');
   } else {
     alert('Sending password reset');
