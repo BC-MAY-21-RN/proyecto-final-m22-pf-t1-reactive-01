@@ -1,11 +1,11 @@
-import {TouchableOpacity, StyleSheet} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import React from 'react';
 import FacebookIcon from '../../assets/svg/facebook.svg';
 import GoogleIcon from '../../assets/svg/google.svg';
 
 const SocialButton = ({type, size}) => {
   return (
-    <TouchableOpacity style={(styles.container, {width: size, height: size})}>
+    <TouchableOpacity style={{margin: 5, width: size, height: size}}>
       {type === 'facebook' ? (
         <FacebookIcon widht={size} height={size} />
       ) : type === 'google' ? (
@@ -16,9 +16,3 @@ const SocialButton = ({type, size}) => {
 };
 
 export default SocialButton;
-
-const styles = StyleSheet.create({
-  container: {
-    margin: 5,
-  },
-});
