@@ -1,7 +1,5 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import Pru from '../../assets/svg/a.svg';
-import Pru2 from '../../assets/svg/email.svg';
 import TypeIcon from './TypeIcon';
 const ButtonMenu = ({title, type, navigation, url}) => {
   return (

@@ -1,4 +1,4 @@
-import {View, Text, StatusBar} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
 import Logo from '../../assets/svg/logo2.svg';

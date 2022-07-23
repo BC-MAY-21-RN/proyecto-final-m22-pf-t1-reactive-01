@@ -2,7 +2,6 @@ import {TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import FacebookIcon from '../../assets/svg/facebook.svg';
 import GoogleIcon from '../../assets/svg/google.svg';
-import theme from '../../assets/theme/theme';
 
 const SocialButton = ({type, size}) => {
   return (

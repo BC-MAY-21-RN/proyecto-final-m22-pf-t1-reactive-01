@@ -1,8 +1,7 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import React from 'react';
 import Layout from '../../../layout/Layout';
-import ListScroll from '../../../components/ListScroll/ListScroll';
-import Input from '../../../components/Inputs/Input';
+
 import ButtonMenu from '../../../components/Button/ButtonMenu';
 
 const HomeScreen = ({navigation}) => {

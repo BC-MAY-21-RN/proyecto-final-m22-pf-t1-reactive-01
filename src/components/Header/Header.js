@@ -1,4 +1,4 @@
-import {TouchableOpacity, Text, View} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
 import Icon from '../../assets/svg/chevron.svg';

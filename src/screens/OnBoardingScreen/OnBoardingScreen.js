@@ -1,4 +1,4 @@
-import {View, Text, StatusBar} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import React from 'react';
 import Button from '../../components/Button/CustomButton';
 import ImgBackground from '../../assets/svg/dogwalk.svg';
@@ -7,6 +7,7 @@ import {styles} from './styles';
 const OnBoardingScreen = ({navigation}) => {
   return (
     <Layout>
+      <StatusBar />
       <View style={styles.img}>
         <ImgBackground width={300} height={300} />
       </View>
