@@ -1,7 +1,6 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import Pru from '../../assets/svg/a.svg';
-import Pru2 from '../../assets/svg/email.svg';
 const TypeIcon = ({type}) => {
   return (
     <View>

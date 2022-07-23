@@ -7,25 +7,21 @@ import Header from '../../components/Header/Header';
 import {styles} from './styles';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
-import {useState} from 'react';
-import { signup } from '../../methods/SignUp';
+import {signup} from '../../methods/SignUp';
 
 const SignInScreen = ({navigation}) => {
-  const [status, setStatus] = useState(false);
-
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: true,
     onSubmit: formValue => {
-      alert('save data'); 
-      signup( 
-      formValue.fullname,
-      formValue.email,
-      formValue.confirmPassword,
-      navigation,
-      )
-      
+      alert('save data');
+      signup(
+        formValue.fullname,
+        formValue.email,
+        formValue.confirmPassword,
+        navigation,
+      );
     },
   });
 

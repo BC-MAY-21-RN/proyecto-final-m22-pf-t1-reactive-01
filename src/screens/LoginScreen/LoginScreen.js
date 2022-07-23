@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Text, View} from 'react-native';
 import Button from '../../components/Button/CustomButton';
 import Layout from '../../layout/Layout';
@@ -8,7 +8,6 @@ import Input from '../../components/Inputs/Input';
 import Logo from '../../assets/svg/logo.svg';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
-import SignInScreen from '../SingInScreen/SignInScreen';
 
 const LoginScreen = ({navigation}) => {
   const formik = useFormik({
@@ -54,7 +53,11 @@ const LoginScreen = ({navigation}) => {
 
         <View style={styles.buttonContainer}>
           <Button title={'Login'} onPress={formik.handleSubmit} />
-          <Text style={styles.signup} onPress ={()=>navigation.navigate("SignInScreen")}   >Sign Up with email</Text>
+          <Text
+            style={styles.signup}
+            onPress={() => navigation.navigate('SignInScreen')}>
+            Sign Up with email
+          </Text>
         </View>
       </View>
     </Layout>
