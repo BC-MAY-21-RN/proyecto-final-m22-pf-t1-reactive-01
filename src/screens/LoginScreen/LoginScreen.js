@@ -8,6 +8,7 @@ import Input from '../../components/Inputs/Input';
 import Logo from '../../assets/svg/logo.svg';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
+import {login} from '../../methods/Login';
 
 const LoginScreen = ({navigation}) => {
   const formik = useFormik({
@@ -15,7 +16,7 @@ const LoginScreen = ({navigation}) => {
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: true,
     onSubmit: formvalue => {
-      alert('WORK');
+      login(formvalue.email, formvalue.password, navigation);
     },
   });
   return (

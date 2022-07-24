@@ -12,7 +12,7 @@ export const login = (email, password, navigation) => {
           .then(querySnapshot => {
             querySnapshot.forEach(doc => {
               if (doc.data().email === email) {
-                doc.data().usertype === 'client'
+                doc.data().type === 'client'
                   ? navigation.navigate('HomeClient')
                   : navigation.navigate('Home');
               }
