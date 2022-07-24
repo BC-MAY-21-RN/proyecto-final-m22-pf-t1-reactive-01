@@ -13,8 +13,8 @@ export const login = (email, password, navigation) => {
             querySnapshot.forEach(doc => {
               if (doc.data().email === email) {
                 doc.data().usertype === 'client'
-                  ? navigation.navigate('ClientHome')
-                  : navigation.navigate('WlakerHome');
+                  ? navigation.navigate('HomeClient')
+                  : navigation.navigate('Home');
               }
             });
           });
