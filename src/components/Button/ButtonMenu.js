@@ -28,16 +28,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f6f7',
     padding: 10,
     margin: 10,
-
     borderRadius: 10,
-    shadowColor: '#c1c1c1',
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
-
     elevation: 4,
   },
   icono: {},
