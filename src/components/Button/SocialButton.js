@@ -4,7 +4,7 @@ import FacebookIcon from '../../assets/svg/facebook.svg';
 import GoogleIcon from '../../assets/svg/google.svg';
 import theme from '../../assets/theme/theme';
 
-const SocialButton = ({type, size}) => {
+const SocialButton = ({type, size, onPress}) => {
   const styles = StyleSheet.create({
     button: {
       margin: 5,
@@ -23,7 +23,7 @@ const SocialButton = ({type, size}) => {
     },
   });
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
       {type === 'facebook' ? (
         <FacebookIcon widht={size} height={size} />
       ) : type === 'google' ? (

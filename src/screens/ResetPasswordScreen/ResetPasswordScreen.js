@@ -4,7 +4,7 @@ import {styles} from './styles';
 import Layout from '../../layout/Layout';
 import Input from '../../components/Inputs/Input';
 import Button from '../../components/Button/CustomButton';
-import {resetPassword} from '../../database/passwordReset';
+import {resetPassword} from '../../methods/PasswordReset';
 import Header from '../../components/Header/Header';
 
 const ResetPasswordScreen = ({navigation}) => {
