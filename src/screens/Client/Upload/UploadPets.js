@@ -1,7 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Layout from '../../../layout/Layout';
-import Upload from '../../../assets/svg/upload.svg';
 import CustomButton from '../../../components/Button/CustomButton';
 import UploadButton from '../../../components/Button/UploadButton';
 const UploadPets = () => {
