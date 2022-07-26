@@ -11,7 +11,7 @@ GoogleSignin.configure({
   webClientId: API_URL,
 });
 
-export const signInWithGoogleAsync = async ({navigation}) => {
+export const signInWithGoogleAsync = async navigation => {
   try {
     const {idToken} = await GoogleSignin.signIn();
     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
@@ -25,7 +25,7 @@ export const signInWithGoogleAsync = async ({navigation}) => {
       const current = auth().currentUser;
       addUserInfo(userData.fullName, userData.email, current.uid);
     } else {
-      navigation.navigate('HomeClient')
+      navigation.navigate('HomeClient');
     }
   } catch (error) {
     if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -39,6 +39,9 @@ export const signInWithGoogleAsync = async ({navigation}) => {
     }
   }
 };
+export const changeView = navigation => {
+  navigation.navigate('HomeClient');
+};
 export const addUserInfo = (firstname, email, uid, navigation) => {
   firestore()
     .collection('users')
@@ -49,7 +52,7 @@ export const addUserInfo = (firstname, email, uid, navigation) => {
     })
     .then(() => {
       Alert.alert('Usuario agregado! => Enviando  A Home');
-      navigation.navigate('HomeClient')
+      navigation.navigate('HomeClient');
     })
     .catch(error => console.log(error));
 };
