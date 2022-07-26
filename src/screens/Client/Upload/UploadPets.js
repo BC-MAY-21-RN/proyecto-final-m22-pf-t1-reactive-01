@@ -3,12 +3,13 @@ import React from 'react';
 import Layout from '../../../layout/Layout';
 import Upload from '../../../assets/svg/upload.svg';
 import CustomButton from '../../../components/Button/CustomButton';
+import UploadButton from '../../../components/Button/UploadButton';
 const UploadPets = () => {
   return (
     <Layout>
       <View style={styles.container}>
         <View style={styles.containerIcon}>
-          <Upload widht={200} height={200} />
+          <UploadButton />
           <Text style={styles.title}>Take Picture</Text>
         </View>
         <View style={styles.containerButton}>
@@ -33,9 +34,9 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    alignContent: 'center',
     fontSize: 20,
     fontWeight: 'bold',
+    paddingRight: 25,
   },
   containerButton: {
     flex: 1,
