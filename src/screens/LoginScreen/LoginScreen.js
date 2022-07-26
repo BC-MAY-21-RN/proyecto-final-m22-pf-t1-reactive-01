@@ -9,6 +9,7 @@ import Logo from '../../assets/svg/logo.svg';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import {login} from '../../methods/Login';
+import {signInWithGoogleAsync} from '../../methods/SignInWithGoogle';
 
 const LoginScreen = ({navigation}) => {
   const formik = useFormik({
@@ -49,7 +50,11 @@ const LoginScreen = ({navigation}) => {
 
         <View style={styles.socialContainer}>
           <SocialButton type="facebook" size={62} />
-          <SocialButton type="google" size={60} />
+          <SocialButton
+            type="google"
+            size={60}
+            onPress={() => signInWithGoogleAsync(navigation)}
+          />
         </View>
 
         <View style={styles.buttonContainer}>
