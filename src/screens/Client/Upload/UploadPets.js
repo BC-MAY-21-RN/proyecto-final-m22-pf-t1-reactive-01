@@ -4,7 +4,7 @@ import Layout from '../../../layout/Layout';
 const UploadPets = () => {
   return (
     <Layout>
-      <View>
+      <View style={styles.container}>
         <Text>UploadPets</Text>
       </View>
     </Layout>
@@ -13,4 +13,11 @@ const UploadPets = () => {
 
 export default UploadPets;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'yellow',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
