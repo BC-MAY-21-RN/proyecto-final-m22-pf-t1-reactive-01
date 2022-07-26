@@ -39,9 +39,6 @@ export const signInWithGoogleAsync = async navigation => {
     }
   }
 };
-export const changeView = navigation => {
-  navigation.navigate('HomeClient');
-};
 export const addUserInfo = (firstname, email, uid, navigation) => {
   firestore()
     .collection('users')
