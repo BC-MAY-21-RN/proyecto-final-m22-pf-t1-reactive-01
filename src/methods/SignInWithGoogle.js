@@ -11,7 +11,7 @@ GoogleSignin.configure({
   webClientId: API_URL,
 });
 
-export const signInWithGoogleAsync = async navigation => {
+export const googleSignIn = async navigation => {
   try {
     const {idToken} = await GoogleSignin.signIn();
     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
