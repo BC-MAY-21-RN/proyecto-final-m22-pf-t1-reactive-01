@@ -9,7 +9,7 @@ const ClientMenu = () => {
       <ButtonMenu title="My Pets" type="b" />
       <ButtonMenu title="Settings" type="c" />
       <ButtonMenu title="Request Walker" type="d" />
-      <ButtonMenu title="perfil" type="e" />
+      <ButtonMenu title="Leave" type="e" />
       <ButtonMenu title="About" type="e" />
     </View>
   );

@@ -2,9 +2,9 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import TypeIcon from './TypeIcon';
 import theme from '../../assets/theme/theme';
-const ButtonMenu = ({title, type}) => {
+const ButtonMenu = ({title, type, onPress}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={styles.icono}>
         <TypeIcon type={type} />
       </View>
