@@ -2,19 +2,14 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import TypeIcon from './TypeIcon';
 import theme from '../../assets/theme/theme';
-const ButtonMenu = ({title, type, navigation, url}) => {
+const ButtonMenu = ({title, type}) => {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => navigation.navigate(url)}>
+    <TouchableOpacity style={styles.container}>
       <View style={styles.icono}>
         <TypeIcon type={type} />
       </View>
       <View style={styles.text}>
         <Text style={styles.title}>{title}</Text>
-      </View>
-      <View style={styles.linecontainer}>
-        <Text style={styles.line}>─────</Text>
       </View>
     </TouchableOpacity>
   );
@@ -38,22 +33,13 @@ const styles = StyleSheet.create({
     shadowRadius: 2.62,
     elevation: 4,
   },
-  icono: {},
+
   text: {
     alignItems: 'center',
+    marginTop: 20,
   },
   title: {
-    alignItems: 'center',
-    fontSize: 18,
-  },
-  linecontainer: {
-    alignItems: 'center',
-    color: 'red',
-    fontSize: 25,
-  },
-  line: {
-    alignItems: 'center',
-    color: 'red',
-    fontSize: 25,
+    textAling: 'center',
+    fontSize: theme.FONT_SIZE_XLARGE,
   },
 });

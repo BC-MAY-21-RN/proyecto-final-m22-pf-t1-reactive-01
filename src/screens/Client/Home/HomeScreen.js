@@ -4,11 +4,11 @@ import Layout from '../../../layout/Layout';
 import ClientMenu from '../../../components/Menues/ClientMenu';
 import {styles} from './styles';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = () => {
   return (
     <Layout>
       <View style={styles.container}>
-        <ClientMenu navigation={navigation} />
+        <ClientMenu />
       </View>
     </Layout>
   );
