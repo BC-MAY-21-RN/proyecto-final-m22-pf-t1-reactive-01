@@ -7,7 +7,9 @@ import {styles} from './styles';
 const HomeScreen = ({navigation}) => {
   return (
     <Layout>
-      <ClientMenu navigation={navigation} />
+      <View style={styles.container}>
+        <ClientMenu navigation={navigation} />
+      </View>
     </Layout>
   );
 };

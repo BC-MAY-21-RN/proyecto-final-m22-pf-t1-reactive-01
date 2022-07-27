@@ -17,11 +17,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-<<<<<<< HEAD
         initialRouteName="HomeClient"
-=======
-        initialRouteName="SplashScreen"
->>>>>>> master
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="SplashScreen" component={Splash} />

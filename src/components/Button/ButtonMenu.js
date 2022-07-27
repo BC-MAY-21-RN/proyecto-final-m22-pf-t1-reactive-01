@@ -1,6 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import TypeIcon from './TypeIcon';
+import theme from '../../assets/theme/theme';
 const ButtonMenu = ({title, type, navigation, url}) => {
   return (
     <TouchableOpacity
@@ -23,11 +24,10 @@ export default ButtonMenu;
 
 const styles = StyleSheet.create({
   container: {
-    width: '40%',
-    height: 'auto',
+    width: theme.WIDTH_SCREEN / 2.7,
+    height: theme.HEIGHT_SCREEN / 5,
     backgroundColor: '#f5f6f7',
-    padding: 10,
-    margin: 10,
+    margin: 15,
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: {
