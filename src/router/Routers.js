@@ -10,13 +10,14 @@ import {
   HomeClient,
   SignInScreen,
 } from '../screens/index';
+import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 const Stack = createNativeStackNavigator();
 
 const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Login"
+        initialRouteName="PetInfo"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -25,6 +26,7 @@ const Routers = () => {
         <Stack.Screen name="SignInScreen" component={SignInScreen} />
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="HomeClient" component={HomeClient} />
+        <Stack.Screen name="PetInfo" component={PetInfo}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
