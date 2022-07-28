@@ -24,7 +24,7 @@ const LoginScreen = ({navigation}) => {
     <Layout>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Logo width={150} height={150} />
+          <Logo width={150} height={150} borderRadius={25} />
         </View>
         <View style={styles.body}>
           <Input
