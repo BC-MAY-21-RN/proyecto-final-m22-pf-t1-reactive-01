@@ -7,12 +7,12 @@ import UploadButton from '../../../components/Button/UploadButton';
 import UploadPhoto from '../../../methods/UploadPhoto';
 
 const UploadPets = () => {
-  const {selectImage} = UploadPhoto();
+  const {selectImageGalery} = UploadPhoto();
   return (
     <Layout>
       <View style={styles.container}>
         <View style={styles.containerIcon}>
-          <UploadButton onPress={selectImage} />
+          <UploadButton onPress={selectImageGalery} />
           <Text style={styles.title}>Take Picture</Text>
         </View>
         <View style={styles.containerButton}>
