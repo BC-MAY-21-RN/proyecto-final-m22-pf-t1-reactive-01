@@ -2,15 +2,15 @@ import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import storage from '@react-native-firebase/storage';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
+import {Alert} from 'react-native';
 const UploadPhoto = () => {
   const uid = auth().currentUser.uid;
 
-  const addImageFirebase = async (urlImage, imagen) => {
+  const addImageFirebase = async imagen => {
     await firestore()
       .collection('Photos')
       .add({
-        urlImage: urlImage,
-        nameImage: imagen,
+        imageUrl: imagen,
         uid: uid,
       })
       .catch();
@@ -24,15 +24,15 @@ const UploadPhoto = () => {
 
     launchImageLibrary(options, response => {
       if (response.errorCode) {
-        console.log(response.errorMessage);
+        Alert.alert(response.errorMessage);
       } else if (response.didCancel) {
-        console.log('the user canceled');
+        Alert.alert('the user canceled');
       } else {
         const path = response.assets[0].uri;
         let file = path.split('/');
-        let nomFile = file.pop();
+        let nameFile = file.pop();
         const task = storage()
-          .ref('Photos/' + uid + '/' + nomFile)
+          .ref('Photos/' + uid + '/' + nameFile)
           .putFile(path);
 
         task.on('state_changed', taskSnapshot => {
@@ -42,8 +42,8 @@ const UploadPhoto = () => {
         });
 
         task.then(() => {
-          addImageFirebase(path, nomFile);
-          console.log('Image uploaded to the bucket!');
+          addImageFirebase(nameFile);
+          Alert.alert('Image uploaded to the bucket!');
         });
       }
     });
@@ -58,9 +58,9 @@ const UploadPhoto = () => {
 
     launchCamera(options, response => {
       if (response.errorCode) {
-        console.log(response.errorMessage);
+        Alert.alert(response.errorMessage);
       } else if (response.didCancel) {
-        console.log('the user canceled');
+        Alert.alert('the user canceled');
       } else {
         const path = response.assets[0].uri;
       }
