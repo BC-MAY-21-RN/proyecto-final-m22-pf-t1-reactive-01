@@ -20,7 +20,7 @@ export default ButtonMenu;
 const styles = StyleSheet.create({
   container: {
     width: theme.WIDTH_SCREEN / 2.7,
-    height: theme.HEIGHT_SCREEN / 5,
+    height: theme.HEIGHT_SCREEN / 4.7,
     backgroundColor: '#f5f6f7',
     margin: 15,
     borderRadius: 10,
@@ -30,16 +30,18 @@ const styles = StyleSheet.create({
       height: 2,
     },
     shadowOpacity: 0.23,
-    shadowRadius: 2.62,
     elevation: 4,
   },
-
+  icono: {
+    marginTop: 15,
+  },
   text: {
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   title: {
-    textAling: 'center',
+    textAlign: 'center',
     fontSize: theme.FONT_SIZE_XLARGE,
+    maxWidth: 100,
   },
 });
