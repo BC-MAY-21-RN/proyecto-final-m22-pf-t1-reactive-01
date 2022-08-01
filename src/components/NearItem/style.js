@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import theme from '../../assets/theme/theme';
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#EFEFEF',
+    backgroundColor: '#e2e2e2',
     height: theme.HEIGHT_SCREEN / 10,
     borderRadius: 10,
     margin: 10,
@@ -24,4 +24,9 @@ export const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   info: {marginLeft: theme.WIDTH_SCREEN / 3},
+  text: {
+    fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: theme.FONT_WEIGHT_BOLD,
+    maxWidth: 100,
+  },
 });

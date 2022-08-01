@@ -9,12 +9,11 @@ const NearItem = ({name, hour, distance}) => {
         style={styles.image}
       />
       <View>
-        <Text>Frederic</Text>
-        <Text>NearItem</Text>
+        <Text style={styles.text}>{name}</Text>
       </View>
       <View style={styles.info}>
-        <Text>3:20</Text>
-        <Text>1.2 Km</Text>
+        <Text style={styles.text}>{hour}</Text>
+        <Text style={styles.text}>{distance}</Text>
       </View>
     </View>
   );

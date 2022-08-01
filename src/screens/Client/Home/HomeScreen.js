@@ -12,9 +12,10 @@ const HomeScreen = () => {
         <ClientMenu />
         <View style={styles.nearContainer}>
           <ScrollView>
-            <NearItem />
-            <NearItem />
-            <NearItem />
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM"/>
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM"/>
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM"/>
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM"/>
           </ScrollView>
         </View>
       </View>
