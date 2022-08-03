@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     marginHorizontal: 10,
   },
-  info: {marginLeft: theme.WIDTH_SCREEN / 3},
+  info: {marginLeft: theme.WIDTH_SCREEN / 4},
   text: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: theme.FONT_WEIGHT_BOLD,
