@@ -20,7 +20,7 @@ const Drawer = createDrawerNavigator();
 
 const Menus = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator screenOptions={{headerTitle: ''}}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
     </Drawer.Navigator>
   );

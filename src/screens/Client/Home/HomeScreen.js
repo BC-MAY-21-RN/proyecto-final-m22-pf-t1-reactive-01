@@ -10,8 +10,8 @@ const HomeScreen = () => {
     <Layout>
       <View style={styles.container}>
         <View style={styles.containerButtons}>
-          <ButtonMenu title="My Pets" type="b" />
-          <ButtonMenu title="Request Walker" type="d" />
+          <ButtonMenu title="My Pets" type="mypets" />
+          <ButtonMenu title="Request Walker" type="find" />
         </View>
         <View style={styles.nearContainer}>
           <ScrollView>
