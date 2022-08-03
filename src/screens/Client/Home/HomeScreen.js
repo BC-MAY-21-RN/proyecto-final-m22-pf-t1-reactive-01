@@ -1,44 +1,25 @@
-import {View, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import Layout from '../../../layout/Layout';
-
 import ButtonMenu from '../../../components/Button/ButtonMenu';
-
-const HomeScreen = ({navigation}) => {
+import {styles} from './styles';
+import NearItem from '../../../components/NearItem/NearItem';
+import {ScrollView} from 'react-native-gesture-handler';
+const HomeScreen = () => {
   return (
     <Layout>
       <View style={styles.container}>
-        <View style={styles.botones}>
-          <ButtonMenu
-            title="perfil"
-            type="a"
-            navigation={navigation}
-            url="HomeClient"
-          />
-          <ButtonMenu
-            title="perfil"
-            type="b"
-            navigation={navigation}
-            url="HomeClient"
-          />
-          <ButtonMenu
-            title="perfil"
-            type="c"
-            navigation={navigation}
-            url="HomeClient"
-          />
-          <ButtonMenu
-            title="perfil"
-            type="d"
-            navigation={navigation}
-            url="HomeClient"
-          />
-          <ButtonMenu
-            title="perfil"
-            type="e"
-            navigation={navigation}
-            url="HomeClient"
-          />
+        <View style={styles.containerButtons}>
+          <ButtonMenu title="My Pets" type="mypets" />
+          <ButtonMenu title="Request Walker" type="find" />
+        </View>
+        <View style={styles.nearContainer}>
+          <ScrollView>
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
+            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
+          </ScrollView>
         </View>
       </View>
     </Layout>
@@ -46,21 +27,3 @@ const HomeScreen = ({navigation}) => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 10,
-  },
-  texto: {
-    backgroundColor: '#b3b0ff',
-    height: 400,
-  },
-  botones: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    backgroundColor: '#dde4f0',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

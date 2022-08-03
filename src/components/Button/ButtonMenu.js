@@ -1,19 +1,15 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import TypeIcon from './TypeIcon';
-const ButtonMenu = ({title, type, navigation, url}) => {
+import theme from '../../assets/theme/theme';
+const ButtonMenu = ({title, type, onPress}) => {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => navigation.navigate(url)}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={styles.icono}>
         <TypeIcon type={type} />
       </View>
       <View style={styles.text}>
         <Text style={styles.title}>{title}</Text>
-      </View>
-      <View style={styles.linecontainer}>
-        <Text style={styles.line}>─────</Text>
       </View>
     </TouchableOpacity>
   );
@@ -23,39 +19,29 @@ export default ButtonMenu;
 
 const styles = StyleSheet.create({
   container: {
-    width: '40%',
-    height: 'auto',
+    width: theme.WIDTH_SCREEN / 2.7,
+    height: theme.HEIGHT_SCREEN / 4.7,
     backgroundColor: '#f5f6f7',
-    padding: 10,
-    margin: 10,
-
+    margin: 15,
     borderRadius: 10,
-    shadowColor: '#c1c1c1',
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,
     },
     shadowOpacity: 0.23,
-    shadowRadius: 2.62,
-
     elevation: 4,
   },
-  icono: {},
+  icono: {
+    marginTop: 15,
+  },
   text: {
     alignItems: 'center',
+    marginTop: 10,
   },
   title: {
-    alignItems: 'center',
-    fontSize: 18,
-  },
-  linecontainer: {
-    alignItems: 'center',
-    color: 'red',
-    fontSize: 25,
-  },
-  line: {
-    alignItems: 'center',
-    color: 'red',
-    fontSize: 25,
+    textAlign: 'center',
+    fontSize: theme.FONT_SIZE_XLARGE,
+    maxWidth: 100,
   },
 });
