@@ -40,12 +40,8 @@ const Routers = () => {
         <Stack.Screen name="SignInScreen" component={SignInScreen} />
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="UploadPets" component={UploadPets} />
-<<<<<<< HEAD
-        <Stack.Screen name="PetInfo" component={PetInfo}/>
-        <Stack.Screen name="ChoiseUser" component ={ChoiseUser}/>
-=======
         <Stack.Screen name="PetInfo" component={PetInfo} />
->>>>>>> master
+        <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
       </Stack.Navigator>
     </NavigationContainer>
   );
