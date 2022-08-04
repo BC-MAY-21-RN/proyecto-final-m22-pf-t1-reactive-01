@@ -1,16 +1,20 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import Pru from '../../assets/svg/a.svg';
+import Mypets from '../../assets/svg/MenuIcons/mypets.svg';
+import Find from '../../assets/svg/MenuIcons/petlocation.svg';
+import FindWalker from '../../assets/svg/MenuIcons/findpet.svg';
+
 const TypeIcon = ({type}) => {
   return (
     <View>
-      {type === 'a' ? (
+      {type === 'mypets' ? (
         <>
-          <Pru widht={100} height={100} />
+          <Mypets widht={100} height={100} />
         </>
-      ) : type === 'b' ? (
+      ) : type === 'find' ? (
         <>
-          <Pru widht={100} height={100} />
+          <FindWalker widht={100} height={100} />
         </>
       ) : type === 'c' ? (
         <>
