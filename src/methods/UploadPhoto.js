@@ -5,12 +5,12 @@ import firestore from '@react-native-firebase/firestore';
 import {Alert} from 'react-native';
 const UploadPhoto = () => {
   const uid = auth().currentUser.uid;
-
-  const addImageFirebase = async imagen => {
+  const addImageFirebase = async (imagen, urlImage) => {
     await firestore()
       .collection('Photos')
       .add({
-        imageUrl: imagen,
+        url: urlImage,
+        name: imagen,
         uid: uid,
       })
       .catch();
@@ -22,7 +22,7 @@ const UploadPhoto = () => {
       storageOptions: {skipBackup: true, path: 'images'},
     };
 
-    launchImageLibrary(options, response => {
+    launchImageLibrary(options, async response => {
       if (response.errorCode) {
         Alert.alert(response.errorMessage);
       } else if (response.didCancel) {
@@ -31,24 +31,15 @@ const UploadPhoto = () => {
         const path = response.assets[0].uri;
         let file = path.split('/');
         let nameFile = file.pop();
-        const task = storage()
-          .ref('Photos/' + uid + '/' + nameFile)
-          .putFile(path);
-
-        task.on('state_changed', taskSnapshot => {
-          console.log(
-            `${taskSnapshot.bytesTransferred} transferred out of ${taskSnapshot.totalBytes}`,
-          );
-        });
-
-        task.then(() => {
-          addImageFirebase(nameFile);
+        const task = storage().ref('Photos/' + uid + '/' + nameFile);
+        await task.putFile(path);
+        await task.getDownloadURL().then(urlFirebase => {
+          addImageFirebase(nameFile, urlFirebase);
           Alert.alert('Image uploaded to the bucket!');
         });
       }
     });
   };
-
   const takePicture = () => {
     const options = {
       title: 'take a picture',
