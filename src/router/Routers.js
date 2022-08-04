@@ -9,6 +9,7 @@ import {
   ResetPassword,
   HomeClient,
   SignInScreen,
+  PetInfoScreen,
 } from '../screens/index';
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +17,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Login"
+        initialRouteName="PetInfoScreen"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -25,6 +26,7 @@ const Routers = () => {
         <Stack.Screen name="SignInScreen" component={SignInScreen} />
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="HomeClient" component={HomeClient} />
+        <Stack.Screen name="PetInfoScreen" component={PetInfoScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
