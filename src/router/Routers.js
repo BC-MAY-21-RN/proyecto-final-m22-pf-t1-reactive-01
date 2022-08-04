@@ -15,6 +15,8 @@ import {
 } from '../screens/index';
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
+import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
+
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -39,6 +41,7 @@ const Routers = () => {
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="UploadPets" component={UploadPets} />
         <Stack.Screen name="PetInfo" component={PetInfo} />
+        <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
       </Stack.Navigator>
     </NavigationContainer>
   );
