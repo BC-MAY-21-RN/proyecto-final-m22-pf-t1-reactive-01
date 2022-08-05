@@ -22,7 +22,9 @@ const Drawer = createDrawerNavigator();
 
 const Menus = () => {
   return (
-    <Drawer.Navigator screenOptions={{headerTitle: ''}}>
+    <Drawer.Navigator
+      screenOptions={{headerTitle: ''}}
+      drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
     </Drawer.Navigator>
   );
@@ -31,7 +33,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="Menus"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Menus" component={Menus} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -42,6 +44,7 @@ const Routers = () => {
         <Stack.Screen name="UploadPets" component={UploadPets} />
         <Stack.Screen name="PetInfo" component={PetInfo} />
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
+        <Stack.Screen name="Drawer" component={CustomDrawer} />
       </Stack.Navigator>
     </NavigationContainer>
   );
