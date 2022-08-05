@@ -1,14 +1,18 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Layout from '../../../layout/Layout';
 import CustomButton from '../../../components/Button/CustomButton';
 import UploadButton from '../../../components/Button/UploadButton';
+
+import UploadPhoto from '../../../methods/UploadPhoto';
+
 const UploadPets = () => {
+  const {selectImageGalery} = UploadPhoto();
   return (
     <Layout>
       <View style={styles.container}>
         <View style={styles.containerIcon}>
-          <UploadButton />
+          <UploadButton onPress={selectImageGalery} />
           <Text style={styles.title}>Take Picture</Text>
         </View>
         <View style={styles.containerButton}>
