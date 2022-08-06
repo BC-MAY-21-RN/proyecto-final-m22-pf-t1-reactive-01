@@ -36,7 +36,7 @@ const PetInfo = () => {
         <Text style={styles.TextDetail}>Color: whithe and brown</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <CustomButton title={"Finish"}/>
+        <CustomButton title={'Finish'} />
       </View>
     </Layout>
   );
