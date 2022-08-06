@@ -23,7 +23,10 @@ const Drawer = createDrawerNavigator();
 const Menus = () => {
   return (
     <Drawer.Navigator
-      screenOptions={{headerTitle: ''}}
+      screenOptions={{
+        headerTitle: '',
+        drawerStyle: {backgroundColor: 'hsla(0,0%,0%,0.5)'},
+      }}
       drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
     </Drawer.Navigator>
