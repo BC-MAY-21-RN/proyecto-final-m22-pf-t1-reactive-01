@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable no-shadow */
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {StyleSheet, TextInput, View} from 'react-native';
 import React, {useState} from 'react';
 import SelectDropdown from 'react-native-select-dropdown';
 import theme from '../../assets/theme/theme';
@@ -18,6 +18,8 @@ const Input = ({type, onChangeText, placeholder}) => {
     'Pug',
     'Gran Danes',
     'Doberman',
+    'Mongrel',
+    'Undefined',
   ];
   const [selectedBreed, setSelectedBreed] = useState('');
 
@@ -139,51 +141,44 @@ const styles = StyleSheet.create({
     backgroundColor: '#ededed',
     fontFamily: 'OpenSans-Medium',
     width: '150%',
-    borderRadius: 10,
   },
   lastname: {
     paddingLeft: 20,
     backgroundColor: '#ededed',
     fontFamily: 'OpenSans-Medium',
     marginHorizontal: 100,
-    borderRadius: 10,
     width: '60%',
   },
   dropdownPet: {
     width: 170,
     paddingLeft: 60,
-    borderRadius: 10,
   },
   dropdownBreed: {
     width: 150,
     paddingLeft: 40,
     marginHorizontal: 70,
-    borderRadius: 10,
   },
   age: {
     paddingLeft: 10,
     width: 150,
     backgroundColor: '#ededed',
-    borderRadius: 10,
   },
   gender: {
     width: 150,
     marginHorizontal: 70,
     paddingLeft: 10,
     backgroundColor: '#ededed',
-    borderRadius: 10,
     position: 'static',
   },
   color: {
     backgroundColor: '#ededed',
-    borderRadius: 10,
     width: '70%',
   },
   description: {
     backgroundColor: '#ededed',
-    borderRadius: 10,
     width: '70%',
     paddingTop: 80,
     position: 'absolute',
+    textAlignVertical: 'center',
   },
 });
