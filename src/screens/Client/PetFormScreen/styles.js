@@ -2,22 +2,9 @@ import {StyleSheet} from 'react-native';
 import theme from '../../../assets/theme/theme';
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'space-around',
-  },
-  header: {
-    height: theme.HEIGHT_SCREEN / 6,
-    alignItems: 'center',
-  },
-  body: {
-    justifyContent: 'space-between',
+  row: {
     flexDirection: 'row',
-    height: 400,
-    marginBottom: theme.HEIGHT_SCREEN / 7,
-  },
-  buttonContainer: {
-    marginTop: theme.HEIGHT_SCREEN / 33,
+    justifyContent: 'space-between',
   },
   text: {
     paddingRight: 240,
@@ -25,5 +12,8 @@ export const styles = StyleSheet.create({
     fontFamily: 'OpenSans-Bold',
     marginVertical: 20,
     fontSize: 25,
+  },
+  buttonContainer: {
+    marginTop: theme.HEIGHT_SCREEN / 8,
   },
 });

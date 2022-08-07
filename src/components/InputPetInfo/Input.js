@@ -1,5 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-shadow */
 import {StyleSheet, TextInput, View} from 'react-native';
 import React, {useState} from 'react';
 import SelectDropdown from 'react-native-select-dropdown';
@@ -7,8 +5,6 @@ import theme from '../../assets/theme/theme';
 
 const Input = ({type, onChangeText, placeholder}) => {
   const petArray = ['Dog', 'Cat'];
-  const [selectedPet, setSelectedPet] = useState('');
-
   const breedArray = [
     'Bulldog',
     'Pastor Aleman',
@@ -21,6 +17,7 @@ const Input = ({type, onChangeText, placeholder}) => {
     'Mongrel',
     'Undefined',
   ];
+  const [selectedPet, setSelectedPet] = useState('');
   const [selectedBreed, setSelectedBreed] = useState('');
 
   return (
@@ -33,7 +30,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             onChangeText={onChangeText}
             placeholder="First Name"
             placeholderTextColor="#818181"
-            style={styles.firstname}
+            style={styles.inputshort}
           />
         </>
       ) : type === 'lastname' ? (
@@ -42,13 +39,13 @@ const Input = ({type, onChangeText, placeholder}) => {
             onChangeText={onChangeText}
             placeholder="Last Name"
             placeholderTextColor="#818181"
-            style={styles.lastname}
+            style={styles.inputgroup}
           />
         </>
       ) : type === 'typepet' ? (
         <View>
           <SelectDropdown
-            buttonStyle={styles.dropdownPet}
+            buttonStyle={styles.dropdown}
             defaultButtonText="Type Pet"
             data={petArray}
             onSelect={pet => {
@@ -60,13 +57,13 @@ const Input = ({type, onChangeText, placeholder}) => {
             rowTextForSelection={(item, index) => {
               return item;
             }}
-            rowStyle={{width: 150, backgroundColor: '#F6F6F6'}}
+            rowStyle={styles.rowStyle}
           />
         </View>
       ) : type === 'breed' ? (
         <View>
           <SelectDropdown
-            buttonStyle={styles.dropdownBreed}
+            buttonStyle={styles.dropdown}
             defaultButtonText="Breed"
             data={breedArray}
             onSelect={breed => {
@@ -78,7 +75,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             rowTextForSelection={(item, index) => {
               return item;
             }}
-            rowStyle={{width: 150, backgroundColor: '#F6F6F6'}}
+            rowStyle={styles.rowStyle}
           />
         </View>
       ) : type === 'age' ? (
@@ -87,7 +84,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             onChangeText={onChangeText}
             placeholder="Age"
             placeholderTextColor="#818181"
-            style={styles.age}
+            style={styles.inputgroup}
           />
         </>
       ) : type === 'gender' ? (
@@ -96,7 +93,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             onChangeText={onChangeText}
             placeholder="Gender"
             placeholderTextColor="#818181"
-            style={styles.gender}
+            style={styles.inputgroup}
           />
         </>
       ) : type === 'color' ? (
@@ -105,23 +102,24 @@ const Input = ({type, onChangeText, placeholder}) => {
             onChangeText={onChangeText}
             placeholder="Color of your Pet"
             placeholderTextColor="#818181"
-            style={styles.color}
+            style={styles.input}
           />
         </>
       ) : type === 'description' ? (
         <>
           <TextInput
             onChangeText={onChangeText}
-            placeholder="Description :"
+            placeholder="Description"
+            multiline
             placeholderTextColor="#818181"
-            style={styles.description}
+            style={styles.inputmultiline}
           />
         </>
       ) : (
         <TextInput
           onChangeText={onChangeText}
           placeholder={placeholder}
-          style={styles.text}
+          style={styles.input}
           placeholderTextColor="#818181"
         />
       )}
@@ -132,53 +130,34 @@ const Input = ({type, onChangeText, placeholder}) => {
 export default Input;
 
 const styles = StyleSheet.create({
-  header: {
-    flexDirection: 'row',
-  },
-
-  firstname: {
-    paddingLeft: 10,
-    backgroundColor: '#ededed',
+  input: {
     fontFamily: 'OpenSans-Medium',
-    width: '150%',
-  },
-  lastname: {
-    paddingLeft: 20,
+    margin: 10,
     backgroundColor: '#ededed',
+  },
+  inputshort: {
     fontFamily: 'OpenSans-Medium',
-    marginHorizontal: 100,
-    width: '60%',
+    margin: 10,
+    backgroundColor: '#ededed',
+    width: theme.WIDTH_SCREEN / 1.5,
   },
-  dropdownPet: {
-    width: 170,
-    paddingLeft: 60,
+  inputmultiline: {
+    backgroundColor: '#ededed',
+    height: 100,
+    maxHeight: 100,
   },
-  dropdownBreed: {
+  inputgroup: {
+    fontFamily: 'OpenSans-Medium',
+    margin: 10,
+    backgroundColor: '#ededed',
+    width: theme.WIDTH_SCREEN / 2.3,
+  },
+  dropdown: {
+    margin: 10,
+    width: theme.WIDTH_SCREEN / 2.3,
+  },
+  rowStyle: {
     width: 150,
-    paddingLeft: 40,
-    marginHorizontal: 70,
-  },
-  age: {
-    paddingLeft: 10,
-    width: 150,
-    backgroundColor: '#ededed',
-  },
-  gender: {
-    width: 150,
-    marginHorizontal: 70,
-    paddingLeft: 10,
-    backgroundColor: '#ededed',
-    position: 'static',
-  },
-  color: {
-    backgroundColor: '#ededed',
-    width: '70%',
-  },
-  description: {
-    backgroundColor: '#ededed',
-    width: '70%',
-    paddingTop: 80,
-    position: 'absolute',
-    textAlignVertical: 'center',
+    backgroundColor: '#F6F6F6',
   },
 });
