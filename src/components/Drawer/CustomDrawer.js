@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {
   DrawerContentScrollView,
@@ -19,9 +19,9 @@ export default function CustomDrawer(props) {
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
-      <View style={styles.footer}>
+      <TouchableOpacity style={styles.footer}>
         <Text style={styles.textFooter}>Exit</Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
