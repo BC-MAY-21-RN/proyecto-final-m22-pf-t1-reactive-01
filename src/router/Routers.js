@@ -5,7 +5,6 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomDrawer from '../components/Drawer/CustomDrawer';
 
 import {
-  Home,
   Splash,
   Onboarding,
   Login,
@@ -16,6 +15,7 @@ import {
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
+import {styles} from './style';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -25,7 +25,9 @@ const Menus = () => {
     <Drawer.Navigator
       screenOptions={{
         headerTitle: '',
-        drawerStyle: {backgroundColor: 'hsla(0,0%,0%,0.5)'},
+        drawerStyle: [styles.drawer],
+        drawerItemStyle: [styles.item],
+        drawerLabelStyle: [styles.text],
       }}
       drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
