@@ -14,11 +14,14 @@ export default function CustomDrawer(props) {
           source={require('../../assets/Placeholders/placeholder-img.jpg')}
           style={styles.img}
         />
-        <Text>Francisco Jose</Text>
+        <Text style={styles.textHeader}>Jheniffer Stifler Madisson</Text>
       </View>
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
+      <View style={styles.footer}>
+        <Text style={styles.textFooter}>Exit</Text>
+      </View>
     </View>
   );
 }
