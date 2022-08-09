@@ -48,7 +48,7 @@ export const addUserInfo = (firstname, email, uid, navigation) => {
       uid: uid,
     })
     .then(() => {
-      Alert.alert('Usuario agregado! => Enviando  A Home');
+      Alert.alert('User added succesfully');
       navigation.navigate('HomeClient');
     })
     .catch(error => console.log(error));

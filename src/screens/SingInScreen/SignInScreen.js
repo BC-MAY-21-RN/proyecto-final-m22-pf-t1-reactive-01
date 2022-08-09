@@ -15,7 +15,7 @@ const SignInScreen = ({navigation}) => {
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: true,
     onSubmit: formValue => {
-      alert('save data');
+      alert('Registered user');
       signup(
         formValue.fullname,
         formValue.email,
