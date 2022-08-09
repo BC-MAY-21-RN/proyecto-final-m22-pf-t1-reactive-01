@@ -16,7 +16,7 @@ import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
 import {styles} from './style';
-
+import ProfileScreen from '../screens/Client/Home/ProfileScreen';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -30,7 +30,8 @@ const Menus = () => {
         drawerLabelStyle: [styles.text],
       }}
       drawerContent={props => <CustomDrawer {...props} />}>
-      <Drawer.Screen name="HomeClient" component={HomeClient} />
+      <Drawer.Screen name="Home" component={HomeClient} />
+      <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
   );
 };

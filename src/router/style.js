@@ -12,6 +12,8 @@ export const styles = StyleSheet.create({
   item: {
     backgroundColor: theme.BACKGROUND_COLOR,
     borderWidth: 1,
+    marginBottom: 0,
+    marginTop: 0,
     marginLeft: 0,
     width: theme.WIDTH_SCREEN,
     borderColor: theme.PRIMARY_COLOR,
