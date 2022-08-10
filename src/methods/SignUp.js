@@ -20,11 +20,11 @@ export const signup = (fullName, email, password, navigation) => {
     })
     .catch(error => {
       if (error.code === 'auth/email-already-in-use') {
-        alert('That email address is already in use!');
+        alert('The email address is already in use!');
       }
 
       if (error.code === 'auth/invalid-email') {
-        alert('That email address is invalid!');
+        alert('The email address is invalid!');
       }
 
       alert(error.toString());

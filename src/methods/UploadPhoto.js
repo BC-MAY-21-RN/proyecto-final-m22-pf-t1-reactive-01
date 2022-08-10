@@ -26,7 +26,7 @@ const UploadPhoto = () => {
       if (response.errorCode) {
         Alert.alert(response.errorMessage);
       } else if (response.didCancel) {
-        Alert.alert('the user canceled');
+        Alert.alert('The operation was canceled');
       } else {
         const path = response.assets[0].uri;
         let file = path.split('/');
@@ -35,7 +35,7 @@ const UploadPhoto = () => {
         await task.putFile(path);
         await task.getDownloadURL().then(urlFirebase => {
           addImageFirebase(nameFile, urlFirebase);
-          Alert.alert('Image uploaded to the bucket!');
+          Alert.alert('Image uploaded successfully');
         });
       }
     });
@@ -51,7 +51,7 @@ const UploadPhoto = () => {
       if (response.errorCode) {
         Alert.alert(response.errorMessage);
       } else if (response.didCancel) {
-        Alert.alert('the user canceled');
+        Alert.alert('The operation was canceled');
       } else {
         const path = response.assets[0].uri;
       }
