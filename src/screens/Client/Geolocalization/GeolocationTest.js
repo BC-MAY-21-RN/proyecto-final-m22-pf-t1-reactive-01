@@ -29,7 +29,7 @@ const GeolocationTest = () => {
         </MapView>
       </View>
       <View style={styles.containerCard}>
-        <Text style={styles.title}>Nearby Walkersr</Text>
+        <Text style={styles.title}>Nearby Walkers</Text>
         <ScrollView>
           <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
           <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
