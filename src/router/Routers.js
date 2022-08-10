@@ -5,34 +5,26 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomDrawer from '../components/Drawer/CustomDrawer';
 
 import {
+  Home,
   Splash,
   Onboarding,
   Login,
   ResetPassword,
   HomeClient,
   SignInScreen,
-  PetFormScreen
+  PetFormScreen,
 } from '../screens/index';
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
-import {styles} from './style';
-import ProfileScreen from '../screens/Client/Home/ProfileScreen';
+import Geolocation from '../screens/Client/Geolocalization/GeolocationTest';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const Menus = () => {
   return (
-    <Drawer.Navigator
-      screenOptions={{
-        headerTitle: '',
-        drawerStyle: [styles.drawer],
-        drawerItemStyle: [styles.item],
-        drawerLabelStyle: [styles.text],
-      }}
-      drawerContent={props => <CustomDrawer {...props} />}>
-      <Drawer.Screen name="Home" component={HomeClient} />
-      <Drawer.Screen name="Profile" component={ProfileScreen} />
+    <Drawer.Navigator screenOptions={{headerTitle: ''}}>
+      <Drawer.Screen name="HomeClient" component={HomeClient} />
     </Drawer.Navigator>
   );
 };
@@ -51,6 +43,8 @@ const Routers = () => {
         <Stack.Screen name="UploadPets" component={UploadPets} />
         <Stack.Screen name="PetInfo" component={PetInfo} />
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
+        <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
+        <Stack.Screen name="Geolocation" component={Geolocation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
