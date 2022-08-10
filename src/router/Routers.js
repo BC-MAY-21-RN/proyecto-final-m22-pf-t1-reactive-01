@@ -5,7 +5,6 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomDrawer from '../components/Drawer/CustomDrawer';
 
 import {
-  Home,
   Splash,
   Onboarding,
   Login,
@@ -17,14 +16,23 @@ import {
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
-
+import {styles} from './style';
+import ProfileScreen from '../screens/Client/Home/ProfileScreen';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const Menus = () => {
   return (
-    <Drawer.Navigator screenOptions={{headerTitle: ''}}>
-      <Drawer.Screen name="HomeClient" component={HomeClient} />
+    <Drawer.Navigator
+      screenOptions={{
+        headerTitle: '',
+        drawerStyle: [styles.drawer],
+        drawerItemStyle: [styles.item],
+        drawerLabelStyle: [styles.text],
+      }}
+      drawerContent={props => <CustomDrawer {...props} />}>
+      <Drawer.Screen name="Home" component={HomeClient} />
+      <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
   );
 };
@@ -32,7 +40,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="PetFormScreen"
+        initialRouteName="SplashScreen"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Menus" component={Menus} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -43,7 +51,6 @@ const Routers = () => {
         <Stack.Screen name="UploadPets" component={UploadPets} />
         <Stack.Screen name="PetInfo" component={PetInfo} />
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
-        <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#e2e2e2',
     height: theme.HEIGHT_SCREEN / 10,
     borderRadius: 10,
-    margin: 10,
+    margin: 7,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
