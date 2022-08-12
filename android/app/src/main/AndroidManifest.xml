@@ -2,6 +2,10 @@
   package="com.mypets">
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    
     <application
       android:name=".MainApplication"
       android:label="@string/app_name"
@@ -23,6 +27,6 @@
       </activity>
       <meta-data
      android:name="com.google.android.geo.API_KEY"
-     android:value=""/>
+     android:value="AIzaSyBEjeZrNj-usHMiEXve97o6IQhYlVl38Nk"/>
     </application>
 </manifest>
