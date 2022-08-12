@@ -11,11 +11,17 @@ export default function Animate(type) {
 
   return (
     <>
-      {type === 'login'}
-      <Lottie
-        ref={animationRef}
-        source={require('../assets/animations/login-an.json')}
-      />
+      {type === 'login' ? (
+        <Lottie
+          ref={animationRef}
+          source={require('../assets/animations/login-an.json')}
+        />
+      ) : (
+        <Lottie
+          ref={animationRef}
+          source={require('../assets/animations/missing-an.json')}
+        />
+      )}
     </>
   );
 }
