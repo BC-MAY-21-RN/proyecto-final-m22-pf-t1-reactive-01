@@ -1,7 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React, {useEffect} from 'react';
 import MapView, {Marker} from 'react-native-maps';
-import NearItem from '../../../components/NearItem/NearItem';
 import {ScrollView} from 'react-native-gesture-handler';
 import Geo from '../../../methods/Geo';
 import Layout from '../../../layout/Layout';
@@ -9,17 +8,17 @@ import ListScroll from '../../../components/ListScroll/ListScroll';
 
 const data = [
   {
-    id: 'francisco anses',
+    id: 'francisco ',
     hour: '2',
     km: '2',
   },
   {
-    id: 'francisco anses',
+    id: 'ayeza',
     hour: '2',
     km: '2',
   },
   {
-    id: 'francisco anses',
+    id: 'martin',
     hour: '2',
     km: '2',
   },
@@ -75,4 +74,3 @@ const styles = StyleSheet.create({
   containerCard: {flex: 0.5},
   title: {fontSize: 25},
 });
-//<NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />

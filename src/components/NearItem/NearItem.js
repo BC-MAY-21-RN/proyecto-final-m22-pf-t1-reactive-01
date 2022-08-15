@@ -15,8 +15,8 @@ const NearItem = ({data}) => {
           <Text style={styles.text}>{data.id}</Text>
         </View>
         <View style={styles.info}>
-          <Text style={styles.text}>{data.hour}</Text>
-          <Text style={styles.text}>{data.distance}</Text>
+          <Text style={styles.text}>{data.hour}hs</Text>
+          <Text style={styles.text}>{data.km} km</Text>
         </View>
       </View>
     </TouchableOpacity>
