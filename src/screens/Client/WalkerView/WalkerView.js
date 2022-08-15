@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   imagen: {width: 200, height: 200, borderRadius: 150},
   info: {},
   textInfo: {fontSize: 25},
-  contreseniasainer: {},
+  resenias: {},
 });
 /*
  
