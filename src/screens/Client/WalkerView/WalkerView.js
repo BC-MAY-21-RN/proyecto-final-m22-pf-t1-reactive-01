@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {useRoute} from '@react-navigation/native';
 import Layout from '../../../layout/Layout';
@@ -22,9 +22,8 @@ const WalkerView = ({navigation}) => {
           <LabelMessage title={'horas'} text={hour} />
           <LabelMessage title={'km'} text={km} />
         </View>
-        <View style={styles.resenias}></View>
       </View>
-      <View>
+      <View style={styles.button}>
         <Button title={'Contratar'} />
       </View>
     </Layout>
@@ -34,15 +33,12 @@ const WalkerView = ({navigation}) => {
 export default WalkerView;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+  },
   image: {
     alignItems: 'center',
   },
   imagen: {width: 200, height: 200, borderRadius: 150},
-  info: {},
   textInfo: {fontSize: 25},
-  resenias: {},
 });
-/*
- 
-*/
