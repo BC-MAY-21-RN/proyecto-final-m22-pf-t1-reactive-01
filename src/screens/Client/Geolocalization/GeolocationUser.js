@@ -54,9 +54,7 @@ const GeolocationUser = () => {
         </View>
         <View style={styles.containerCard}>
           <Text style={styles.title}>Nearby Walkers</Text>
-          <ScrollView>
-            <ListScroll title="Nearby Walkers" data={data} />
-          </ScrollView>
+          <ListScroll data={data} />
         </View>
       </View>
     </Layout>
