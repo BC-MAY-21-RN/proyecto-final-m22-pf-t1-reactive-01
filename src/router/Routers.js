@@ -17,6 +17,7 @@ import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
 import Geolocation from '../screens/Client/Geolocalization/GeolocationUser';
+import WalkerView from '../screens/Client/WalkerView/WalkerView';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -45,6 +46,7 @@ const Routers = () => {
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
         <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
         <Stack.Screen name="Geolocation" component={Geolocation} />
+        <Stack.Screen name="WalkerView" component={WalkerView} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -5,6 +5,25 @@ import NearItem from '../../../components/NearItem/NearItem';
 import {ScrollView} from 'react-native-gesture-handler';
 import Geo from '../../../methods/Geo';
 import Layout from '../../../layout/Layout';
+import ListScroll from '../../../components/ListScroll/ListScroll';
+
+const data = [
+  {
+    id: 'francisco anses',
+    hour: '2',
+    km: '2',
+  },
+  {
+    id: 'francisco anses',
+    hour: '2',
+    km: '2',
+  },
+  {
+    id: 'francisco anses',
+    hour: '2',
+    km: '2',
+  },
+];
 const GeolocationUser = () => {
   const {lati, longi, getLocation} = Geo();
 
@@ -35,16 +54,8 @@ const GeolocationUser = () => {
           </MapView>
         </View>
         <View style={styles.containerCard}>
-          <Text style={styles.title}>Nearby Walkers</Text>
           <ScrollView>
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
+            <ListScroll title="Nearby Walkers" data={data} />
           </ScrollView>
         </View>
       </View>
@@ -64,3 +75,4 @@ const styles = StyleSheet.create({
   containerCard: {flex: 0.5},
   title: {fontSize: 25},
 });
+//<NearItem name="Francisco Jose " hour="16:30" distance="1.3 KM" />
