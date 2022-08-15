@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import MapView, {Marker} from 'react-native-maps';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -53,6 +53,7 @@ const GeolocationUser = () => {
           </MapView>
         </View>
         <View style={styles.containerCard}>
+          <Text style={styles.title}>Nearby Walkers</Text>
           <ScrollView>
             <ListScroll title="Nearby Walkers" data={data} />
           </ScrollView>
