@@ -13,14 +13,6 @@ const HomeScreen = () => {
           <ButtonMenu title="My Pets" type="mypets" />
           <ButtonMenu title="Request Walker" type="find" />
         </View>
-        <View style={styles.nearContainer}>
-          <ScrollView>
-            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
-            <NearItem name="Francisco jose " hour="16:30" distance="1.3 KM" />
-          </ScrollView>
-        </View>
       </View>
     </Layout>
   );
