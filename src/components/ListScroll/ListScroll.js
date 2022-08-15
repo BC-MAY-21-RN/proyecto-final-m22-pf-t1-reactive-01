@@ -2,12 +2,6 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import NearItem from '../NearItem/NearItem';
 
-const Item = ({id, hour, km}) => (
-  <View style={styles.item}>
-    <NearItem name={id} hour={hour} distance={km} />
-  </View>
-);
-
 const ListScroll = ({title, data}) => {
   return (
     <View style={styles.container}>

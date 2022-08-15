@@ -4,9 +4,6 @@ import {styles} from './style';
 import {useNavigation} from '@react-navigation/native';
 const NearItem = ({data}) => {
   const navigation = useNavigation();
-  //const {id, hour, distance} = data;
-  //console.log('item');
-
   return (
     <TouchableOpacity onPress={() => navigation.navigate('WalkerView', {data})}>
       <View style={styles.container}>
