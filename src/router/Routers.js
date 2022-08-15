@@ -12,7 +12,7 @@ import {
   ResetPassword,
   HomeClient,
   SignInScreen,
-  PetFormScreen,
+  PetFormScreen,Mypet
 } from '../screens/index';
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
@@ -32,7 +32,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="Mypet"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Menus" component={Menus} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -45,6 +45,7 @@ const Routers = () => {
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
         <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
         <Stack.Screen name="Geolocation" component={Geolocation} />
+        <Stack.Screen name="Mypet" component={Mypet} />
       </Stack.Navigator>
     </NavigationContainer>
   );
