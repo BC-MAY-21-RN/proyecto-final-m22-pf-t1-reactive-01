@@ -2,6 +2,22 @@ import {StyleSheet} from 'react-native';
 import theme from '../../assets/theme/theme';
 
 export const styles = StyleSheet.create({
+  containerTittle: {
+    height: 100,
+    borderRadius: 10,
+    backgroundColor: theme.PRIMARY_COLOR,
+    justifyContent: 'center',
+    borderBottomColor: 'grey',
+    marginTop: 10,
+  },
+  textTittle: {
+    paddingLeft: 90,
+    color: '#000000',
+    fontFamily: theme.FONT_FAMILY_BOLD,
+    marginVertical: -42,
+    paddingTop: 2,
+    fontSize: 45,
+  },
   card: {
     display: 'flex',
     flexDirection: 'row',
@@ -65,5 +81,8 @@ export const styles = StyleSheet.create({
   characteristicsdscript: {
     fontSize: 18,
     color: '#000000',
+  },
+  buttonContainer: {
+    
   },
 });
