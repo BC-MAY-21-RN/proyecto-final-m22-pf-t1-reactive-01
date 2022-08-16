@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     width: theme.WIDTH_SCREEN,
     height: theme.HEIGHT_SCREEN,
-    padding: 10,
+    padding:10,
     backgroundColor: theme.BACKGROUND_COLOR,
   },
 });

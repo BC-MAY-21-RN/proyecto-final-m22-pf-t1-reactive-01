@@ -18,6 +18,7 @@ import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
 import Geolocation from '../screens/Client/Geolocalization/GeolocationTest';
+import ProfileScreen from '../screens/Client/Home/Proffile/ProfileScreen';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -32,7 +33,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="ProfileScreen"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Menus" component={Menus} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -45,6 +46,7 @@ const Routers = () => {
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
         <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
         <Stack.Screen name="Geolocation" component={Geolocation} />
+        <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
