@@ -23,7 +23,14 @@ const Drawer = createDrawerNavigator();
 
 const Menus = () => {
   return (
-    <Drawer.Navigator screenOptions={{headerTitle: ''}}>
+    <Drawer.Navigator
+      screenOptions={{
+        headerTitle: '',
+        drawerStyle: [styles.drawer],
+        drawerItemStyle: [styles.item],
+        drawerLabelStyle: [styles.text],
+      }}
+      drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
       <Drawer.Screen name="Geolocation" component={Geolocation} />
     </Drawer.Navigator>
