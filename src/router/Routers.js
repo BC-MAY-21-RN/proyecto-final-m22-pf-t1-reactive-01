@@ -3,7 +3,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomDrawer from '../components/Drawer/CustomDrawer';
-
 import {
   Home,
   Splash,
@@ -17,15 +16,26 @@ import {
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/Home/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
-import Geolocation from '../screens/Client/Geolocalization/GeolocationTest';
+<<<<<<< HEAD
 import ProfileScreen from '../screens/Client/Home/Proffile/ProfileScreen';
+import Geolocation from '../screens/Client/Geolocalization/GeolocationUser';
+import WalkerView from '../screens/Client/WalkerView/WalkerView';
+
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const Menus = () => {
   return (
-    <Drawer.Navigator screenOptions={{headerTitle: ''}}>
+    <Drawer.Navigator
+      screenOptions={{
+        headerTitle: '',
+        drawerStyle: [styles.drawer],
+        drawerItemStyle: [styles.item],
+        drawerLabelStyle: [styles.text],
+      }}
+      drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
+      <Drawer.Screen name="Geolocation" component={Geolocation} />
     </Drawer.Navigator>
   );
 };
@@ -46,7 +56,11 @@ const Routers = () => {
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
         <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
         <Stack.Screen name="Geolocation" component={Geolocation} />
+<<<<<<< HEAD
         <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
+=======
+        <Stack.Screen name="WalkerView" component={WalkerView} />
+>>>>>>> master
       </Stack.Navigator>
     </NavigationContainer>
   );
