@@ -12,10 +12,10 @@ const ProfileScreen = () => {
         <Text style={styles.Titte}>Profile</Text>
         <HeaderProffile />
         <View style={styles.menuContai}>
-          <OptionMenu title="My pets" type="Star" />
-          <OptionMenu title="My favorite walkers" type="Star" />
+          <OptionMenu title="Edit profile" type="User" />
+          <OptionMenu title="Contact Us" type="Phone" />
           <OptionMenu title="Service history" type="Hiy" />
-          <OptionMenu title="Settings" type="Stti" />
+          
         </View>
       </View>
     
