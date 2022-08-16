@@ -6,3 +6,4 @@ export {default as ResetPassword} from './ResetPasswordScreen/ResetPasswordScree
 export {default as SignInScreen} from './SingInScreen/SignInScreen';
 export {default as HomeClient} from './Client/Home/HomeScreen';
 export {default as PetFormScreen} from './Client/PetFormScreen/PetFormScreen';
+export {default as Mypet} from './Pets/Mypet';
