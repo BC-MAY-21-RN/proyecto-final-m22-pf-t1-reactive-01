@@ -8,6 +8,9 @@ import User from '../../assets/svg/user.svg';
 import Phone from '../../assets/svg/phone.svg';
 import Star from '../../assets/svg/star.svg';
 import Hiy from '../../assets/svg/hiy.svg';
+import Invite from '../../assets/svg/invite.svg';
+import Lock from '../../assets/svg/lock.svg';
+import Trash from '../../assets/svg/trash.svg';
 
 const TypeIcon = ({type}) => {
   return (
@@ -51,6 +54,18 @@ const TypeIcon = ({type}) => {
       ) : type === 'Hiy' ? (
         <>
           <Hiy widht={30} height={30} />
+        </>
+      ) : type === 'Invite' ? (
+        <>
+          <Invite widht={30} height={30} />
+        </>
+      ) : type === 'Trash' ? (
+        <>
+          <Trash widht={30} height={30} />
+        </>
+      ) : type === 'Lock' ? (
+        <>
+          <Lock widht={30} height={30} />
         </>
       ) : type === 'Star' ? (
         <>

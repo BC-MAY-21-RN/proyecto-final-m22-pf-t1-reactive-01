@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     fontFamily: theme.FONT_FAMILY_BOLD,
     fontSize: theme.FONT_SIZE_XLARGE,
+    color:theme.FONT_COLOR
   },
   menuContai: {},
 });

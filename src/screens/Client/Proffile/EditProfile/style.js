@@ -1,4 +1,4 @@
-import theme from '../../../assets/theme/theme';
+import theme from '../../../../assets/theme/theme';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -10,6 +10,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     fontFamily: theme.FONT_FAMILY_BOLD,
     fontSize: theme.FONT_SIZE_XLARGE,
+    color:theme.FONT_COLOR
   },
-  menuContai: {},
+  butt:{
+    paddingTop:50
+  },
 });
