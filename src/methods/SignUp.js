@@ -9,7 +9,7 @@ export const signup = (fullName, email, password, navigation) => {
       firestore()
         .collection('users')
         .add({
-          fullName: fullName,
+          firstname: fullName,
           email: email,
           uid: current.uid,
           password: password,

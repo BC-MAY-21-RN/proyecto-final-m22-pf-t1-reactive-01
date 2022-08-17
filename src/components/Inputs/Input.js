@@ -3,6 +3,7 @@ import React from 'react';
 import EmailIcon from '../../assets/svg/email.svg';
 import PasswordIcon from '../../assets/svg/lock.svg';
 import UserIcon from '../../assets/svg/user.svg';
+import PhoneIcon from '../../assets/svg/phone.svg';
 
 const Input = ({title, type, onChangeText, placeholder, error, value}) => {
   return (
@@ -29,6 +30,18 @@ const Input = ({title, type, onChangeText, placeholder, error, value}) => {
           <TextInput
             onChangeText={onChangeText}
             placeholder="Enter your email"
+            placeholderTextColor="#818181"
+            style={styles.text}
+            value={value}
+            keyboardType='phone-pad'
+          />
+        </>
+      ) : type === 'tel' ? (
+        <>
+          <PhoneIcon widht={25} height={20} style={styles.icon} />
+          <TextInput
+            onChangeText={onChangeText}
+            placeholder="Enter your cell phone number"
             placeholderTextColor="#818181"
             style={styles.text}
             value={value}
