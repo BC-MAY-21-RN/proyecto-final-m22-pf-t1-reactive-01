@@ -7,10 +7,9 @@ export const styles = StyleSheet.create({
   },
   Titte: {
     textAlign: 'center',
-    justifyContent:'center',
+    justifyContent: 'center',
     fontFamily: theme.FONT_FAMILY_BOLD,
     fontSize: theme.FONT_SIZE_XLARGE,
   },
-  menuContai: {
-  },
+  menuContai: {},
 });

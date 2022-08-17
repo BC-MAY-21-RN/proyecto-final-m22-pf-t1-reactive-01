@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import theme from '../../../../assets/theme/theme';
+import theme from '../../../assets/theme/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -11,11 +11,10 @@ export const styles = StyleSheet.create({
     height: theme.HEIGHT_SCREEN / 5,
     alignItems: 'center',
   },
-  img:{
-    width:250,
-    height:250,
-    borderRadius:120,
-
+  img: {
+    width: 250,
+    height: 250,
+    borderRadius: 120,
   },
   body: {
     justifyContent: 'space-around',
