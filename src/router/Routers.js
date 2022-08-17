@@ -17,9 +17,10 @@ import {
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/PetInfo/PetInfo';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
-import ProfileScreen from '../screens/Client/PetInfoScreen/PetInfoScreen';
+import ProfileScreen from '../screens/Client/Proffile/ProfileScreen';
 import Geolocation from '../screens/Client/Geolocalization/GeolocationUser';
 import WalkerView from '../screens/Client/WalkerView/WalkerView';
+import SettingScreen from '../screens/Client/SettingScreen/Settingscreen';
 import {styles} from './style';
 
 const Stack = createNativeStackNavigator();
@@ -44,7 +45,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="SettingScreen"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Menus" component={Menus} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -60,6 +61,7 @@ const Routers = () => {
         <Stack.Screen name="Mypet" component={Mypet} />
         <Stack.Screen name="WalkerView" component={WalkerView} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="SettingScreen" component={SettingScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
