@@ -17,16 +17,30 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  ImageName: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   image: {
     width: theme.WIDTH_SCREEN / 6,
     height: theme.WIDTH_SCREEN / 6,
     borderRadius: 5,
     marginHorizontal: 10,
   },
-  info: {marginLeft: theme.WIDTH_SCREEN / 4},
+  info: {
+    flex: 0.8,
+    alignItems: 'flex-end',
+    paddingRight: 20,
+  },
+  km: {justifyContent: 'center', alignItems: 'center'},
   text: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: theme.FONT_WEIGHT_BOLD,
-    maxWidth: 100,
+  },
+  textIcon: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
