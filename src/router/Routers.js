@@ -17,9 +17,10 @@ import {
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfoScreen from '../screens/Client/PetFormScreen/PetFormScreen';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
-import ProfileScreen from '../screens/Client/PetInfoScreen/PetInfoScreen';
+import ProfileScreen from '../screens/Client/Proffile/ProfileScreen';
 import Geolocation from '../screens/Client/Geolocalization/GeolocationUser';
 import WalkerView from '../screens/Client/WalkerView/WalkerView';
+import SettingScreen from '../screens/Client/SettingScreen/Settingscreen';
 import EditProfile from '../screens/Client/Proffile/EditProfile/EditProfile';
 import {styles} from './style';
 
@@ -61,6 +62,7 @@ const Routers = () => {
         <Stack.Screen name="Mypet" component={Mypet} />
         <Stack.Screen name="WalkerView" component={WalkerView} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="SettingScreen" component={SettingScreen}/>
         <Stack.Screen name="Editprofile" component={EditProfile}/>
       </Stack.Navigator>
     </NavigationContainer>
