@@ -1,12 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import MapView, {Marker} from 'react-native-maps';
 import Geo from '../../../methods/Geo';
 import Layout from '../../../layout/Layout';
 import ListScroll from '../../../components/ListScroll/ListScroll';
-
-import {getListWalkers} from '../../../methods/RetrieveWalker';
-
+import useWalkers from '../../../methods/RetrieveWalker';
 const data = [
   {
     id: 'francisco ',
@@ -24,14 +22,17 @@ const data = [
     km: '2',
   },
 ];
+
 const GeolocationUser = () => {
   const {lati, longi, getLocation} = Geo();
+  const {walkers} = useWalkers();
 
   useEffect(() => {
     getLocation();
-  }, [getLocation]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  getListWalkers();
+  console.log(walkers);
 
   return (
     <Layout>
