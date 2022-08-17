@@ -43,7 +43,7 @@ export const addUserInfo = (firstname, email, uid, navigation) => {
   firestore()
     .collection('users')
     .add({
-      fullName: firstname,
+      firstname: firstname,
       email: email,
       uid: uid,
     })

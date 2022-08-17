@@ -12,7 +12,7 @@ const NearItem = ({data}) => {
           style={styles.image}
         />
         <View>
-          <Text style={styles.text}>{data.fullName}</Text>
+          <Text style={styles.text}>{data.firstname}</Text>
         </View>
         <View style={styles.info}>
           <Text style={styles.text}>{data.km} km</Text>
