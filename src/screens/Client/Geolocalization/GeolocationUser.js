@@ -1,10 +1,11 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import MapView, {Marker} from 'react-native-maps';
-import {ScrollView} from 'react-native-gesture-handler';
 import Geo from '../../../methods/Geo';
 import Layout from '../../../layout/Layout';
 import ListScroll from '../../../components/ListScroll/ListScroll';
+
+import {getListWalkers} from '../../../methods/RetrieveWalker';
 
 const data = [
   {
@@ -29,6 +30,8 @@ const GeolocationUser = () => {
   useEffect(() => {
     getLocation();
   }, [getLocation]);
+
+  getListWalkers();
 
   return (
     <Layout>
