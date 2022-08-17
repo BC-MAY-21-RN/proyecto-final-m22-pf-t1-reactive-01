@@ -27,7 +27,6 @@ export const googleSignIn = async navigation => {
     } else {
       const current = auth().currentUser;
 
-      console.log(current.email);
       await firestore()
         .collection('users')
         .get()
