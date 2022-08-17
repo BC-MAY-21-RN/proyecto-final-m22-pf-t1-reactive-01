@@ -6,24 +6,6 @@ import Layout from '../../../layout/Layout';
 import ListScroll from '../../../components/ListScroll/ListScroll';
 import {getListWalkers} from '../../../methods/RetrieveWalkerFS';
 
-const data = [
-  {
-    fullName: 'francisco ',
-    type: '2',
-    email: '2',
-  },
-  {
-    fullName: 'ayeza',
-    type: '2',
-    email: '2',
-  },
-  {
-    fullName: 'martin',
-    type: '2',
-    email: '2',
-  },
-];
-
 const GeolocationUser = () => {
   const {lati, longi, getLocation} = Geo();
   const [walkers, setWalkers] = useState([]);

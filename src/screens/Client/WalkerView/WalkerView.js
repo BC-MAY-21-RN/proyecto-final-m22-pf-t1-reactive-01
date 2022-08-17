@@ -4,7 +4,6 @@ import {useRoute} from '@react-navigation/native';
 import Layout from '../../../layout/Layout';
 import LabelMessage from '../../../components/LabelMessage/LabelMessage';
 import Button from '../../../components/Button/CustomButton';
-import Star from '../../../assets/svg/star.svg';
 const WalkerView = ({navigation}) => {
   const route = useRoute();
   const {firstname, star, km} = route.params.data;
