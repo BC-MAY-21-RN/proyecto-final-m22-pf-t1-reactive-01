@@ -13,6 +13,7 @@ import {
   SignInScreen,
   PetFormScreen,
   Mypet,
+  SendComments,
 } from '../screens/index';
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfo from '../screens/Client/PetInfo/PetInfo';
@@ -44,7 +45,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="SendComments"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Menus" component={Menus} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -60,6 +61,7 @@ const Routers = () => {
         <Stack.Screen name="Mypet" component={Mypet} />
         <Stack.Screen name="WalkerView" component={WalkerView} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="SendComments" component={SendComments} />
       </Stack.Navigator>
     </NavigationContainer>
   );
