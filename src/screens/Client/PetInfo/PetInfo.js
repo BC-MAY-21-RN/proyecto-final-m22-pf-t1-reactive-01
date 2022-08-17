@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import Layout from '../../../../layout/Layout';
+import Layout from '../../../layout/Layout';
 import {styles} from './styles';
-import Heart from '../../../../assets/svg/heart.svg';
-import Header from '../../../../components/Header/Header';
-import CustomButton from '../../../../components/Button/CustomButton';
+import Heart from '../../../assets/svg/heart.svg';
+import Header from '../../../components/Header/Header';
+import CustomButton from '../../../components/Button/CustomButton';
 
 const PetInfo = () => {
   return (
@@ -14,7 +14,7 @@ const PetInfo = () => {
         <View style={styles.header}>
           <Image
             style={styles.img}
-            source={require('../../../../assets/Placeholders/placeholder-img.jpg')}
+            source={require('../../../assets/Placeholders/placeholder-img.jpg')}
           />
         </View>
       </View>

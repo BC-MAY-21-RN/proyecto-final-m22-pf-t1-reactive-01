@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import theme from '../../assets/theme/theme';
+import theme from '../../../assets/theme/theme';
 
 export const styles = StyleSheet.create({
   containerTittle: {
@@ -82,7 +82,5 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: '#000000',
   },
-  buttonContainer: {
-    
-  },
+  buttonContainer: {},
 });
