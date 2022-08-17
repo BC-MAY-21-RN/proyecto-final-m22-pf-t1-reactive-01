@@ -25,7 +25,21 @@ export const googleSignIn = async navigation => {
       const current = auth().currentUser;
       addUserInfo(userData.fullName, userData.email, current.uid);
     } else {
-      navigation.navigate('Menus');
+      const current = auth().currentUser;
+
+      console.log(current.email);
+      await firestore()
+        .collection('users')
+        .get()
+        .then(querySnapshot => {
+          querySnapshot.forEach(doc => {
+            if (current.email === doc.data().email) {
+              doc.data().type === 'client'
+                ? navigation.navigate('Menus')
+                : navigation.navigate('Home');
+            }
+          });
+        });
     }
   } catch (error) {
     if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -49,7 +63,7 @@ export const addUserInfo = (firstname, email, uid, navigation) => {
     })
     .then(() => {
       Alert.alert('User added succesfully');
-      navigation.navigate('HomeClient');
+      navigation.navigate('ChoiseUser');
     })
     .catch(error => console.log(error));
 };
