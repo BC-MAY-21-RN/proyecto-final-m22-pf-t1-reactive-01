@@ -1,11 +1,10 @@
-/* eslint-disable react-native/no-inline-styles */
 import {View, Text} from 'react-native';
 import React from 'react';
-import Button from '../../components/Button/CustomButton';
-import Layout from '../../layout/Layout';
-import Header from '../../components/Header/Header';
-import Input from '../../components/InputPetInfo/Input';
-import {styles} from './styles';
+import Button from '../../../components/Button/CustomButton';
+import Layout from '../../../layout/Layout';
+import Header from '../../../components/Header/Header';
+import Input from '../../../components/InputPetInfo/Input';
+import {styles} from '../Pets/styles';
 
 const PetInfoScreen = navigation => {
   return (
