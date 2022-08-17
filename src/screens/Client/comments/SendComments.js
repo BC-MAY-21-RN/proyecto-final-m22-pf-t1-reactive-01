@@ -1,22 +1,36 @@
-import {View, Text} from 'react-native';
-import React from 'react';
+import {View, Text, Alert} from 'react-native';
+import React, {useState} from 'react';
 import Layout from '../../../layout/Layout';
 import Header from '../../../components/Header/Header';
 import {styles} from './styles';
 import Button from '../../../components/Button/CustomButton';
 import Input from '../../../components/InputComment/Input';
-import {firebase} from '@react-native-firebase/storage';
+import firestore from '@react-native-firebase/firestore';
 
 const SendComments = navigation => {
+  const [value, setValue] = useState('');
+  const uploadComments = () => {
+    firestore()
+      .collection('reviews')
+      .doc('reviewGeneral')
+      .update({
+        review: firestore.FieldValue.arrayUnion(value),
+      })
+      .then(() => Alert.alert('Comentario agregado', value))
+      .catch(error => Alert.alert('ERROR', error));
+  };
   return (
     <Layout>
       <Header navigation={navigation} />
+      <Text style={styles.text}>Please enter your comment</Text>
       <View style={styles.containerText}>
-        <Text style={styles.text}>Please enter your comment</Text>
-        <Input type="comment" />
+        <Input
+          type="comment"
+          onChangeText={commentText => setValue(commentText)}
+        />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title={'Send'} />
+        <Button title={'Send'} onPress={uploadComments} />
       </View>
     </Layout>
   );

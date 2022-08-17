@@ -2,8 +2,8 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   inputmultiline: {
     backgroundColor: '#ededed',
-    height: 100,
-    maxHeight: 100,
+    height: 300,
+    maxHeight: 300,
   },
   input: {
     fontFamily: 'OpenSans-Medium',
