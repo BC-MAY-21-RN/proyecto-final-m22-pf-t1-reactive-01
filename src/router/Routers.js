@@ -20,7 +20,6 @@ import ProfileScreen from '../screens/Client/Home/Proffile/ProfileScreen';
 import Geolocation from '../screens/Client/Geolocalization/GeolocationUser';
 import WalkerView from '../screens/Client/WalkerView/WalkerView';
 
-
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -57,8 +56,7 @@ const Routers = () => {
         <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
         <Stack.Screen name="Geolocation" component={Geolocation} />
         <Stack.Screen name="WalkerView" component={WalkerView} />
-        <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
-
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
