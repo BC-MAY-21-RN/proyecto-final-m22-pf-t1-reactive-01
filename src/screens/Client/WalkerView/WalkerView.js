@@ -6,7 +6,7 @@ import LabelMessage from '../../../components/LabelMessage/LabelMessage';
 import Button from '../../../components/Button/CustomButton';
 const WalkerView = ({navigation}) => {
   const route = useRoute();
-  const {hour, id, km} = route.params.data;
+  const {fullName, star, type} = route.params.data;
 
   return (
     <Layout>
@@ -18,9 +18,9 @@ const WalkerView = ({navigation}) => {
           />
         </View>
         <View style={styles.info}>
-          <LabelMessage title={'paseador'} text={id} />
-          <LabelMessage title={'horas'} text={hour} />
-          <LabelMessage title={'km'} text={km} />
+          <LabelMessage title={'paseador'} text={fullName} />
+          <LabelMessage title={'star'} text={star} />
+          <LabelMessage title={'km'} text={type} />
         </View>
       </View>
       <View style={styles.button}>

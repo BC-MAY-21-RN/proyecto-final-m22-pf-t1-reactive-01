@@ -4,35 +4,40 @@ import MapView, {Marker} from 'react-native-maps';
 import Geo from '../../../methods/Geo';
 import Layout from '../../../layout/Layout';
 import ListScroll from '../../../components/ListScroll/ListScroll';
-import useWalkers from '../../../methods/RetrieveWalker';
+import {getListWalkers} from '../../../methods/RetrieveWalkerFS';
+
 const data = [
   {
-    id: 'francisco ',
-    hour: '2',
-    km: '2',
+    fullName: 'francisco ',
+    type: '2',
+    email: '2',
   },
   {
-    id: 'ayeza',
-    hour: '2',
-    km: '2',
+    fullName: 'ayeza',
+    type: '2',
+    email: '2',
   },
   {
-    id: 'martin',
-    hour: '2',
-    km: '2',
+    fullName: 'martin',
+    type: '2',
+    email: '2',
   },
 ];
 
 const GeolocationUser = () => {
   const {lati, longi, getLocation} = Geo();
-  const {walkers} = useWalkers();
-
+  const [walkers, setWalkers] = useState([]);
+  const traerDatos = async () => {
+    const datis = await getListWalkers();
+    setWalkers(datis);
+  };
   useEffect(() => {
-    getLocation();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  console.log(walkers);
+    const interval = setInterval(() => {
+      getLocation();
+      traerDatos();
+    }, 20000);
+    return () => clearInterval(interval);
+  }, [getLocation]);
 
   return (
     <Layout>
@@ -58,7 +63,7 @@ const GeolocationUser = () => {
         </View>
         <View style={styles.containerCard}>
           <Text style={styles.title}>Nearby Walkers</Text>
-          <ListScroll data={data} />
+          <ListScroll data={walkers} />
         </View>
       </View>
     </Layout>

@@ -6,11 +6,10 @@ export default function useWalkers() {
   const [walkers, setWalkers] = useState([]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const interval = setInterval(() => {
       cargarLista();
-    }, 1000);
-    return () => clearTimeout(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   const getList = async () => {
@@ -33,8 +32,6 @@ export default function useWalkers() {
 
   const cargarLista = async () => {
     const resp = await getList();
-
-    console.log(resp.length);
     if (resp.length > 0) {
       setWalkers(resp);
     } else {

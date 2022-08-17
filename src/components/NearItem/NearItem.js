@@ -12,11 +12,11 @@ const NearItem = ({data}) => {
           style={styles.image}
         />
         <View>
-          <Text style={styles.text}>{data.id}</Text>
+          <Text style={styles.text}>{data.fullName}</Text>
         </View>
         <View style={styles.info}>
-          <Text style={styles.text}>{data.hour}hs</Text>
           <Text style={styles.text}>{data.km} km</Text>
+          <Text style={styles.text}>{data.star} stars</Text>
         </View>
       </View>
     </TouchableOpacity>

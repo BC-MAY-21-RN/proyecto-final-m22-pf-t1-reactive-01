@@ -25,7 +25,7 @@ export const googleSignIn = async navigation => {
       const current = auth().currentUser;
       addUserInfo(userData.fullName, userData.email, current.uid);
     } else {
-      navigation.navigate('Geolocation');
+      navigation.navigate('Menus');
     }
   } catch (error) {
     if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -43,7 +43,7 @@ export const addUserInfo = (firstname, email, uid, navigation) => {
   firestore()
     .collection('users')
     .add({
-      firstname: firstname,
+      fullName: firstname,
       email: email,
       uid: uid,
     })
