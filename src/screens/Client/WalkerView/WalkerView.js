@@ -4,9 +4,10 @@ import {useRoute} from '@react-navigation/native';
 import Layout from '../../../layout/Layout';
 import LabelMessage from '../../../components/LabelMessage/LabelMessage';
 import Button from '../../../components/Button/CustomButton';
+import Star from '../../../assets/svg/star.svg';
 const WalkerView = ({navigation}) => {
   const route = useRoute();
-  const {firstname, star, type} = route.params.data;
+  const {firstname, star, km} = route.params.data;
 
   return (
     <Layout>
@@ -20,7 +21,7 @@ const WalkerView = ({navigation}) => {
         <View style={styles.info}>
           <LabelMessage title={'paseador'} text={firstname} />
           <LabelMessage title={'star'} text={star} />
-          <LabelMessage title={'km'} text={type} />
+          <LabelMessage title={'km'} text={km} />
         </View>
       </View>
       <View style={styles.button}>
