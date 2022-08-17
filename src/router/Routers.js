@@ -15,11 +15,12 @@ import {
   Mypet,
 } from '../screens/index';
 import UploadPets from '../screens/Client/Upload/UploadPets';
-import PetInfo from '../screens/Client/PetInfo/PetInfo';
+import PetInfoScreen from '../screens/Client/PetFormScreen/PetFormScreen';
 import ChoiseUser from '../screens/Client/ChoiseUser/ChoiseUser';
 import ProfileScreen from '../screens/Client/PetInfoScreen/PetInfoScreen';
 import Geolocation from '../screens/Client/Geolocalization/GeolocationUser';
 import WalkerView from '../screens/Client/WalkerView/WalkerView';
+import EditProfile from '../screens/Client/Proffile/EditProfile/EditProfile';
 import {styles} from './style';
 
 const Stack = createNativeStackNavigator();
@@ -53,13 +54,14 @@ const Routers = () => {
         <Stack.Screen name="SignInScreen" component={SignInScreen} />
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="UploadPets" component={UploadPets} />
-        <Stack.Screen name="PetInfo" component={PetInfo} />
+        <Stack.Screen name="PetInfoScreen" component={PetInfoScreen} />
         <Stack.Screen name="ChoiseUser" component={ChoiseUser} />
         <Stack.Screen name="PetFormScreen" component={PetFormScreen} />
         <Stack.Screen name="Geolocation" component={Geolocation} />
         <Stack.Screen name="Mypet" component={Mypet} />
         <Stack.Screen name="WalkerView" component={WalkerView} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="Editprofile" component={EditProfile}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
