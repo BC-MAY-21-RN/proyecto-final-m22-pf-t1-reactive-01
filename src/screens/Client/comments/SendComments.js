@@ -6,6 +6,7 @@ import {styles} from './styles';
 import Button from '../../../components/Button/CustomButton';
 import Input from '../../../components/InputComment/Input';
 import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
 
 const SendComments = navigation => {
   const [value, setValue] = useState('');
@@ -14,6 +15,7 @@ const SendComments = navigation => {
       .collection('reviews')
       .doc('reviewGeneral')
       .update({
+        uid: auth().currentUser.uid,
         review: firestore.FieldValue.arrayUnion(value),
       })
       .then(() => Alert.alert('Comentario agregado', value))
