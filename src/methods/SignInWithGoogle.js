@@ -26,7 +26,6 @@ export const googleSignIn = async navigation => {
       addUserInfo(userData.fullName, userData.email, current.uid);
     } else {
       const current = auth().currentUser;
-
       await firestore()
         .collection('users')
         .get()
