@@ -6,7 +6,7 @@ import Header from '../../../components/Header/Header';
 import Input from '../../../components/InputPetInfo/Input';
 import {styles} from '../Pets/styles';
 
-const PetInfoScreen = navigation => {
+const PetInfoScreen = ({navigation}) => {
   return (
     <Layout>
       <View style={styles.container}>
@@ -34,7 +34,7 @@ const PetInfoScreen = navigation => {
         </View>
 
         <View style={styles.buttonContainer}>
-          <Button title={'Next'} />
+          <Button title={'Next'} onPress={() => navigation.navigate('')} />
         </View>
       </View>
     </Layout>

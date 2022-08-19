@@ -22,7 +22,6 @@ import Geolocation from '../screens/Client/Geolocalization/GeolocationUser';
 import WalkerView from '../screens/Client/WalkerView/WalkerView';
 import {styles} from './style';
 
-
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 

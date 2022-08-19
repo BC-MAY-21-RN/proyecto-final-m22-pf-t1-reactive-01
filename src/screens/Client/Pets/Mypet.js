@@ -11,33 +11,34 @@ const data = [
     name: 'cucu ',
     image:
       'https://cdn.mequieroir.com/wp-content/uploads/2019/10/mascota-espana-blanca-1024x639.jpg',
-    male: '2',
+    gender: 'Male',
     color: 'rojo ',
     age: '2',
-    characteristicsm: '2',
+    characteristics: 'he have very long hair and red color ',
   },
   {
     id: 2,
     name: 'pepe ',
     image:
       'https://cdn.mequieroir.com/wp-content/uploads/2019/10/mascota-espana-blanca-1024x639.jpg',
-    male: '2',
+    gender: 'Male',
     color: 'blanco ',
     age: '2',
-    characteristicsm: '2',
+    characteristics: 'he not have tail',
   },
   {
     id: 3,
     name: 'francisco ',
     image:
       'https://cdn.mequieroir.com/wp-content/uploads/2019/10/mascota-espana-blanca-1024x639.jpg',
-    male: '2',
+    gender: 'Male',
     color: 'negro ',
     age: '2',
-    characteristicsm: '2',
+    characteristics:
+      'It is a quite friendly and calm dog. It likes to take naps and responds to the call of "hotdog"',
   },
 ];
-const Mypet = navigation => {
+const Mypet = ({navigation}) => {
   return (
     <Layout>
       <HeaderPrincipal navigation={navigation} />
@@ -50,7 +51,7 @@ const Mypet = navigation => {
         keyExtractor={item => item.id}
       />
       <View style={styles.buttonContainer}>
-        <ButtonAdd />
+        <ButtonAdd onPress={() => navigation.navigate('PetFormScreen')} />
       </View>
     </Layout>
   );

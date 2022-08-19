@@ -23,7 +23,7 @@ export const googleSignIn = async navigation => {
     };
     if (user_sign_in.additionalUserInfo.isNewUser) {
       const current = auth().currentUser;
-      addUserInfo(userData.fullName, userData.email, current.uid);
+      addUserInfo(userData.fullName, userData.email, current.uid, navigation);
     } else {
       const current = auth().currentUser;
       await firestore()
@@ -34,7 +34,7 @@ export const googleSignIn = async navigation => {
             if (current.email === doc.data().email) {
               doc.data().type === 'client'
                 ? navigation.navigate('Menus')
-                : navigation.navigate('Home');
+                : navigation.navigate('Menus');
             }
           });
         });

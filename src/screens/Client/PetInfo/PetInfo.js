@@ -6,7 +6,7 @@ import Heart from '../../../assets/svg/heart.svg';
 import Header from '../../../components/Header/Header';
 import CustomButton from '../../../components/Button/CustomButton';
 
-const PetInfo = () => {
+const PetInfo = ({navigation}) => {
   return (
     <Layout>
       <Header />

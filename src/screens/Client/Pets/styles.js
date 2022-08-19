@@ -81,6 +81,7 @@ export const styles = StyleSheet.create({
   characteristicsdscript: {
     fontSize: 18,
     color: '#000000',
+    maxWidth: 200,
   },
   buttonContainer: {},
 });

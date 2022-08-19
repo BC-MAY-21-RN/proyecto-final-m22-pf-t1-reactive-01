@@ -1,7 +1,7 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
-const CardPet = ({name, image, male, color, age, characteristics}) => {
+const CardPet = ({name, image, gender, color, age, characteristics}) => {
   return (
     <View style={styles.card}>
       <Image style={styles.imageCard} source={{uri: image}} />
@@ -9,7 +9,7 @@ const CardPet = ({name, image, male, color, age, characteristics}) => {
       <View style={styles.infoCard}>
         <Text style={styles.namePet}>{name}</Text>
         <View style={styles.male}>
-          <Text style={styles.maledscript}>{male}</Text>
+          <Text style={styles.maledscript}>{gender}</Text>
         </View>
         <View style={styles.color}>
           <Text style={styles.colordscript}>{color}</Text>
