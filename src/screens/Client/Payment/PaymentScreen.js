@@ -55,7 +55,7 @@ const PaymentScreen = () => {
           />
         </View>
         <View style={styles.container_boton}>
-          <Button title="enviar" />
+          <Button title="TO PAY" />
         </View>
       </View>
     </Layout>
