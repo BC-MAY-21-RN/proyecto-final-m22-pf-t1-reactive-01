@@ -18,7 +18,7 @@ const PaymentScreen = () => {
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: true,
     onSubmit: formValue => {
-      alert('Registered user');
+      alert('Pago check');
     },
   });
   return (
@@ -49,7 +49,6 @@ const PaymentScreen = () => {
             title="EXPIRY"
             placeholder="02/23"
             type="numeric"
-            //value={numberCard}
             inputType="expiry"
             onFocus={() => onFrontPress()}
             error={formik.errors.expiry}
@@ -68,11 +67,7 @@ const PaymentScreen = () => {
           />
         </View>
         <View style={styles.container_boton}>
-          <Button
-            title="TO PAY"
-            onPress={formik.handleSubmit}
-            // onPress={onFrontPress}
-          />
+          <Button title="TO PAY" onPress={formik.handleSubmit} />
         </View>
       </View>
     </Layout>
@@ -89,9 +84,12 @@ function initialValues() {
 
 function validationSchema() {
   return {
-    numberCard: Yup.string().required('Full numberCard is required'),
-    expiry: Yup.string().required('expiry is required'),
-    code: Yup.string().required('code is required'),
+    numberCard: Yup.string()
+      .min(16)
+      .max(16)
+      .required('Full numberCard is required'),
+    expiry: Yup.string().min(4).max(4).required('expiry is required'),
+    code: Yup.string().min(3).max(3).required('code is required'),
   };
 }
 

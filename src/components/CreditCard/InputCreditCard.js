@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import {StyleSheet, Text, TextInput, View} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {useCard} from '../../methods/hook/useCard';
 const InputCreditCard = ({
   title,
@@ -33,9 +33,6 @@ const InputCreditCard = ({
           style={styles.numberCard}
           placeholder={placeholder}
           keyboardType={type}
-          //value={}
-          //onChangeText={text => setnumber(text)}
-          //() => { this.bChange(); this.hChange(); }
           onChangeText={onChangeText}
           onFocus={onFocus}
         />
@@ -50,7 +47,6 @@ export default InputCreditCard;
 const styles = StyleSheet.create({
   container: {},
   text: {
-    //backgroundColor: 'white',
     paddingLeft: 5,
     paddingRight: 5,
   },
@@ -62,9 +58,6 @@ const styles = StyleSheet.create({
   line: {
     borderTopWidth: 1,
     borderColor: 'black',
-    //backgroundColor: 'blue',
   },
-  numberCard: {
-    //backgroundColor: 'white',
-  },
+  numberCard: {},
 });
