@@ -15,7 +15,6 @@ const InputCreditCard = ({
   const {number, expery, code, onChange, valuePlaceholder, setnumber} =
     useCard();
 
-  console.log(error);
   let color = 'black';
   if (error !== undefined) {
     color = 'red';
