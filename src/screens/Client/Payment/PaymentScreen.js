@@ -7,11 +7,20 @@ import InputCreditCard from '../../../components/CreditCard/InputCreditCard';
 import Button from '../../../components/Button/CustomButton';
 import {useMoveCard} from '../../../methods/hook/useMoveCard';
 import {renderFront, renderBack} from './RenderViews';
-
+import {useFormik} from 'formik';
+import * as Yup from 'yup';
 const PaymentScreen = () => {
   const {number, expery, code} = useCard();
   const {viewRef, onFrontPress, onBackPress} = useMoveCard();
 
+  const formik = useFormik({
+    initialValues: initialValues(),
+    validationSchema: Yup.object(validationSchema()),
+    validateOnChange: true,
+    onSubmit: formValue => {
+      alert('Registered user');
+    },
+  });
   return (
     <Layout>
       <View style={styles.container}>
@@ -20,7 +29,7 @@ const PaymentScreen = () => {
             ref={ref => (viewRef.current = ref)}
             width={300}
             height={300}
-            gestureEnabled={true}>
+            gestureEnabled={false}>
             {renderFront()}
             {renderBack()}
           </GestureFlipView>
@@ -31,7 +40,10 @@ const PaymentScreen = () => {
             placeholder={number}
             type="numeric"
             inputType="cardNumber"
-            test={() => onFrontPress()}
+            onFocus={() => onFrontPress()}
+            error={formik.errors.numberCard}
+            value={formik.values.numberCard}
+            onChangeText={text => formik.setFieldValue('numberCard', text)}
           />
           <InputCreditCard
             title="EXPIRY"
@@ -39,24 +51,49 @@ const PaymentScreen = () => {
             type="numeric"
             //value={numberCard}
             inputType="expiry"
-            test={() => onFrontPress()}
+            onFocus={() => onFrontPress()}
+            error={formik.errors.expiry}
+            value={formik.values.expiry}
+            onChangeText={text => formik.setFieldValue('expiry', text)}
           />
           <InputCreditCard
             title="CVC/CCV"
             placeholder="952"
             type="numeric"
             inputType="code"
-            onFocus={renderBack()}
-            test={() => onBackPress()}
+            onFocus={() => onBackPress()}
+            error={formik.errors.code}
+            value={formik.values.code}
+            onChangeText={text => formik.setFieldValue('code', text)}
           />
         </View>
         <View style={styles.container_boton}>
-          <Button title="TO PAY" onPress={onFrontPress} />
+          <Button
+            title="TO PAY"
+            onPress={formik.handleSubmit}
+            // onPress={onFrontPress}
+          />
         </View>
       </View>
     </Layout>
   );
 };
+
+function initialValues() {
+  return {
+    numberCard: '',
+    expiry: '',
+    code: '',
+  };
+}
+
+function validationSchema() {
+  return {
+    numberCard: Yup.string().required('Full numberCard is required'),
+    expiry: Yup.string().required('expiry is required'),
+    code: Yup.string().required('code is required'),
+  };
+}
 
 export default PaymentScreen;
 

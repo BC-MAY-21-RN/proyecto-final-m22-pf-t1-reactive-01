@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React, {useState} from 'react';
 import {useCard} from '../../methods/hook/useCard';
@@ -7,20 +8,25 @@ const InputCreditCard = ({
   type,
   value,
   inputType,
-  test,
+  error,
+  onChangeText,
+  onFocus,
 }) => {
   const {number, expery, code, onChange, valuePlaceholder, setnumber} =
     useCard();
 
-  function onFocus() {
-    console.log('jeje');
+  console.log(error);
+  let color = 'black';
+  if (error !== undefined) {
+    color = 'red';
   }
 
-  //console.log(number);
   return (
     <View style={styles.container}>
       <View style={styles.text}>
-        <Text style={styles.title}>{title}</Text>
+        <Text style={{fontSize: 14, color: `${color}`, fontWeight: 'bold'}}>
+          {title}
+        </Text>
       </View>
       <View style={styles.input}>
         <TextInput
@@ -28,10 +34,12 @@ const InputCreditCard = ({
           placeholder={placeholder}
           keyboardType={type}
           //value={}
-          onChangeText={text => setnumber(text)}
-          onFocus={test}
+          //onChangeText={text => setnumber(text)}
+          //() => { this.bChange(); this.hChange(); }
+          onChangeText={onChangeText}
+          onFocus={onFocus}
         />
-        <View style={styles.line}></View>
+        <View style={styles.line} />
       </View>
     </View>
   );
@@ -46,7 +54,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     paddingRight: 5,
   },
-  title: {fontWeight: 'bold', color: 'black'},
+  title: {fontWeight: 'bold'},
   input: {
     justifyContent: 'space-evenly',
     height: 80,
