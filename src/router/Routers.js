@@ -23,7 +23,7 @@ import WalkerView from '../screens/Client/WalkerView/WalkerView';
 import SettingScreen from '../screens/Client/SettingScreen/Settingscreen';
 import EditProfile from '../screens/Client/Proffile/EditProfile/EditProfile';
 import {styles} from './style';
-
+import PaymentScreen from '../screens/Client/Payment/PaymentScreen';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -62,8 +62,9 @@ const Routers = () => {
         <Stack.Screen name="Mypet" component={Mypet} />
         <Stack.Screen name="WalkerView" component={WalkerView} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
-        <Stack.Screen name="SettingScreen" component={SettingScreen}/>
-        <Stack.Screen name="Editprofile" component={EditProfile}/>
+        <Stack.Screen name="SettingScreen" component={SettingScreen} />
+        <Stack.Screen name="Editprofile" component={EditProfile} />
+        <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
