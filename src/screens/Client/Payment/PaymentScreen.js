@@ -9,7 +9,10 @@ import {useMoveCard} from '../../../methods/hook/useMoveCard';
 import {renderFront, renderBack} from './RenderViews';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-const PaymentScreen = () => {
+
+import {checkPayment} from '../../../methods/Payment';
+
+const PaymentScreen = ({navigation}) => {
   const {number, expery, code} = useCard();
   const {viewRef, onFrontPress, onBackPress} = useMoveCard();
 
@@ -18,7 +21,13 @@ const PaymentScreen = () => {
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: true,
     onSubmit: formValue => {
-      alert('Pago check');
+      //alert('Pago check');
+      checkPayment(
+        formValue.numberCard,
+        formValue.expiry,
+        formValue.code,
+        navigation,
+      );
     },
   });
   return (
