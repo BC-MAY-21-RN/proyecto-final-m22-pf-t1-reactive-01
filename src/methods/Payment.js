@@ -14,8 +14,8 @@ export const addPayment = (date, walker, price, navigation) => {
       hours: 2,
     })
     .then(() => {
-      Alert.alert('pago realizado con exito');
-      navigation.navigate('PaymentScreen');
+      Alert.alert('successful payment');
+      navigation.navigate('Menus');
     })
     .catch(error => console.log(error));
 };
