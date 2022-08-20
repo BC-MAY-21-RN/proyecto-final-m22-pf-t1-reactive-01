@@ -1,11 +1,22 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React, {useState} from 'react';
 import {useCard} from '../../methods/hook/useCard';
-const InputCreditCard = ({title, placeholder, type, value, inputType}) => {
+const InputCreditCard = ({
+  title,
+  placeholder,
+  type,
+  value,
+  inputType,
+  test,
+}) => {
   const {number, expery, code, onChange, valuePlaceholder, setnumber} =
     useCard();
 
-  console.log(number);
+  function onFocus() {
+    console.log('jeje');
+  }
+
+  //console.log(number);
   return (
     <View style={styles.container}>
       <View style={styles.text}>
@@ -18,6 +29,7 @@ const InputCreditCard = ({title, placeholder, type, value, inputType}) => {
           keyboardType={type}
           //value={}
           onChangeText={text => setnumber(text)}
+          onFocus={test}
         />
         <View style={styles.line}></View>
       </View>
