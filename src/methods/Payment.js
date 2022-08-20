@@ -28,6 +28,6 @@ export const checkPayment = (number, expiry, code, navigation) => {
   if (number === card.number && expiry === card.expiry && code === card.code) {
     addPayment(date, walker, price, navigation);
   } else {
-    Alert.alert('payment rechazed ');
+    Alert.alert('payment refused try again ');
   }
 };
