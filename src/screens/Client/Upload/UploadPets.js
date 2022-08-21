@@ -5,11 +5,14 @@ import CustomButton from '../../../components/Button/CustomButton';
 import UploadButton from '../../../components/Button/UploadButton';
 
 import UploadPhoto from '../../../methods/UploadPhoto';
+import Header from '../../../components/Header/Header';
+import {styles} from './styles';
 
 const UploadPets = ({navigation}) => {
   const {selectImageGalery} = UploadPhoto();
   return (
     <Layout>
+      <Header navigation={navigation} />
       <View style={styles.container}>
         <View style={styles.containerIcon}>
           <UploadButton onPress={selectImageGalery} />
@@ -24,25 +27,3 @@ const UploadPets = ({navigation}) => {
 };
 
 export default UploadPets;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  containerIcon: {
-    flex: 1,
-    textAlign: 'center',
-    justifyContent: 'flex-end',
-  },
-  title: {
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: 'bold',
-    paddingRight: 25,
-  },
-  containerButton: {
-    flex: 1,
-    justifyContent: 'space-around',
-  },
-});
