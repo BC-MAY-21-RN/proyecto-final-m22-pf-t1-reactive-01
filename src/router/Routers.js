@@ -13,6 +13,7 @@ import {
   SignInScreen,
   PetFormScreen,
   Mypet,
+  SendComments,
 } from '../screens/index';
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfoScreen from '../screens/Client/PetFormScreen/PetFormScreen';
@@ -24,6 +25,7 @@ import SettingScreen from '../screens/Client/SettingScreen/Settingscreen';
 import EditProfile from '../screens/Client/Proffile/EditProfile/EditProfile';
 import {styles} from './style';
 import PaymentScreen from '../screens/Client/Payment/PaymentScreen';
+import HistoryPayment from '../screens/HistoryPaymentets/HistoryPayment';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -63,8 +65,10 @@ const Routers = () => {
         <Stack.Screen name="WalkerView" component={WalkerView} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen name="SettingScreen" component={SettingScreen} />
-        <Stack.Screen name="Editprofile" component={EditProfile} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+        <Stack.Screen name="HistoryPayment" component={HistoryPayment} />
+        <Stack.Screen name="SendComments" component={SendComments} />
 
       </Stack.Navigator>
     </NavigationContainer>
