@@ -9,10 +9,10 @@ const SwitchBotton = () => {
     <View style={styles.container}>
       <Switch
         trackColor={{false: '#767577', trnoue: '#81b0ff'}}
-        thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+        thumbColor={isEnabled ? '#6B96DC' : '#f5dd4b'}
         onValueChange={toggleSwitch}
         value={isEnabled}
-        style={{transform: [{scaleX: 2.4}, {scaleY: 2}]}}
+        style={styles.switich}
       />
     </View>
   );
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  switich: {transform: [{scaleX: 2.4}, {scaleY: 2}]},
 });
 
 export default SwitchBotton;

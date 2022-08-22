@@ -1,8 +1,8 @@
-import {TextInput, View} from 'react-native';
+import {TextInput, View, Text} from 'react-native';
 import React, {useState} from 'react';
 import SelectDropdown from 'react-native-select-dropdown';
 import {styles} from './style';
-const Input = ({type, onChangeText, placeholder}) => {
+const Input = ({type, onChangeText, placeholder, value, error}) => {
   const petArray = ['Dog', 'Cat'];
   const breedArray = [
     'Bulldog',
@@ -30,6 +30,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             placeholder="First Name"
             placeholderTextColor="#818181"
             style={styles.inputshort}
+            value={value}
           />
         </>
       ) : type === 'lastname' ? (
@@ -39,6 +40,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             placeholder="Last Name"
             placeholderTextColor="#818181"
             style={styles.inputgroup}
+            value={value}
           />
         </>
       ) : type === 'typepet' ? (
@@ -57,6 +59,7 @@ const Input = ({type, onChangeText, placeholder}) => {
               return item;
             }}
             rowStyle={styles.rowStyle}
+            value={value}
           />
         </View>
       ) : type === 'breed' ? (
@@ -75,6 +78,7 @@ const Input = ({type, onChangeText, placeholder}) => {
               return item;
             }}
             rowStyle={styles.rowStyle}
+            value={value}
           />
         </View>
       ) : type === 'age' ? (
@@ -84,6 +88,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             placeholder="Age"
             placeholderTextColor="#818181"
             style={styles.inputgroup}
+            value={value}
           />
         </>
       ) : type === 'gender' ? (
@@ -93,6 +98,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             placeholder="Gender"
             placeholderTextColor="#818181"
             style={styles.inputgroup}
+            value={value}
           />
         </>
       ) : type === 'color' ? (
@@ -102,6 +108,7 @@ const Input = ({type, onChangeText, placeholder}) => {
             placeholder="Color of your Pet"
             placeholderTextColor="#818181"
             style={styles.input}
+            value={value}
           />
         </>
       ) : type === 'description' ? (
@@ -120,8 +127,10 @@ const Input = ({type, onChangeText, placeholder}) => {
           placeholder={placeholder}
           style={styles.input}
           placeholderTextColor="#818181"
+          value={value}
         />
       )}
+      <Text style={styles.error}>{error}</Text>
     </View>
   );
 };

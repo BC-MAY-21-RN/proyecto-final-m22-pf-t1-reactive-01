@@ -10,6 +10,7 @@ export const savePet = async (
   gender,
   color,
   description,
+  navigation,
 ) => {
   await firestore
     .collection('users')
@@ -24,5 +25,6 @@ export const savePet = async (
         color: color,
         description: description,
       },
-    });
+    })
+    .then(navigation.navigate('UploadPhoto'));
 };
