@@ -25,7 +25,7 @@ export const googleSignIn = async navigation => {
       const current = auth().currentUser;
       addUserInfo(userData.fullName, userData.email, current.uid);
     } else {
-      navigation.navigate('SplashScreen');
+      navigation.navigate('Menus');
     }
   } catch (error) {
     if (error.code === statusCodes.SIGN_IN_CANCELLED) {

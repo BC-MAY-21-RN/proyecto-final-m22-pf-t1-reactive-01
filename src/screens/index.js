@@ -7,3 +7,4 @@ export {default as SignInScreen} from './SingInScreen/SignInScreen';
 export {default as HomeClient} from './Client/Home/HomeScreen';
 export {default as PetFormScreen} from './Client/PetFormScreen/PetFormScreen';
 export {default as Mypet} from './Client/Pets/Mypet';
+export {default as SendComments} from './Client/comments/SendComments';
