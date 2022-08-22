@@ -13,6 +13,7 @@ import {
   SignInScreen,
   PetFormScreen,
   Mypet,
+  SendComments,
 } from '../screens/index';
 import UploadPets from '../screens/Client/Upload/UploadPets';
 import PetInfoScreen from '../screens/Client/PetFormScreen/PetFormScreen';
@@ -62,9 +63,10 @@ const Routers = () => {
         <Stack.Screen name="Mypet" component={Mypet} />
         <Stack.Screen name="WalkerView" component={WalkerView} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
-        <Stack.Screen name="SettingScreen" component={SettingScreen} />
-        <Stack.Screen name="Editprofile" component={EditProfile} />
-        <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+        <Stack.Screen name="SettingScreen" component={SettingScreen}/>
+        <Stack.Screen name="Editprofile" component={EditProfile}/>
+        <Stack.Screen name="SendComments" component={SendComments} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
