@@ -49,7 +49,6 @@ const LoginScreen = ({navigation}) => {
         </View>
 
         <View style={styles.socialContainer}>
-          <SocialButton type="facebook" size={62} />
           <SocialButton
             type="google"
             size={60}

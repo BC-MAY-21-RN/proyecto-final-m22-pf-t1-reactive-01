@@ -13,7 +13,11 @@ const HomeScreen = ({navigation}) => {
             type="mypets"
             onPress={() => navigation.navigate('Mypet')}
           />
-          <ButtonMenu title="Request Walker" type="find" />
+          <ButtonMenu
+            title="Request Walker"
+            type="find"
+            onPress={navigation.navigate('Geolocation')}
+          />
         </View>
       </View>
     </Layout>

@@ -38,7 +38,7 @@ const Menus = () => {
       }}
       drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
-      <Drawer.Screen name="Geolocation" component={Geolocation} />
+      <Drawer.Screen name="SettingScreen" component={SettingScreen} />
     </Drawer.Navigator>
   );
 };
@@ -65,6 +65,7 @@ const Routers = () => {
         <Stack.Screen name="SettingScreen" component={SettingScreen} />
         <Stack.Screen name="Editprofile" component={EditProfile} />
         <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
