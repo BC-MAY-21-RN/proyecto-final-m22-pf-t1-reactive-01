@@ -11,6 +11,7 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 
 import {checkPayment} from '../../../methods/Payment';
+import Header from '../../../components/Header/Header';
 
 const PaymentScreen = ({navigation}) => {
   const {number, expery, code} = useCard();
@@ -32,6 +33,7 @@ const PaymentScreen = ({navigation}) => {
   });
   return (
     <Layout>
+      <Header navigation={navigation} />
       <View style={styles.container}>
         <View style={styles.container_creditCard}>
           <GestureFlipView

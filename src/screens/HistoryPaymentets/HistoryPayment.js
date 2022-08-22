@@ -6,7 +6,8 @@ import {useEffect} from 'react';
 import CardPayment from '../../components/CardHistory/CardPayment';
 import {ScrollView} from 'react-native-gesture-handler';
 import Layout from '../../layout/Layout';
-const HistoryPayment = () => {
+import Header from '../../components/Header/Header';
+const HistoryPayment = ({navigation}) => {
   const [history, setHistory] = useState([]);
 
   const traerDatos = async () => {
@@ -23,6 +24,7 @@ const HistoryPayment = () => {
 
   return (
     <Layout>
+      <Header navigation={navigation} />
       <View style={styles.container}>
         <View style={styles.containerTitle}>
           <Text style={styles.title}>History Payments</Text>

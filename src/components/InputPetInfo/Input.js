@@ -2,8 +2,9 @@ import {TextInput, View, Text} from 'react-native';
 import React, {useState} from 'react';
 import SelectDropdown from 'react-native-select-dropdown';
 import {styles} from './style';
+import {useSelector} from '../../methods/hook/useSelector';
 const Input = ({type, onChangeText, placeholder, value, error}) => {
-  const petArray = ['Dog', 'Cat'];
+  const petArray = ['Select', 'Dog', 'Cat'];
   const breedArray = [
     'Bulldog',
     'Pastor Aleman',
@@ -16,8 +17,8 @@ const Input = ({type, onChangeText, placeholder, value, error}) => {
     'Mongrel',
     'Undefined',
   ];
-  const [selectedPet, setSelectedPet] = useState('');
-  const [selectedBreed, setSelectedBreed] = useState('');
+
+  const {setSelectedPet, setSelectedBreed} = useSelector();
 
   return (
     <View>

@@ -19,7 +19,10 @@ const UploadPets = ({navigation}) => {
           <Text style={styles.title}>Take Picture</Text>
         </View>
         <View style={styles.containerButton}>
-          <CustomButton title="Next" onPress={() => navigation.navigate('')} />
+          <CustomButton
+            title="Next"
+            onPress={() => navigation.navigate('Menus')}
+          />
         </View>
       </View>
     </Layout>

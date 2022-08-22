@@ -1,8 +1,9 @@
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
+import {Alert} from 'react-native';
 const current = auth().currentUser;
 
-export const savePet = async (
+export const savePet = (
   name,
   typepet,
   breed,
@@ -12,19 +13,21 @@ export const savePet = async (
   description,
   navigation,
 ) => {
-  await firestore
-    .collection('users')
-    .doc(current.uid)
+  firestore()
+    .collection('mascotas')
     .add({
-      pet: {
-        namePet: name,
-        typepet: typepet,
-        breed: breed,
-        age: age,
-        gender: gender,
-        color: color,
-        description: description,
-      },
+      owner: current.uid,
+      namePet: name,
+      typepet: typepet,
+      breed: breed,
+      age: age,
+      gender: gender,
+      color: color,
+      description: description,
     })
-    .then(navigation.navigate('UploadPhoto'));
+    .then(() => {
+      Alert.alert('add succesfully');
+      navigation.navigate('UploadPets');
+    })
+    .catch(error => console.log(error));
 };

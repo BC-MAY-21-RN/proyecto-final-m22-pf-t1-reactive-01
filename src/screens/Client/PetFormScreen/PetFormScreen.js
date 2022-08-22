@@ -8,6 +8,7 @@ import {styles} from './styles';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import {savePet} from '../../../methods/SavePet';
+import {useSelector} from '../../../methods/hook/useSelector';
 
 const PetInfoScreen = ({navigation}) => {
   const formik = useFormik({
@@ -17,8 +18,8 @@ const PetInfoScreen = ({navigation}) => {
     onSubmit: formValue => {
       savePet(
         formValue.name,
-        formValue.typepet,
-        formValue.breed,
+        selectedPet,
+        selectedBreed,
         formValue.age,
         formValue.gender,
         formValue.color,
@@ -27,7 +28,7 @@ const PetInfoScreen = ({navigation}) => {
       );
     },
   });
-
+  const {selectedPet, selectedBreed} = useSelector();
   return (
     <Layout>
       <Header navigation={navigation} />
@@ -100,8 +101,6 @@ function initialValues() {
 function validationSchema() {
   return {
     name: Yup.string().required('Field Required'),
-    typepet: Yup.string().required('Field Required'),
-    breed: Yup.string().required('Field Required'),
     age: Yup.string().required('Field Required'),
     gender: Yup.string().required('Field Required'),
     color: Yup.string().required('Field Required'),

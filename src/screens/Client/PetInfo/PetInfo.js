@@ -9,7 +9,7 @@ import CustomButton from '../../../components/Button/CustomButton';
 const PetInfo = ({navigation}) => {
   return (
     <Layout>
-      <Header />
+      <Header navigation={navigation} />
       <View style={styles.container}>
         <View style={styles.header}>
           <Image

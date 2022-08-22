@@ -16,7 +16,7 @@ const HomeScreen = ({navigation}) => {
           <ButtonMenu
             title="Request Walker"
             type="find"
-            onPress={navigation.navigate('Geolocation')}
+            onPress={() => navigation.navigate('Geolocation')}
           />
         </View>
       </View>
