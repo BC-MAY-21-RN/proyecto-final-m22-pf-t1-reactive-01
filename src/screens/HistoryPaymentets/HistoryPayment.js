@@ -3,7 +3,6 @@ import React from 'react';
 import {useState} from 'react';
 import {getHistoryPayments} from '../../methods/HistoryPayments';
 import {useEffect} from 'react';
-import ListScroll from '../../components/ListScroll/ListScroll';
 import CardPayment from '../../components/CardHistory/CardPayment';
 import {ScrollView} from 'react-native-gesture-handler';
 import Layout from '../../layout/Layout';
@@ -59,7 +58,9 @@ const HistoryPayment = () => {
   return (
     <Layout>
       <View style={styles.container}>
-        <Text style={styles.text}>LISTA????????????</Text>
+        <View style={styles.containerTitle}>
+          <Text style={styles.title}>History Payments</Text>
+        </View>
         <ScrollView style={styles.scroll}>
           {data.map((item, key) => (
             <CardPayment key={key} data={item} />
@@ -73,6 +74,7 @@ const HistoryPayment = () => {
 export default HistoryPayment;
 
 const styles = StyleSheet.create({
-  container: {flex: 1, backgroundColor: '#aecdeb'},
-  title: {},
+  container: {flex: 1},
+  containerTitle: {alignItems: 'center'},
+  title: {fontSize: 30, fontWeight: 'bold', color: 'black'},
 });

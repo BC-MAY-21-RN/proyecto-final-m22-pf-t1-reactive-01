@@ -3,7 +3,7 @@ import React from 'react';
 import Date from '../../assets/svg/cardPayment/date.svg';
 import Price from '../../assets/svg/cardPayment/price.svg';
 import Reloj from '../../assets/svg/cardPayment/reloj.svg';
-
+import Walker from '../../assets/svg/cardPayment/walker.svg';
 const CardPayment = ({data}) => {
   const {date, walker, hours, price} = data;
 
@@ -16,11 +16,12 @@ const CardPayment = ({data}) => {
         />
       </View>
       <View style={styles.containerInfo}>
-        <View style={styles.name}>
-          <Text style={styles.nameText}>{walker}</Text>
+        <View style={styles.iconText}>
+          <Walker widht={20} height={20} />
+          <Text style={styles.nameWalker}>{walker}</Text>
         </View>
         <View style={styles.iconText}>
-          <Date widht={20} height={20} style={styles.nameText} />
+          <Date widht={20} height={20} />
           <Text style={styles.textIcon}>{date}</Text>
         </View>
         <View style={styles.iconText}>
@@ -54,20 +55,21 @@ const styles = StyleSheet.create({
   containerInfo: {
     justifyContent: 'space-between',
   },
-  name: {
-    paddingLeft: 25,
-    alignItems: 'center',
+  nameWalker: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    color: 'black',
+    textTransform: 'capitalize',
   },
   iconText: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    margin: 3,
+    margin: 4,
   },
   image: {
     width: 80,
     height: 80,
     borderRadius: 150,
   },
-  nameText: {fontWeight: 'bold', fontSize: 18, color: 'black'},
   textIcon: {fontWeight: 'bold', fontSize: 14, color: 'grey'},
 });
