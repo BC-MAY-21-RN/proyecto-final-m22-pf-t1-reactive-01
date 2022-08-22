@@ -8,19 +8,14 @@ export const getHistoryPayments = async () => {
     const arrayHistory = [];
     const usersQuerySnapshot = await firestore().collection('payments').get();
     usersQuerySnapshot.forEach(documentSnapshot => {
-      if (documentSnapshot.data().type === uid) {
+      if (documentSnapshot.data().uid === uid) {
         arrayHistory.push({
           id: documentSnapshot.id,
           ...documentSnapshot.data(),
         });
       }
     });
-    console.log(arrayHistory);
-    if (arrayHistory.length > 0) {
-      return arrayHistory;
-    } else {
-      return arrayHistory;
-    }
+    return arrayHistory;
   } catch (error) {
     Alert.alert('data not found');
   }

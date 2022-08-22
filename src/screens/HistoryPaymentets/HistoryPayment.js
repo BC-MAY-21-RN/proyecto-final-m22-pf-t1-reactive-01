@@ -10,50 +10,16 @@ const HistoryPayment = () => {
   const [history, setHistory] = useState([]);
 
   const traerDatos = async () => {
-    const datis = await getHistoryPayments();
-    setHistory(datis);
+    const datos = await getHistoryPayments();
+    setHistory(datos);
   };
-  /*
+
   useEffect(() => {
     const interval = setInterval(() => {
       traerDatos();
     }, 20000);
     return () => clearInterval(interval);
   }, []);
-*/
-
-  const data = [
-    {
-      date: 'Sat Aug 20 17:12:16 2022',
-      walker: 'mario',
-      hours: '2',
-      price: '100',
-    },
-    {
-      date: 'Sat Aug 21 17:12:16 2022',
-      walker: 'luis',
-      hours: '2',
-      price: '100',
-    },
-    {
-      date: 'Sat Aug 22 17:12:16 2022',
-      walker: 'carlos',
-      hours: '2',
-      price: '100',
-    },
-    {
-      date: 'Sat Aug 23 17:12:16 2022',
-      walker: 'dario',
-      hours: '2',
-      price: '100',
-    },
-    {
-      date: 'Sat Aug 24 17:12:16 2022',
-      walker: 'pedro',
-      hours: '2',
-      price: '100',
-    },
-  ];
 
   return (
     <Layout>
@@ -62,7 +28,7 @@ const HistoryPayment = () => {
           <Text style={styles.title}>History Payments</Text>
         </View>
         <ScrollView style={styles.scroll}>
-          {data.map((item, key) => (
+          {history.map((item, key) => (
             <CardPayment key={key} data={item} />
           ))}
         </ScrollView>
@@ -75,6 +41,6 @@ export default HistoryPayment;
 
 const styles = StyleSheet.create({
   container: {flex: 1},
-  containerTitle: {alignItems: 'center'},
+  containerTitle: {alignItems: 'center', marginBottom: 10, marginTop: 10},
   title: {fontSize: 30, fontWeight: 'bold', color: 'black'},
 });
