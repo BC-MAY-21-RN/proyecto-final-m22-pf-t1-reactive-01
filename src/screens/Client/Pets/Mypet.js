@@ -2,7 +2,7 @@ import {FlatList, View, Text} from 'react-native';
 import React from 'react';
 import Layout from '../../../layout/Layout';
 import HeaderPrincipal from '../../../components/Header/Header';
-import Card from './CardPet';
+import CardPet from './CardPet';
 import {styles} from './styles';
 import ButtonAdd from '../../../components/Button/ButtonAdd';
 const data = [
