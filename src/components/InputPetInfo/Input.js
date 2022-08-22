@@ -54,7 +54,7 @@ const Input = ({type, onChangeText, placeholder, value, error}) => {
               setSelectedPet(pet);
             }}
             buttonTextAfterSelection={(selectedPet, index) => {
-              return selectedPet;
+              return index;
             }}
             rowTextForSelection={(item, index) => {
               return item;

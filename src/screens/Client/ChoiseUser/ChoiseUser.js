@@ -6,9 +6,9 @@ import {styles} from './styles';
 import SwitchBotton from '../../../components/Switch/Switch';
 import CsutomButton from '../../../components/Button/CustomButton';
 import {savetype} from '../../../methods/SaveType';
-
+import {useSelector} from '../../../methods/hook/typeselector';
 const ChoiseUser = () => {
-
+  const {selectedPet, setSelectType} = useSelector();
   return (
     <Layout>
       <Header />

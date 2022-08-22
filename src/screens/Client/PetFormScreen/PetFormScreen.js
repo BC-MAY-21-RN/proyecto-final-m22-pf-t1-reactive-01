@@ -17,7 +17,7 @@ const PetInfoScreen = ({navigation}) => {
     validateOnChange: true,
     onSubmit: formValue => {
       savePet(
-        formValue.name,
+        formValue.namePet,
         selectedPet,
         selectedBreed,
         formValue.age,
@@ -35,7 +35,7 @@ const PetInfoScreen = ({navigation}) => {
       <Text style={styles.text}>Basic Info</Text>
       <Input
         type="firstname"
-        onChangeText={text => formik.setFieldValue('name', text)}
+        onChangeText={text => formik.setFieldValue('namePet', text)}
         error={formik.errors.name}
         value={formik.values.name}
       />
@@ -88,7 +88,7 @@ const PetInfoScreen = ({navigation}) => {
 
 function initialValues() {
   return {
-    name: '',
+    namePet: '',
     typepet: '',
     breed: '',
     age: '',
@@ -100,7 +100,7 @@ function initialValues() {
 
 function validationSchema() {
   return {
-    name: Yup.string().required('Field Required'),
+    namePet: Yup.string().required('Field Required'),
     age: Yup.string().required('Field Required'),
     gender: Yup.string().required('Field Required'),
     color: Yup.string().required('Field Required'),

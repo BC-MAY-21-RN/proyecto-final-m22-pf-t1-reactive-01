@@ -3,20 +3,22 @@ import storage from '@react-native-firebase/storage';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import {Alert} from 'react-native';
+
 const UploadPhoto = () => {
   const uid = auth().currentUser.uid;
-  const addImageFirebase = async (imagen, urlImage) => {
+  const addImageFirebase = async (imagen, urlImage, namePet) => {
     await firestore()
       .collection('Photos')
       .add({
         url: urlImage,
         name: imagen,
         uid: uid,
+        namePet: namePet,
       })
       .catch();
   };
 
-  const selectImageGalery = () => {
+  const selectImageGalery = namePet => {
     const options = {
       title: 'select an image',
       storageOptions: {skipBackup: true, path: 'images'},
@@ -34,7 +36,7 @@ const UploadPhoto = () => {
         const task = storage().ref('Photos/' + uid + '/' + nameFile);
         await task.putFile(path);
         await task.getDownloadURL().then(urlFirebase => {
-          addImageFirebase(nameFile, urlFirebase);
+          addImageFirebase(nameFile, urlFirebase, namePet);
           Alert.alert('Image uploaded successfully');
         });
       }

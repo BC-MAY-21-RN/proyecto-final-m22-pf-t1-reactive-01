@@ -1,10 +1,11 @@
 import {FlatList, View, Text} from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Layout from '../../../layout/Layout';
 import HeaderPrincipal from '../../../components/Header/Header';
 import Card from './CardPet';
 import {styles} from './styles';
 import ButtonAdd from '../../../components/Button/ButtonAdd';
+import {retrivePets} from '../../../methods/SavePet';
 const data = [
   {
     id: 1,
@@ -39,6 +40,23 @@ const data = [
   },
 ];
 const Mypet = ({navigation}) => {
+  const [pets, setPets] = useState([]);
+
+  const traerDatos = async () => {
+    const datos = await retrivePets();
+    setPets(datos);
+    console.log(datos);
+  };
+
+  //console.log(pets);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      traerDatos();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Layout>
       <HeaderPrincipal navigation={navigation} />

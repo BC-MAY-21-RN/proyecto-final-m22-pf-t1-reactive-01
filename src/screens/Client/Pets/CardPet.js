@@ -1,13 +1,24 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
-const CardPet = ({name, image, gender, color, age, characteristics}) => {
+const CardPet = ({
+  age,
+  breed,
+  color,
+  description,
+  gender,
+  namePet,
+  typepet,
+}) => {
+  const imagen =
+    'https://firebasestorage.googleapis.com/v0/b/mypets-6f047.appspot.com/o/Photos%2FF0I4UnMi5nS8umzIccCHJpdyQof2%2Frn_image_picker_lib_temp_ad02dda0-0655-4a63-b766-0d42f3abe336.jpg?alt=media&token=79a90e4d-95b3-4a24-86d2-4b4db0a40464 ';
   return (
     <View style={styles.card}>
-      <Image style={styles.imageCard} source={{uri: image}} />
-
+      <View style={styles.imgaContainer}>
+        <Image style={styles.imageCard} source={{uri: imagen}} />
+      </View>
       <View style={styles.infoCard}>
-        <Text style={styles.namePet}>{name}</Text>
+        <Text style={styles.namePet}>{namePet}</Text>
         <View style={styles.male}>
           <Text style={styles.maledscript}>{gender}</Text>
         </View>
@@ -18,7 +29,7 @@ const CardPet = ({name, image, gender, color, age, characteristics}) => {
           <Text style={styles.agedscript}>{age}</Text>
         </View>
         <View style={styles.characteristics}>
-          <Text style={styles.characteristicsdscript}>{characteristics}</Text>
+          <Text style={styles.characteristicsdscript}>{description}</Text>
         </View>
       </View>
     </View>
