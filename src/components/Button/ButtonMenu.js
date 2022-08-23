@@ -20,7 +20,7 @@ export default ButtonMenu;
 const styles = StyleSheet.create({
   container: {
     width: theme.WIDTH_SCREEN / 2.7,
-    height: theme.HEIGHT_SCREEN / 4.7,
+    height: theme.HEIGHT_SCREEN / 4.7 + 15,
     backgroundColor: '#f5f6f7',
     margin: 15,
     borderRadius: 10,
@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_XLARGE,
     maxWidth: 100,
+    fontWeight: 'bold',
   },
 });
