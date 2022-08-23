@@ -8,12 +8,28 @@ const HomeScreen = ({navigation}) => {
   return (
     <Layout>
       <View style={styles.containerButtons}>
-        <ButtonMenu
-          type="history"
-          onPress={() => navigation.navigate('Login')}
-        />
-        <ButtonMenu />
-        <ButtonMenu type="exit" onPress={() => navigation.navigate('Login')} />
+        <View style={styles.buttons}>
+          <ButtonMenu
+            type="acceptRides"
+            title="Rides"
+            onPress={() => navigation.navigate('Rides')}
+          />
+          <ButtonMenu
+            type="historyWalker"
+            title="History"
+            onPress={() => navigation.navigate('HistoryPaymentsWalkers')}
+          />
+          <ButtonMenu
+            type="profileWalker"
+            title="Profile"
+            onPress={() => navigation.navigate('ProfileWalker')}
+          />
+          <ButtonMenu
+            type="exitWalker"
+            title="Exit"
+            //onPress={() => navigation.navigate('Login')}
+          />
+        </View>
       </View>
     </Layout>
   );

@@ -9,9 +9,16 @@ export const styles = StyleSheet.create({
     borderTopWidth: 1,
   },
   containerButtons: {
-    padding: 10,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttons: {
+    //padding: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   texto: {
     backgroundColor: '#b3b0ff',

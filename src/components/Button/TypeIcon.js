@@ -12,6 +12,10 @@ import Invite from '../../assets/svg/invite.svg';
 import Lock from '../../assets/svg/lock.svg';
 import Trash from '../../assets/svg/trash.svg';
 import Exit from '../../assets/svg/exit.svg';
+import HistoryWalker from '../../assets/svg/menuWalker/history.svg';
+import PetsWalker from '../../assets/svg/menuWalker/pets.svg';
+import ExitWalker from '../../assets/svg/menuWalker/exit.svg';
+import ProfileWalker from '../../assets/svg/menuWalker/profile.svg';
 
 const TypeIcon = ({type}) => {
   return (
@@ -24,7 +28,7 @@ const TypeIcon = ({type}) => {
         <>
           <FindWalker widht={100} height={100} />
         </>
-      ) : type === 'exit' ? (
+      ) : type === 'profile' ? (
         <>
           <Pru widht={100} height={100} />
         </>
@@ -71,6 +75,26 @@ const TypeIcon = ({type}) => {
       ) : type === 'Star' ? (
         <>
           <Star widht={30} height={30} />
+        </>
+      ) : type === 'historyWalker' ? (
+        <>
+          <HistoryWalker widht={100} height={100} />
+        </>
+      ) : type === 'acceptRides' ? (
+        <>
+          <PetsWalker widht={100} height={100} />
+        </>
+      ) : type === 'exit' ? (
+        <>
+          <Exit widht={100} height={100} />
+        </>
+      ) : type === 'exitWalker' ? (
+        <>
+          <ExitWalker widht={100} height={100} />
+        </>
+      ) : type === 'profileWalker' ? (
+        <>
+          <ProfileWalker widht={100} height={100} />
         </>
       ) : (
         <>
