@@ -31,4 +31,14 @@ export const styles = StyleSheet.create({
     width: 150,
     backgroundColor: '#F6F6F6',
   },
+  header: {
+    flexDirection: 'row',
+  },
+  error: {
+    color: 'red',
+    fontSize: theme.FONT_SIZE_SMALL,
+    fontWeight: theme.FONT_FAMILY_BOLD,
+    fontFamily: theme.FONT_FAMILY,
+    alignItems: 'center',
+  },
 });

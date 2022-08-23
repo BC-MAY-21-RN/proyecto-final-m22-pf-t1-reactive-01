@@ -4,12 +4,15 @@ import {useRoute} from '@react-navigation/native';
 import Layout from '../../../layout/Layout';
 import LabelMessage from '../../../components/LabelMessage/LabelMessage';
 import Button from '../../../components/Button/CustomButton';
+import Header from '../../../components/Header/Header';
+
 const WalkerView = ({navigation}) => {
   const route = useRoute();
   const {firstname, star, km} = route.params.data;
 
   return (
     <Layout>
+      <Header navigation={navigation} />
       <View style={styles.container}>
         <View style={styles.image}>
           <Image
@@ -24,7 +27,10 @@ const WalkerView = ({navigation}) => {
         </View>
       </View>
       <View style={styles.button}>
-        <Button title={'Contratar'} />
+        <Button
+          title={'Contratar'}
+          onPress={() => navigation.navigate('PaymentScreen')}
+        />
       </View>
     </Layout>
   );

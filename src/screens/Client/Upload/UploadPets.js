@@ -1,22 +1,30 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 import Layout from '../../../layout/Layout';
 import CustomButton from '../../../components/Button/CustomButton';
 import UploadButton from '../../../components/Button/UploadButton';
-
 import UploadPhoto from '../../../methods/UploadPhoto';
+import Header from '../../../components/Header/Header';
+import {styles} from './styles';
+import {useRoute} from '@react-navigation/native';
 
-const UploadPets = () => {
+const UploadPets = ({navigation}) => {
+  const route = useRoute();
+  const {namePet} = route.params;
   const {selectImageGalery} = UploadPhoto();
   return (
     <Layout>
+      <Header navigation={navigation} />
       <View style={styles.container}>
         <View style={styles.containerIcon}>
-          <UploadButton onPress={selectImageGalery} />
+          <UploadButton onPress={selectImageGalery(namePet)} />
           <Text style={styles.title}>Take Picture</Text>
         </View>
         <View style={styles.containerButton}>
-          <CustomButton title="Next" />
+          <CustomButton
+            title="Next"
+            onPress={() => navigation.navigate('Menus')}
+          />
         </View>
       </View>
     </Layout>
@@ -24,25 +32,3 @@ const UploadPets = () => {
 };
 
 export default UploadPets;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  containerIcon: {
-    flex: 1,
-    textAlign: 'center',
-    justifyContent: 'flex-end',
-  },
-  title: {
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: 'bold',
-    paddingRight: 25,
-  },
-  containerButton: {
-    flex: 1,
-    justifyContent: 'space-around',
-  },
-});

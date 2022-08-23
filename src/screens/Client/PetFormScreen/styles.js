@@ -14,6 +14,6 @@ export const styles = StyleSheet.create({
     fontSize: 25,
   },
   buttonContainer: {
-    marginTop: theme.HEIGHT_SCREEN / 8,
+    marginTop: theme.HEIGHT_SCREEN / 12,
   },
 });

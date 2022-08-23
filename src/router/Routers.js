@@ -40,7 +40,7 @@ const Menus = () => {
       }}
       drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="HomeClient" component={HomeClient} />
-      <Drawer.Screen name="Geolocation" component={Geolocation} />
+      <Drawer.Screen name="SettingScreen" component={SettingScreen} />
     </Drawer.Navigator>
   );
 };
@@ -48,7 +48,7 @@ const Routers = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="Login"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Menus" component={Menus} />
         <Stack.Screen name="SplashScreen" component={Splash} />
@@ -69,6 +69,7 @@ const Routers = () => {
         <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
         <Stack.Screen name="HistoryPayment" component={HistoryPayment} />
         <Stack.Screen name="SendComments" component={SendComments} />
+        <Stack.Screen name="HomeWalker" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

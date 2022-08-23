@@ -5,8 +5,9 @@ import Geo from '../../../methods/Geo';
 import Layout from '../../../layout/Layout';
 import ListScroll from '../../../components/ListScroll/ListScroll';
 import {getListWalkers} from '../../../methods/RetrieveWalkerFS';
+import Header from '../../../components/Header/Header';
 
-const GeolocationUser = () => {
+const GeolocationUser = ({navigation}) => {
   const {lati, longi, getLocation} = Geo();
   const [walkers, setWalkers] = useState([]);
   const traerDatos = async () => {
@@ -23,6 +24,7 @@ const GeolocationUser = () => {
 
   return (
     <Layout>
+      <Header navigation={navigation} />
       <View style={styles.container}>
         <View style={styles.containerMap}>
           <MapView

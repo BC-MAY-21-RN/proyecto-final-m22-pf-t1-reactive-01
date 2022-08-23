@@ -11,6 +11,7 @@ import Hiy from '../../assets/svg/hiy.svg';
 import Invite from '../../assets/svg/invite.svg';
 import Lock from '../../assets/svg/lock.svg';
 import Trash from '../../assets/svg/trash.svg';
+import Exit from '../../assets/svg/exit.svg';
 
 const TypeIcon = ({type}) => {
   return (
@@ -23,13 +24,13 @@ const TypeIcon = ({type}) => {
         <>
           <FindWalker widht={100} height={100} />
         </>
-      ) : type === 'c' ? (
+      ) : type === 'exit' ? (
         <>
           <Pru widht={100} height={100} />
         </>
-      ) : type === 'd' ? (
+      ) : type === 'history' ? (
         <>
-          <Pru widht={100} height={100} />
+          <Hiy widht={100} height={100} />
         </>
       ) : type === 'e' ? (
         <>

@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   imageCard: {
     width: 155,
     height: 155,
-    borderRadius: 10,
+    borderRadius: 70,
   },
   infoCard: {
     paddingHorizontal: 25,
@@ -81,6 +81,10 @@ export const styles = StyleSheet.create({
   characteristicsdscript: {
     fontSize: 18,
     color: '#000000',
+    maxWidth: 200,
   },
-  buttonContainer: {},
+  imageContainer: {
+    marginTop: 30,
+    width: 50,
+  },
 });
