@@ -88,6 +88,7 @@ export const retrivePets = async () => {
               age: pet.age,
               description: pet.description,
               namePet: pet.namePet,
+              color: pet.color,
             };
             mascotas.push(dataPets);
           }

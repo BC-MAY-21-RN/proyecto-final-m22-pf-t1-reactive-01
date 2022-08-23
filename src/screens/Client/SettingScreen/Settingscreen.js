@@ -4,7 +4,7 @@ import Header from '../../../components/Header/Header';
 import {styles} from './style';
 import OptionMenu from '../../../components/OptionMenu/OptionMenu';
 
-const SettingScreen = () => {
+const SettingScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Header />

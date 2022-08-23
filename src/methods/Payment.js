@@ -1,7 +1,9 @@
 import auth from '@react-native-firebase/auth';
 import {Alert} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
-
+import {store} from '../store/store';
+const lat = store.getState().geoLocation.lat;
+const long = store.getState().geoLocation.long;
 export const addPayment = (date, price, navigation, firstname, id) => {
   const uid = auth().currentUser.uid;
   firestore()
@@ -13,6 +15,8 @@ export const addPayment = (date, price, navigation, firstname, id) => {
       date: date,
       price: price,
       hours: 2,
+      latitude: lat,
+      longitude: long,
     })
     .then(() => {
       Alert.alert('successful payment');

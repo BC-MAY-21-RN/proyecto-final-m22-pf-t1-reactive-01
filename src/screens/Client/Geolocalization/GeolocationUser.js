@@ -6,6 +6,7 @@ import Layout from '../../../layout/Layout';
 import ListScroll from '../../../components/ListScroll/ListScroll';
 import {getListWalkers} from '../../../methods/RetrieveWalkerFS';
 import Header from '../../../components/Header/Header';
+import {store} from '../../../store/store';
 
 const GeolocationUser = ({navigation}) => {
   const {lati, longi, getLocation} = Geo();
@@ -30,8 +31,8 @@ const GeolocationUser = ({navigation}) => {
           <MapView
             style={styles.map}
             initialRegion={{
-              latitude: lati,
-              longitude: longi,
+              latitude: store.getState().geoLocation.lat,
+              longitude: store.getState().geoLocation.long,
               latitudeDelta: 0.05,
               longitudeDelta: 0.05,
             }}>
