@@ -2,89 +2,69 @@ import {StyleSheet} from 'react-native';
 import theme from '../../../assets/theme/theme';
 
 export const styles = StyleSheet.create({
-  containerTittle: {
-    height: 100,
-    borderRadius: 10,
-    backgroundColor: theme.PRIMARY_COLOR,
-    justifyContent: 'center',
-    borderBottomColor: 'grey',
-    marginTop: 10,
-  },
-  textTittle: {
-    paddingLeft: 90,
-    color: '#000000',
-    fontFamily: theme.FONT_FAMILY_BOLD,
-    marginVertical: -42,
-    paddingTop: 2,
-    fontSize: 45,
-  },
   card: {
     display: 'flex',
-    flexDirection: 'row',
+
     marginVertical: 20,
-    backgroundColor: '#F4FBFB',
     paddingBottom: 50,
     borderRadius: 10,
     borderColor: '#9ADCFF',
     borderWidth: 2,
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
+    height: 250,
+    width: '100%',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+
+    elevation: 12,
   },
   imageCard: {
-    width: 155,
-    height: 155,
-    borderRadius: 70,
-  },
-  infoCard: {
-    paddingHorizontal: 25,
+    borderRadius: 10,
+    flex: 1,
+    width: '100%',
+    height: 250,
+    resizeMode: 'cover',
+    position: 'absolute',
+    aspectRatio: 2,
   },
   namePet: {
-    fontSize: 18,
-    color: '#000000',
-    marginBottom: 10,
+    color: '#c2cece',
     fontWeight: 'bold',
-    paddingHorizontal: 50,
+    fontSize: 30,
+    marginLeft: 25,
+    marginTop: 60,
+    textShadowRadius: 15,
+    fontFamily: theme.FONT_FAMILY,
   },
-  male: {
-    flexDirection: 'row',
+  dataContainer: {
+    height: 50,
+    backgroundColor: '#e7dfdfc5',
+    justifyContent: 'center',
+    width: 125,
     alignItems: 'center',
-    marginBottom: 5,
+    borderRadius: 30,
+    marginHorizontal: 5,
   },
-  maledscript: {
-    fontSize: 18,
-    color: '#000000',
+  dataText: {
+    fontWeight: 'bold',
+    textShadowRadius: 10,
   },
-  color: {
-    display: 'flex',
+  rowcontainer: {
     flexDirection: 'row',
-    marginTop: 2,
+    marginTop: 20,
+    marginLeft: 10,
   },
-  colordscript: {
-    fontSize: 18,
-    color: '#000000',
-  },
-  age: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 6,
-  },
-  agedscript: {
-    fontSize: 18,
-    color: '#000000',
-  },
-  characteristics: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 6,
-  },
-  characteristicsdscript: {
-    fontSize: 18,
-    color: '#000000',
-    maxWidth: 200,
-  },
-  imageContainer: {
-    marginTop: 30,
-    width: 50,
+  textDescritption: {
+    maxWidth: 250,
+    textShadowRadius: 15,
+    marginLeft: 30,
+    marginTop: 10,
+    color: 'white',
+    fontSize: 13,
+    fontWeight: 'blod',
   },
 });
