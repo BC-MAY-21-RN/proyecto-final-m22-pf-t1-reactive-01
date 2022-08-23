@@ -5,7 +5,7 @@ import Price from '../../assets/svg/cardPayment/price.svg';
 import Reloj from '../../assets/svg/cardPayment/reloj.svg';
 import Walker from '../../assets/svg/cardPayment/walker.svg';
 const CardPayment = ({data}) => {
-  const {date, walker, hours, price} = data;
+  const {date, nameWalker, hours, price} = data;
 
   return (
     <View style={styles.container}>
@@ -18,7 +18,7 @@ const CardPayment = ({data}) => {
       <View style={styles.containerInfo}>
         <View style={styles.iconText}>
           <Walker widht={20} height={20} />
-          <Text style={styles.nameWalker}>{walker}</Text>
+          <Text style={styles.nameWalker}>{nameWalker}</Text>
         </View>
         <View style={styles.iconText}>
           <Date widht={20} height={20} />

@@ -21,9 +21,9 @@ const WalkerView = ({navigation}) => {
           />
         </View>
         <View style={styles.info}>
-          <LabelMessage title={'paseador'} text={firstname} />
-          <LabelMessage title={'star'} text={star} />
-          <LabelMessage title={'km'} text={km} />
+          <LabelMessage title={'Walker Name'} text={firstname} />
+          <LabelMessage title={'Rate'} text={star + '  stars'} />
+          <LabelMessage title={'Km'} text={km} />
         </View>
       </View>
       <View style={styles.button}>
@@ -49,3 +49,4 @@ const styles = StyleSheet.create({
   imagen: {width: 200, height: 200, borderRadius: 150},
   textInfo: {fontSize: 25},
 });
+
