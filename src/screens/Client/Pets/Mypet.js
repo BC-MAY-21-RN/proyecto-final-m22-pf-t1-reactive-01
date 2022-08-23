@@ -45,7 +45,6 @@ const Mypet = ({navigation}) => {
   const traerDatos = async () => {
     const datos = await retrivePets();
     setPets(datos);
-    console.log(datos);
   };
 
   //console.log(pets);
@@ -53,7 +52,7 @@ const Mypet = ({navigation}) => {
   useEffect(() => {
     const interval = setInterval(() => {
       traerDatos();
-    }, 5000);
+    }, 25000);
     return () => clearInterval(interval);
   }, []);
 
@@ -64,7 +63,7 @@ const Mypet = ({navigation}) => {
         <Text style={styles.textTittle}>My pets</Text>
       </View>
       <FlatList
-        data={data}
+        data={pets}
         renderItem={({item}) => <Card {...item} />}
         keyExtractor={item => item.id}
       />

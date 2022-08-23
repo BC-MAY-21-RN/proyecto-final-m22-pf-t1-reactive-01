@@ -1,6 +1,7 @@
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import {Alert} from 'react-native';
+
 const current = auth().currentUser;
 
 export const savePet = (
@@ -66,7 +67,7 @@ export const getImagePet = async () => {
         });
       }
     });
-    //console.log(petImageArray);
+    //
     return petImageArray;
   } catch (error) {
     Alert.alert('data not found');
@@ -75,31 +76,24 @@ export const getImagePet = async () => {
 
 export const retrivePets = async () => {
   const arrayPets = await getPets();
-  const arrayImagePets = await getImagePet();
-
-  var mascotas = [];
-  /*
-  arrayPets.forEach(function (pets) {
-    arrayImagePets.forEach(function (petImage) {
-      console.log(pets.namePet);
-      console.log(petImage.name);
-      /*
-      if (pets.uid === petImage.uid) {
-        console.log(pets.namePet);
-        mascotas.push(pets);
-      }
-      */
-
-  arrayPets.forEach(pet => {
-    arrayImagePets.forEach(photo => {
-      if (pet.petName === photo.petName) {
-        console.log('Entro');
-        mascotas.push(pet);
-      }
-    });
-  });
-
-  // uid F0I4UnMi5nS8umzIccCHJpdyQof2 pets.uid === petImage.uid && pets.namePet === petImage.namePet
-
-  return mascotas;
+  const mascotas = [];
+  if (arrayPets.length > 0) {
+    const arrayImagePets = await getImagePet();
+    if (arrayPets.length > 0) {
+      arrayPets.forEach(pet => {
+        arrayImagePets.forEach(photo => {
+          if (pet.uid === photo.uid && pet.namePet === photo.namePet) {
+            const dataPets = {
+              url: photo.url,
+              age: pet.age,
+              description: pet.description,
+              namePet: pet.namePet,
+            };
+            mascotas.push(dataPets);
+          }
+        });
+      });
+      return mascotas;
+    }
+  }
 };
