@@ -26,6 +26,12 @@ import EditProfile from '../screens/Client/Proffile/EditProfile/EditProfile';
 import {styles} from './style';
 import PaymentScreen from '../screens/Client/Payment/PaymentScreen';
 import HistoryPayment from '../screens/HistoryPaymentets/HistoryPayment';
+
+import RidesScreen from '../screens/Home/RidesScreen';
+import HistoryPaymentsWalkers from '../screens/Home/HistoryPaymentsWalker';
+import ProfileWalker from '../screens/Home/ProfileWalker';
+import LocalitationPet from '../screens/Home/LocalitationPet';
+
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -70,6 +76,14 @@ const Routers = () => {
         <Stack.Screen name="HistoryPayment" component={HistoryPayment} />
         <Stack.Screen name="SendComments" component={SendComments} />
         <Stack.Screen name="HomeWalker" component={Home} />
+        <Stack.Screen name="Rides" component={RidesScreen} />
+        <Stack.Screen name="LocalitationPet" component={LocalitationPet} />
+
+        <Stack.Screen
+          name="HistoryPaymentsWalkers"
+          component={HistoryPaymentsWalkers}
+        />
+        <Stack.Screen name="ProfileWalker" component={ProfileWalker} />
       </Stack.Navigator>
     </NavigationContainer>
   );

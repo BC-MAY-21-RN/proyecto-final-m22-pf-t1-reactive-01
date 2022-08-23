@@ -11,22 +11,22 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.buttons}>
           <ButtonMenu
             type="acceptRides"
-            title="Accept Rides"
-            //onPress={() => navigation.navigate('Login')}
+            title="Rides"
+            onPress={() => navigation.navigate('Rides')}
           />
           <ButtonMenu
             type="historyWalker"
-            title="history"
-            //onPress={() => navigation.navigate('Login')}
+            title="History"
+            onPress={() => navigation.navigate('HistoryPaymentsWalkers')}
           />
           <ButtonMenu
             type="profileWalker"
-            title="profile"
-            //onPress={() => navigation.navigate('Login')}
+            title="Profile"
+            onPress={() => navigation.navigate('ProfileWalker')}
           />
           <ButtonMenu
             type="exitWalker"
-            title="exit"
+            title="Exit"
             //onPress={() => navigation.navigate('Login')}
           />
         </View>

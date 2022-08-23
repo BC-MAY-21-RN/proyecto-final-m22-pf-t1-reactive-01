@@ -20,7 +20,7 @@ export default ButtonMenu;
 const styles = StyleSheet.create({
   container: {
     width: theme.WIDTH_SCREEN / 2.7,
-    height: theme.HEIGHT_SCREEN / 4.7 + 15,
+    height: theme.HEIGHT_SCREEN / 4.7 + 10,
     backgroundColor: '#f5f6f7',
     margin: 15,
     borderRadius: 10,
