@@ -6,6 +6,7 @@ import {styles} from './styles';
 import {store} from '../../../store/store';
 import {setLatitud, setLongitud} from '../../../store/slices/pets/geoLocation';
 import Geo from '../../../methods/Geo';
+import {signOut} from '../../../methods/Exit';
 const HomeScreen = ({navigation}) => {
   const {lati, longi, getLocation} = Geo();
 
@@ -18,12 +19,12 @@ const HomeScreen = ({navigation}) => {
     return () => clearInterval(interval);
   }, [getLocation, longi, lati]);
 
-  console.log(store.getState().geoLocation);
+  // console.log(store.getState().geoLocation);
 
   return (
     <Layout>
-      <View style={styles.container}>
-        <View style={styles.containerButtons}>
+      <View style={styles.containerButtons}>
+        <View style={styles.buttons}>
           <ButtonMenu
             title="My Pets"
             type="mypets"
@@ -42,7 +43,7 @@ const HomeScreen = ({navigation}) => {
           <ButtonMenu
             title="Exit"
             type="exit"
-            onPress={() => navigation.navigate('Login')}
+            onPress={() => signOut(navigation)}
           />
         </View>
       </View>
