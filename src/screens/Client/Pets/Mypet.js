@@ -9,33 +9,33 @@ import {retrivePets} from '../../../methods/SavePet';
 const data = [
   {
     id: 1,
-    name: 'cucu ',
+    namePet: 'cucu ',
     image:
       'https://cdn.mequieroir.com/wp-content/uploads/2019/10/mascota-espana-blanca-1024x639.jpg',
     gender: 'Male',
     color: 'rojo ',
     age: '2',
-    characteristics: 'he have very long hair and red color ',
+    description: 'he have very long hair and red color ',
   },
   {
     id: 2,
-    name: 'pepe ',
+    namePet: 'pepe ',
     image:
       'https://cdn.mequieroir.com/wp-content/uploads/2019/10/mascota-espana-blanca-1024x639.jpg',
     gender: 'Male',
     color: 'blanco ',
     age: '2',
-    characteristics: 'he not have tail',
+    description: 'he not have tail',
   },
   {
     id: 3,
-    name: 'francisco ',
+    namePet: 'francisco ',
     image:
       'https://cdn.mequieroir.com/wp-content/uploads/2019/10/mascota-espana-blanca-1024x639.jpg',
     gender: 'Male',
     color: 'negro ',
     age: '2',
-    characteristics:
+    description:
       'It is a quite friendly and calm dog. It likes to take naps and responds to the call of "hotdog"',
   },
 ];
@@ -46,8 +46,6 @@ const Mypet = ({navigation}) => {
     const datos = await retrivePets();
     setPets(datos);
   };
-
-  //console.log(pets);
 
   useEffect(() => {
     const interval = setInterval(() => {
