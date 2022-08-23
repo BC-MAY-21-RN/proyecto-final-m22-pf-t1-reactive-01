@@ -19,7 +19,6 @@ export const styles = StyleSheet.create({
     //padding: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
-
   },
   texto: {
     backgroundColor: '#b3b0ff',
