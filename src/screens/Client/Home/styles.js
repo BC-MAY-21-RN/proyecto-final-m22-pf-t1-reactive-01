@@ -1,7 +1,9 @@
 import {StyleSheet} from 'react-native';
 import theme from '../../../assets/theme/theme';
 export const styles = StyleSheet.create({
-  container: {},
+  container: {
+    justifyContent: 'center',
+  },
   nearContainer: {
     marginTop: theme.HEIGHT_SCREEN / 13,
     backgroundColor: '#efefef',
@@ -12,6 +14,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
+
   },
   texto: {
     backgroundColor: '#b3b0ff',

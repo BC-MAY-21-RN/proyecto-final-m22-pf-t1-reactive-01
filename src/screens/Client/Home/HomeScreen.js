@@ -34,6 +34,16 @@ const HomeScreen = ({navigation}) => {
             type="find"
             onPress={() => navigation.navigate('Geolocation')}
           />
+          <ButtonMenu
+            title="History Payment"
+            type="history"
+            onPress={() => navigation.navigate('HistoryPayment')}
+          />
+          <ButtonMenu
+            title="Exit"
+            type="exit"
+            onPress={() => navigation.navigate('Login')}
+          />
         </View>
       </View>
     </Layout>
