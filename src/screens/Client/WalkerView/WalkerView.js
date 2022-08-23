@@ -8,7 +8,7 @@ import Header from '../../../components/Header/Header';
 
 const WalkerView = ({navigation}) => {
   const route = useRoute();
-  const {firstname, star, km} = route.params.data;
+  const {firstname, star, km, id} = route.params.data;
 
   return (
     <Layout>
@@ -16,7 +16,7 @@ const WalkerView = ({navigation}) => {
       <View style={styles.container}>
         <View style={styles.image}>
           <Image
-            source={require('../../../assets/Placeholders/placeholder-img.jpg')}
+            source={require('../../../assets/image/perfil/messi.jpeg')}
             style={styles.imagen}
           />
         </View>
@@ -29,7 +29,7 @@ const WalkerView = ({navigation}) => {
       <View style={styles.button}>
         <Button
           title={'Contratar'}
-          onPress={() => navigation.navigate('PaymentScreen')}
+          onPress={() => navigation.navigate('PaymentScreen', {firstname, id})}
         />
       </View>
     </Layout>

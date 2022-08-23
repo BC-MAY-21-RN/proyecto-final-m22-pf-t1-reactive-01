@@ -12,11 +12,13 @@ import * as Yup from 'yup';
 
 import {checkPayment} from '../../../methods/Payment';
 import Header from '../../../components/Header/Header';
+import {useRoute} from '@react-navigation/native';
 
 const PaymentScreen = ({navigation}) => {
   const {number, expery, code} = useCard();
   const {viewRef, onFrontPress, onBackPress} = useMoveCard();
-
+  const route = useRoute();
+  const {firstname, id} = route.params;
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
@@ -28,6 +30,8 @@ const PaymentScreen = ({navigation}) => {
         formValue.expiry,
         formValue.code,
         navigation,
+        firstname,
+        id,
       );
     },
   });
