@@ -1,12 +1,12 @@
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
+const current = auth().currentUser;
 
-export const savetype = async (type, navigation) => {
-  const current = auth().currentUser;
-  await firestore.collection('users').doc(current.uid).add({type: type});
+export const savetype = (type, navigation) => {
+  firestore().collection('users').doc(current.uid).update({type: type});
   if (type === 'client') {
     navigation.navigate('Menus');
   } else {
-    navigation.navigate('Home');
+    navigation.navigate('HomeWalker');
   }
 };

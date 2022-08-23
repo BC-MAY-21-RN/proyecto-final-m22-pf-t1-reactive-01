@@ -65,7 +65,7 @@ const Mypet = ({navigation}) => {
       <FlatList
         data={pets}
         renderItem={({item}) => <Card {...item} />}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.namePet}
       />
       <View style={styles.buttonContainer}>
         <ButtonAdd onPress={() => navigation.navigate('PetFormScreen')} />
