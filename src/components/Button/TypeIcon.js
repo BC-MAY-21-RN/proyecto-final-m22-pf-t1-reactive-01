@@ -7,11 +7,11 @@ import FindWalker from '../../assets/svg/MenuIcons/findpet.svg';
 import User from '../../assets/svg/user.svg';
 import Phone from '../../assets/svg/phone.svg';
 import Star from '../../assets/svg/star.svg';
-import Hiy from '../../assets/svg/hiy.svg';
+import Hiy from '../../assets/svg/MenuIcons/history.svg';
 import Invite from '../../assets/svg/invite.svg';
 import Lock from '../../assets/svg/lock.svg';
 import Trash from '../../assets/svg/trash.svg';
-import Exit from '../../assets/svg/exit.svg';
+import Exit from '../../assets/svg/test/puerta.svg';
 import HistoryWalker from '../../assets/svg/menuWalker/history.svg';
 import PetsWalker from '../../assets/svg/menuWalker/pets.svg';
 import ExitWalker from '../../assets/svg/menuWalker/exit.svg';
@@ -30,7 +30,7 @@ const TypeIcon = ({type}) => {
         </>
       ) : type === 'profile' ? (
         <>
-          <Pru widht={100} height={100} />
+          <Exit widht={100} height={100} />
         </>
       ) : type === 'history' ? (
         <>

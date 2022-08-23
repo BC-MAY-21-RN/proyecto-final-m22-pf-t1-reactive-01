@@ -2,9 +2,22 @@ import {StyleSheet} from 'react-native';
 import theme from '../../../assets/theme/theme';
 
 export const styles = StyleSheet.create({
+  containerTittle: {
+    margin: 10,
+    height: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: theme.PRIMARY_COLOR,
+    borderWidth: 4,
+    borderRadius: 10,
+  },
+  title: {
+    fontFamily: theme.FONT_FAMILY,
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
   card: {
     display: 'flex',
-
     marginVertical: 20,
     paddingBottom: 50,
     borderRadius: 10,
