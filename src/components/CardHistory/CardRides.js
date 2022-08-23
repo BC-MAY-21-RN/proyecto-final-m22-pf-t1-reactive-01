@@ -6,7 +6,7 @@ import Reloj from '../../assets/svg/rides/reloj.svg';
 import Gps from '../../assets/svg/menuWalker/findpet.svg';
 import Perfil from '../../assets/svg/rides/perfil.svg';
 const CardRides = ({data, navigation}) => {
-  const {date, walker, hours, price, latitude, longitude} = data;
+  const {date, nameWalker, hours, price, latitude, longitude} = data;
 
   return (
     <View style={styles.container}>
@@ -19,7 +19,7 @@ const CardRides = ({data, navigation}) => {
       <View style={styles.containerInfo}>
         <View style={styles.iconText}>
           <Perfil widht={20} height={20} />
-          <Text style={styles.nameWalker}>{walker}</Text>
+          <Text style={styles.nameWalker}>{nameWalker}</Text>
         </View>
         <View style={styles.iconText}>
           <Date widht={20} height={20} />

@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../layout/Layout';
 import {styles} from '../../screens/Client/Home/styles';
 import ButtonMenu from '../../components/Button/ButtonMenu';
-
+import {signOut} from '../../methods/Exit';
 const HomeScreen = ({navigation}) => {
   return (
     <Layout>
@@ -14,11 +14,7 @@ const HomeScreen = ({navigation}) => {
             title="Rides"
             onPress={() => navigation.navigate('Rides')}
           />
-          <ButtonMenu
-            type="historyWalker"
-            title="History"
-            onPress={() => navigation.navigate('HistoryPaymentsWalkers')}
-          />
+
           <ButtonMenu
             type="profileWalker"
             title="Profile"
@@ -27,7 +23,7 @@ const HomeScreen = ({navigation}) => {
           <ButtonMenu
             type="exitWalker"
             title="Exit"
-            //onPress={() => navigation.navigate('Login')}
+            onPress={() => signOut(navigation)}
           />
         </View>
       </View>
@@ -36,3 +32,11 @@ const HomeScreen = ({navigation}) => {
 };
 
 export default HomeScreen;
+/*
+
+<ButtonMenu
+            type="historyWalker"
+            title="History"
+            onPress={() => navigation.navigate('HistoryPaymentsWalkers')}
+          /> 
+          */
