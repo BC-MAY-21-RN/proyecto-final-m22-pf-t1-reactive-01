@@ -9,6 +9,7 @@ import {useMoveCard} from '../../../methods/hook/useMoveCard';
 import {renderFront, renderBack} from './RenderViews';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
+import {store} from '../../../store/store';
 
 import {checkPayment} from '../../../methods/Payment';
 import Header from '../../../components/Header/Header';

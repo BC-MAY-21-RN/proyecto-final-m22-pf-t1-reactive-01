@@ -1,8 +1,17 @@
 import auth from '@react-native-firebase/auth';
 import {Alert} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
-
-export const addPayment = (date, walker, price, navigation) => {
+import {store} from '../store/store';
+const lat = store.getState().geoLocation.lat;
+const long = store.getState().geoLocation.long;
+export const addPayment = (
+  date,
+  walker,
+  price,
+  navigation,
+  latitude,
+  longitude,
+) => {
   const uid = auth().currentUser.uid;
   firestore()
     .collection('payments')
@@ -12,6 +21,8 @@ export const addPayment = (date, walker, price, navigation) => {
       date: date,
       price: price,
       hours: 2,
+      latitude: latitude,
+      longitude: longitude,
     })
     .then(() => {
       Alert.alert('successful payment');
@@ -26,7 +37,7 @@ export const checkPayment = (number, expiry, code, navigation) => {
   const walker = 'marito';
   const price = '100';
   if (number === card.number && expiry === card.expiry && code === card.code) {
-    addPayment(date, walker, price, navigation);
+    addPayment(date, walker, price, navigation, lat, long);
   } else {
     Alert.alert('payment refused try again ');
   }
