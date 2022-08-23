@@ -1,9 +1,9 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Layout from '../../layout/Layout';
 import Header from '../../components/Header/Header';
 import CardRides from '../../components/CardHistory/CardRides';
-
+import {getJobs} from '../../methods/DataWalker';
 const data = [
   {
     date: 'Sat Aug 20 17:12:16 2022',
@@ -23,6 +23,18 @@ const data = [
   },
 ];
 const RidesScreen = ({navigation}) => {
+  const [rides, setRides] = useState([]);
+  const traerDatos = async () => {
+    const datos = await getJobs();
+    setRides(datos);
+  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      traerDatos();
+    }, 20000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Layout>
       <Header navigation={navigation} />
@@ -31,7 +43,7 @@ const RidesScreen = ({navigation}) => {
           <Text style={styles.title}>Rides</Text>
         </View>
         <ScrollView style={styles.scroll}>
-          {data.map((item, key) => (
+          {rides.map((item, key) => (
             <CardRides key={key} data={item} navigation={navigation} />
           ))}
         </ScrollView>
