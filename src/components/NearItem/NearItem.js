@@ -10,7 +10,7 @@ const NearItem = ({data}) => {
       <View style={styles.container}>
         <View style={styles.ImageName}>
           <Image
-            source={require('../../assets/Placeholders/placeholder-img.jpg')}
+            source={require('../../assets/image/perfil/messi.jpeg')}
             style={styles.image}
           />
           <View>

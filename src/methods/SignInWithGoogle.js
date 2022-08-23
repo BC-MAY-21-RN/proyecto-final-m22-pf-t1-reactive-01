@@ -29,7 +29,6 @@ export const googleSignIn = async navigation => {
       .get()
       .then(documentSnapshot => {
         if (documentSnapshot.exists) {
-          console.log(documentSnapshot.data().type);
           if (documentSnapshot.data().type === 'walker') {
             navigation.navigate('HomeWalker');
           } else if (documentSnapshot.data().type === 'client') {
