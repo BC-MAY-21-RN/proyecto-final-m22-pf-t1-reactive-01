@@ -14,7 +14,7 @@ const OptionMenu = ({navigation, title, type}) => {
         <Text style={styles.title}>{title}</Text>
       </View>
       <View style={styles.icon}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
           <Icon width={30} height={30} />
         </TouchableOpacity>
       </View>
