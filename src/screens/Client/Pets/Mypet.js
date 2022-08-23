@@ -26,7 +26,7 @@ const Mypet = ({navigation}) => {
     <Layout>
       <HeaderPrincipal navigation={navigation} />
       <View style={styles.containerTittle}>
-        <Text style={styles.textTittle}>My pets</Text>
+        <Text style={styles.title}>My pets</Text>
       </View>
       <FlatList
         data={pets}
