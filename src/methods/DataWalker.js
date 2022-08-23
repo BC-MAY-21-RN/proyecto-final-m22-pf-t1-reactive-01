@@ -20,3 +20,21 @@ export const getJobs = async () => {
     Alert.alert('data not found');
   }
 };
+
+export const getPerfil = async () => {
+  try {
+    const uid = auth().currentUser.uid;
+    //const user = await firestore().collection('users').doc(uid).get();
+
+    const arrayWalker = [];
+    const usersQuerySnapshot = await firestore().collection('users').get();
+    usersQuerySnapshot.forEach(documentSnapshot => {
+      if (documentSnapshot.data().uid === uid) {
+        arrayWalker.push({id: documentSnapshot.id, ...documentSnapshot.data()});
+      }
+    });
+    return arrayWalker;
+  } catch (error) {
+    Alert.alert('data not found');
+  }
+};
