@@ -10,7 +10,10 @@ export const useGeo = () => {
 
   const modify = (id, navigation) => {
     try {
-      firestore().collection('payments').doc(id).update({completed: true});
+      firestore()
+        .collection('payments')
+        .doc(id)
+        .update({completed: 'paid out'});
       navigation.navigate('HomeWalker');
     } catch (error) {
       console.log('error');

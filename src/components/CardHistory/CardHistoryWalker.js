@@ -4,8 +4,9 @@ import Date from '../../assets/svg/cardPayment/date.svg';
 import Price from '../../assets/svg/cardPayment/price.svg';
 import Reloj from '../../assets/svg/cardPayment/reloj.svg';
 import Walker from '../../assets/svg/cardPayment/walker.svg';
+import Check from '../../assets/svg/cardPayment/check.svg';
 const CardHistoryWalker = ({data}) => {
-  const {date, hours, price, nameClient} = data;
+  const {date, hours, price, nameClient, completed} = data;
 
   return (
     <View style={styles.container}>
@@ -31,6 +32,10 @@ const CardHistoryWalker = ({data}) => {
         <View style={styles.iconText}>
           <Reloj widht={20} height={20} />
           <Text style={styles.textIcon}>{hours} hs</Text>
+        </View>
+        <View style={styles.iconText}>
+          <Check widht={20} height={20} />
+          <Text style={styles.textIcon}>{completed} </Text>
         </View>
       </View>
     </View>

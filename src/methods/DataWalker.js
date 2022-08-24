@@ -9,7 +9,7 @@ export const getJobs = async () => {
     usersQuerySnapshot.forEach(documentSnapshot => {
       if (
         documentSnapshot.data().uidWalker === uid &&
-        documentSnapshot.data().completed === false
+        documentSnapshot.data().completed === 'not payed'
       ) {
         arrayJobs.push({id: documentSnapshot.id, ...documentSnapshot.data()});
       }
@@ -29,7 +29,7 @@ export const getJobsComplete = async () => {
     usersQuerySnapshot.forEach(documentSnapshot => {
       if (
         documentSnapshot.data().uidWalker === uid &&
-        documentSnapshot.data().completed === true
+        documentSnapshot.data().completed === 'paid out'
       ) {
         arrayJobs.push({id: documentSnapshot.id, ...documentSnapshot.data()});
       }
