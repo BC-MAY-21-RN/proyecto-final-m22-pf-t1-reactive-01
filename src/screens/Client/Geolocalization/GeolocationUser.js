@@ -23,6 +23,8 @@ const GeolocationUser = ({navigation}) => {
     return () => clearInterval(interval);
   }, [getLocation]);
 
+  // console.log(walkers);
+  // <Marker coordinate={{latitude: lati, longitude: longi}} />
   return (
     <Layout>
       <Header navigation={navigation} />
@@ -36,14 +38,16 @@ const GeolocationUser = ({navigation}) => {
               latitudeDelta: 0.05,
               longitudeDelta: 0.05,
             }}>
-            <Marker coordinate={{latitude: lati, longitude: longi}} />
-            <Marker coordinate={{latitude: -37.972521, longitude: -57.5844}} />
-            <Marker
-              coordinate={{latitude: -37.970237, longitude: -57.584121}}
-            />
-            <Marker
-              coordinate={{latitude: -37.9567287, longitude: -57.625607}}
-            />
+            {walkers.map((item, key) => (
+              <View key={key}>
+                <Marker
+                  coordinate={{
+                    latitude: item.latitude,
+                    longitude: item.longitude,
+                  }}
+                />
+              </View>
+            ))}
           </MapView>
         </View>
         <View style={styles.containerCard}>

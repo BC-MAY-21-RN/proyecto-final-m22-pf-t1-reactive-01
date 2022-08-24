@@ -27,7 +27,7 @@ const CardRides = ({data, navigation}) => {
         </View>
         <View style={styles.iconText}>
           <Price widht={20} height={20} />
-          <Text style={styles.textIcon}>$ {price}</Text>
+          <Text style={styles.textIcon}>{price}</Text>
         </View>
         <View style={styles.iconText}>
           <Reloj widht={20} height={20} />
