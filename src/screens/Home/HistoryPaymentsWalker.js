@@ -4,33 +4,21 @@ import Layout from '../../layout/Layout';
 import CardPayment from '../../components/CardHistory/CardPayment';
 import Header from '../../components/Header/Header';
 import CardHistoryWalker from '../../components/CardHistory/CardHistoryWalker';
-const data = [
-  {
-    date: 'lunes',
-    walker: 'nico',
-    hours: '2',
-    price: '11',
-  },
-  {
-    date: 'lunes',
-    walker: 'pepe',
-    hours: '2',
-    price: '11',
-  },
-  {
-    date: 'lunes',
-    walker: 'favi',
-    hours: '2',
-    price: '11',
-  },
-  {
-    date: 'lunes',
-    walker: 'raquel',
-    hours: '2',
-    price: '11',
-  },
-];
+import {useState} from 'react';
+import {getJobsComplete} from '../../methods/DataWalker';
+import {useEffect} from 'react';
+
 const HistoryPaymentsWalkers = ({navigation}) => {
+  const [info, setInfo] = useState([]);
+
+  const traerDatos = async () => {
+    const data = await getJobsComplete();
+    setInfo(data);
+  };
+  useEffect(() => {
+    traerDatos();
+  }, []);
+
   return (
     <Layout>
       <Header navigation={navigation} />
@@ -39,7 +27,7 @@ const HistoryPaymentsWalkers = ({navigation}) => {
           <Text style={styles.title}>History Walker</Text>
         </View>
         <ScrollView style={styles.scroll}>
-          {data.map((item, key) => (
+          {info.map((item, key) => (
             <CardHistoryWalker key={key} data={item} />
           ))}
         </ScrollView>

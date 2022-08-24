@@ -34,7 +34,6 @@ const RidesScreen = ({navigation}) => {
     }, 20000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <Layout>
       <Header navigation={navigation} />

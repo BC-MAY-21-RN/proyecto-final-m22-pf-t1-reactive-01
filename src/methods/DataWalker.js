@@ -7,15 +7,35 @@ export const getJobs = async () => {
     const arrayJobs = [];
     const usersQuerySnapshot = await firestore().collection('payments').get();
     usersQuerySnapshot.forEach(documentSnapshot => {
-      if (documentSnapshot.data().uidWalker === uid) {
+      if (
+        documentSnapshot.data().uidWalker === uid &&
+        documentSnapshot.data().completed === 'not payed'
+      ) {
         arrayJobs.push({id: documentSnapshot.id, ...documentSnapshot.data()});
       }
     });
-    if (arrayJobs.length > 0) {
-      return arrayJobs;
-    } else {
-      return arrayJobs;
-    }
+
+    return arrayJobs;
+  } catch (error) {
+    Alert.alert('data not found');
+  }
+};
+
+export const getJobsComplete = async () => {
+  try {
+    const uid = auth().currentUser.uid;
+    const arrayJobs = [];
+    const usersQuerySnapshot = await firestore().collection('payments').get();
+    usersQuerySnapshot.forEach(documentSnapshot => {
+      if (
+        documentSnapshot.data().uidWalker === uid &&
+        documentSnapshot.data().completed === 'paid out'
+      ) {
+        arrayJobs.push({id: documentSnapshot.id, ...documentSnapshot.data()});
+      }
+    });
+
+    return arrayJobs;
   } catch (error) {
     Alert.alert('data not found');
   }

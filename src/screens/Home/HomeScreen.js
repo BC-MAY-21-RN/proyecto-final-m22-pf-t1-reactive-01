@@ -14,7 +14,11 @@ const HomeScreen = ({navigation}) => {
             title="Rides"
             onPress={() => navigation.navigate('Rides')}
           />
-
+          <ButtonMenu
+            type="historyWalker"
+            title="History"
+            onPress={() => navigation.navigate('HistoryPaymentsWalkers')}
+          />
           <ButtonMenu
             type="profileWalker"
             title="Profile"
@@ -34,9 +38,5 @@ const HomeScreen = ({navigation}) => {
 export default HomeScreen;
 /*
 
-<ButtonMenu
-            type="historyWalker"
-            title="History"
-            onPress={() => navigation.navigate('HistoryPaymentsWalkers')}
-          /> 
+
           */

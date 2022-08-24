@@ -6,6 +6,7 @@ const lat = store.getState().geoLocation.lat;
 const long = store.getState().geoLocation.long;
 export const addPayment = (date, price, navigation, firstname, id) => {
   const uid = auth().currentUser.uid;
+  const nameClient = auth().currentUser.displayName;
   firestore()
     .collection('payments')
     .add({
@@ -17,6 +18,8 @@ export const addPayment = (date, price, navigation, firstname, id) => {
       hours: 2,
       latitude: lat,
       longitude: long,
+      completed: 'not payed',
+      nameClient: nameClient,
     })
     .then(() => {
       Alert.alert('successful payment');
