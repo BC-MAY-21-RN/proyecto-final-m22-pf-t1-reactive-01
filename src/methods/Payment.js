@@ -17,6 +17,7 @@ export const addPayment = (date, price, navigation, firstname, id) => {
       hours: 2,
       latitude: lat,
       longitude: long,
+      completed: false,
     })
     .then(() => {
       Alert.alert('successful payment');

@@ -1,17 +1,18 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Linking, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import MapView, {Marker} from 'react-native-maps';
 import Layout from '../../layout/Layout';
 import Header from '../../components/Header/Header';
 import {useRoute} from '@react-navigation/native';
 import Button from '../../components/Button/CustomButton';
+import {useGeo} from '../../methods/hook/useGeo';
 const LocalitationPet = ({navigation}) => {
   const lati = -37.972521;
   const longi = -57.5844;
   const route = useRoute();
-  const {latitude, longitude} = route.params;
-
-  console.log(latitude + '-' + longitude);
+  const {latitude, longitude, date, id} = route.params;
+  const {toGoogleMaps} = useGeo();
+  const navegar = navigation;
   return (
     <Layout>
       <Header navigation={navigation} />
@@ -29,7 +30,10 @@ const LocalitationPet = ({navigation}) => {
           </MapView>
         </View>
         <View style={styles.containerButton}>
-          <Button title="TO PAY" />
+          <Button
+            title="confirm and go"
+            onPress={() => toGoogleMaps(latitude, longitude, navigation, id)}
+          />
         </View>
       </View>
     </Layout>

@@ -6,7 +6,7 @@ import Reloj from '../../assets/svg/rides/reloj.svg';
 import Gps from '../../assets/svg/menuWalker/findpet.svg';
 import Perfil from '../../assets/svg/rides/perfil.svg';
 const CardRides = ({data, navigation}) => {
-  const {date, nameWalker, hours, price, latitude, longitude} = data;
+  const {date, nameWalker, hours, price, latitude, longitude, id} = data;
 
   return (
     <View style={styles.container}>
@@ -38,7 +38,12 @@ const CardRides = ({data, navigation}) => {
         <View style={styles.gps}>
           <TouchableOpacity
             onPress={() =>
-              navigation.navigate('LocalitationPet', {latitude, longitude})
+              navigation.navigate('LocalitationPet', {
+                latitude,
+                longitude,
+                date,
+                id,
+              })
             }>
             <Gps widht={50} height={50} />
           </TouchableOpacity>
