@@ -41,20 +41,6 @@ const PetInfoScreen = ({navigation}) => {
       />
       <View style={styles.row}>
         <Input
-          type="typepet"
-          onChangeText={text => formik.setFieldValue('typepet', text)}
-          error={formik.errors.typepet}
-          value={formik.values.typepet}
-        />
-        <Input
-          type="breed"
-          onChangeText={text => formik.setFieldValue('breed', text)}
-          error={formik.errors.breed}
-          value={formik.values.breed}
-        />
-      </View>
-      <View style={styles.row}>
-        <Input
           type="age"
           error={formik.errors.age}
           value={formik.values.age}

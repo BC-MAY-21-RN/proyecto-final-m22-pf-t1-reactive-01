@@ -28,7 +28,7 @@ const Input = ({type, onChangeText, placeholder, value, error}) => {
         <>
           <TextInput
             onChangeText={onChangeText}
-            placeholder="First Name"
+            placeholder="Name Pet"
             placeholderTextColor="#818181"
             style={styles.inputshort}
             value={value}
@@ -117,9 +117,9 @@ const Input = ({type, onChangeText, placeholder, value, error}) => {
           <TextInput
             onChangeText={onChangeText}
             placeholder="Description"
-            multiline
             placeholderTextColor="#818181"
             style={styles.inputmultiline}
+            multiline
           />
         </>
       ) : (

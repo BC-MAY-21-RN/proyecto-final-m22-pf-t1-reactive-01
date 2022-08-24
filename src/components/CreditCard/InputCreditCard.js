@@ -34,6 +34,7 @@ const InputCreditCard = ({
           keyboardType={type}
           onChangeText={onChangeText}
           onFocus={onFocus}
+          maxLength={16}
         />
         <View style={styles.line} />
       </View>
