@@ -5,11 +5,9 @@ import Layout from '../../../layout/Layout';
 import LabelMessage from '../../../components/LabelMessage/LabelMessage';
 import Button from '../../../components/Button/CustomButton';
 import Header from '../../../components/Header/Header';
-
 const WalkerView = ({navigation}) => {
   const route = useRoute();
   const {firstname, star, km, id} = route.params.data;
-
   return (
     <Layout>
       <Header navigation={navigation} />
